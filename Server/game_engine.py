@@ -88,3 +88,20 @@ class CaroGameEngine:
             symbol = self.current_turn
             self.board[row][col] = symbol
             self.move_history.append((row, col, symbol))
+
+# 6. Kiểm tra điều kiện Thắng (5 quân liên tiếp)
+            if self._check_win(row, col, symbol):
+                self.is_game_over = True
+                self.winner = symbol
+                self.timer_running = False
+                return {
+                    "success": True,
+                    "row": row,
+                    "col": col,
+                    "symbol": symbol,
+                    "player": username,
+                    "game_over": True,
+                    "winner": self.winner,
+                    "winner_player": username,
+                    "reason": "WIN"
+                }
