@@ -18,7 +18,7 @@ Nhóm NET_262701303_03 · Đề tài UDM_16: **Game Caro trực tuyến**
 
 | STT | Thành viên | Phần phụ trách | Công việc chính |
 | ---: | --- | --- | --- |
-| 1 | Lê Văn Khải | Network & Protocol | Phân tích và xây dựng kết nối Socket Client–Server; thiết kế Protocol, Message và mã thông điệp; xử lý gửi/nhận dữ liệu, timeout, mất kết nối và lỗi mạng. |
+| 1 | Lê Văn Khải | Network & Protocol    | Phân tích và xây dựng kết nối Socket Client–Server; thiết kế Protocol, Message và mã thông điệp; xử lý gửi/nhận dữ liệu, timeout, mất kết nối và lỗi mạng. |
 | 2 | Trần Nguyễn Hoàng Minh | User & Lobby | Phân tích và xây dựng chức năng người chơi, đăng nhập, trạng thái Online/Offline, danh sách người chơi trực tuyến và lời mời đấu (gửi, chấp nhận hoặc từ chối). |
 | 3 | Phạm Minh Hiếu | Room & Match | Phân tích và xây dựng chức năng tạo, tham gia, rời phòng; danh sách và trạng thái phòng; quản lý người chơi trong phòng, phân chia quân X/O và hỗ trợ người xem. |
 | 4 | Trần Quang Huy | Game Engine | Xây dựng bàn cờ và xử lý nước đi, lượt chơi, kiểm tra nước đi hợp lệ, thời gian và kết quả thắng/thua/hòa. |
