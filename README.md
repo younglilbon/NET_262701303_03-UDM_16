@@ -1,39 +1,41 @@
-# NET_262701303_03-UDM_16
+**NET_262701303_03-UDM_16**
 
 **Đồ án môn Lập trình mạng**  
 Nhóm NET_262701303_03 · Đề tài UDM_16: **Game Caro trực tuyến**
 
-## Cấu trúc repository
+**Cấu trúc repository**
 
-Code/
-├── Client/
-│   ├── GUI/
-│   ├── Game/
-│   ├── Network/
-│   └── Room/
-├── Server/
-│   ├── Network/
-│   ├── User_Lobby/
-│   ├── Room_Match/
-│   ├── Game_Engine/
-│   ├── Synchronization/
-│   └── History/
-├── Shared/
-│   ├── Models/
-│   └── Protocol/
-└── Tests/
-    ├── Unit/
-    ├── Integration/
-    └── Performance/
+```text
+.
+├── Code/
+│   ├── Client/
+│   │   ├── Game/
+│   │   ├── GUI/
+│   │   ├── Network/
+│   │   └── Room/
+│   ├── Server/
+│   │   ├── Game_Engine/
+│   │   ├── History/
+│   │   ├── Network/
+│   │   ├── Room_Match/
+│   │   ├── Synchronization/
+│   │   └── User_Lobby/
+│   ├── Shared/
+│   │   ├── Models/
+│   │   └── Protocol/
+│   └── Tests/
+│       ├── Integration/
+│       ├── Performance/
+│       └── Unit/
+├── DOCX/
+├── Extra/
+├── PPTX/
+├── .gitignore
+├── README.md
+└── requirements.txt
+```
 
-DOCX/
-
-Extra/
-
-PPTX/
-
-
-### Thông tin và yêu cầu đề tài
+**Thông tin và yêu cầu đề tài**
 
 | Nội dung | Chi tiết |
 | --- | --- |
@@ -55,7 +57,7 @@ Các chức năng cần đáp ứng:
 - Server phân biệt người chơi và khán giả; khán giả chỉ được xem, không được đi nước hoặc thay đổi trạng thái trận đấu.
 - Khán giả có thể rời phòng mà không ảnh hưởng đến trận đấu.
 
-## Danh sách thành viên
+**Danh sách thành viên**
 
 | STT | Họ và tên | MSSV |
 | ---: | --- | ---: |
@@ -66,7 +68,7 @@ Các chức năng cần đáp ứng:
 | 5 | Trần Gia Khiêm | 054206009756 |
 | 6 | Lê Minh Như | 077306006704 |
 
-## Phân công công việc
+**Phân chia công việc**
 
 | STT | Thành viên | Phần phụ trách | Công việc chính |
 | ---: | --- | --- | --- |
@@ -79,16 +81,16 @@ Các chức năng cần đáp ứng:
 
 Các thành viên cùng phối hợp tích hợp và kiểm thử toàn hệ thống; mỗi người chịu trách nhiệm kiểm thử, sửa lỗi trong phần việc của mình.
 
-## Giới thiệu đề tài
+**Giới thiệu đề tài**
 
 Đề tài xây dựng trò chơi Caro trực tuyến theo mô hình **Client–Server**. Người chơi có thể kết nối qua mạng, đăng nhập, tạo hoặc tham gia phòng đấu và chơi theo lượt. Hệ thống đồng bộ trạng thái bàn cờ theo thời gian thực, đồng thời xử lý các tình huống mất kết nối.
 
-### Thành phần hệ thống
+**Thành phần hệ thống**
 
 - **Server:** Tiếp nhận kết nối, quản lý người chơi trực tuyến và các phòng đấu, đồng bộ trạng thái trận đấu giữa các Client, đồng thời kiểm tra tính hợp lệ của trò chơi.
 - **Client:** Cung cấp giao diện để đăng nhập, xem sảnh chờ (Lobby), tạo hoặc tham gia phòng đấu, thực hiện nước đi và nhận kết quả.
 
-### Chức năng chính
+**Chức năng chính**
 
 - Kết nối Client–Server, gửi và nhận thông điệp, xử lý lỗi mạng hoặc tình huống người chơi mất kết nối.
 - Đăng nhập, quản lý trạng thái người chơi, xem danh sách người chơi trực tuyến và gửi hoặc nhận lời mời đấu.
