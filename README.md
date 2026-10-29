@@ -5,33 +5,33 @@ Nhóm NET_262701303_03 · Đề tài UDM_16: **Game Caro trực tuyến**
 
 ## Cấu trúc repository
 
-```text
-.
-├── Code/
-│   ├── Client/
-│   │   ├── GUI/                 # Giao diện đăng nhập, sảnh chờ, phòng và bàn cờ
-│   │   ├── Network/             # Kết nối Server và gửi/nhận thông điệp
-│   │   ├── Room/                # Thao tác phòng và vai trò người chơi/khán giả
-│   │   └── Game/                # Hiển thị bàn cờ, lượt chơi và đồng hồ
-│   ├── Server/
-│   │   ├── Network/             # Quản lý kết nối và xử lý thông điệp
-│   │   ├── User_Lobby/          # Đăng nhập, người chơi online và lời mời
-│   │   ├── Room_Match/          # Phòng đấu, thành viên và khán giả
-│   │   ├── Game_Engine/         # Bàn cờ, luật chơi, lượt và kết quả
-│   │   ├── Synchronization/     # Đồng bộ, phát trạng thái trận đấu
-│   │   └── History/             # Lịch sử và kết quả các trận đấu
-│   ├── Shared/
-│   │   ├── Protocol/            # Định dạng và loại thông điệp Client–Server
-│   │   └── Models/              # Dữ liệu dùng chung giữa Client và Server
-│   └── Tests/
-│       ├── Unit/                # Kiểm thử từng module
-│       ├── Integration/         # Kiểm thử luồng Client–Server
-│       └── Performance/         # Kiểm thử nhiều người chơi/phòng
-├── DOCX/                        # Báo cáo Word
-├── Extra/                       # Tài liệu, hình ảnh và tư liệu minh chứng
-├── PPTX/                        # Slide thuyết trình
-└── README.md
-```
+Code/
+├── Client/
+│   ├── GUI/
+│   ├── Game/
+│   ├── Network/
+│   └── Room/
+├── Server/
+│   ├── Network/
+│   ├── User_Lobby/
+│   ├── Room_Match/
+│   ├── Game_Engine/
+│   ├── Synchronization/
+│   └── History/
+├── Shared/
+│   ├── Models/
+│   └── Protocol/
+└── Tests/
+    ├── Unit/
+    ├── Integration/
+    └── Performance/
+
+DOCX/
+
+Extra/
+
+PPTX/
+
 
 ### Thông tin và yêu cầu đề tài
 
