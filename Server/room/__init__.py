@@ -3,10 +3,11 @@ TV3 - Room & Match
 Package quản lý phòng đấu Caro.
 
 Cách dùng:
-    from server.room import RoomManager, RoomError, Room, RoomStatus, Role
+    from Server.room import RoomManager, RoomError, Room, RoomStatus, Role
 """
 from .errors import (
     ALREADY_IN_ROOM,
+    INVALID_ARGUMENT,
     INVALID_STATE,
     NOT_HOST,
     NOT_IN_ROOM,
@@ -29,6 +30,7 @@ __all__ = [
     "ALREADY_IN_ROOM",
     "NOT_IN_ROOM",
     "NOT_HOST",
+    "INVALID_ARGUMENT",
     "INVALID_STATE",
     "SPECTATOR_FORBIDDEN",
 ]

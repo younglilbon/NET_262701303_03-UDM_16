@@ -41,12 +41,12 @@ Module **không** đảm nhiệm: truyền nhận socket (TV1), đăng nhập (T
 
 1. Mỗi người chỉ ở **một phòng** tại một thời điểm.
 2. Mỗi phòng có tối đa **2 người chơi** (X và O); số khán giả không giới hạn.
-3. Chủ phòng cầm quân X, người vào chơi sau cầm quân O.
+3. Chủ phòng cầm quân X, người vào chơi sau cầm quân O. Nếu người cầm X rời phòng khi chưa đấu, người vào sau nhận **vai còn trống** (không ghi đè người đang có trong phòng).
 4. Chỉ vào chơi được khi phòng ở trạng thái `WAITING`. Vào xem được ở mọi trạng thái, kể cả giữa trận.
 5. Chỉ chủ phòng được bắt đầu trận, và phòng phải đủ 2 người chơi.
 6. Khán giả không được gửi nước đi; Server từ chối.
 7. Khán giả rời phòng không ảnh hưởng đến trận đấu.
-8. Người chơi rời phòng giữa trận: trận kết thúc, đối thủ thắng (**cần thống nhất với TV4, TV5**).
+8. Người chơi rời phòng giữa trận: trận bị hủy, người còn lại thắng do đối phương rời trận (`leave_room` trả `match_aborted=True` và `winner`; **cần thống nhất với TV4, TV5**). Phòng quay về `WAITING` để người khác vào chơi, không bị kẹt.
 9. Chủ phòng rời khi phòng còn người chơi: quyền chủ phòng chuyển cho người còn lại. Không còn người chơi: phòng đóng.
 10. Sau khi trận kết thúc, có thể chơi lại và đổi quân X/O.
 11. Các phòng độc lập, thao tác ở phòng này không ảnh hưởng phòng khác.
@@ -66,7 +66,7 @@ Module **không** đảm nhiệm: truyền nhận socket (TV1), đăng nhập (T
 | `WAITING` | Có chủ phòng, đang chờ người chơi thứ hai |
 | `READY` | Đủ 2 người chơi, chưa bắt đầu |
 | `PLAYING` | Trận đang diễn ra |
-| `FINISHED` | Trận kết thúc (thắng/thua/hòa/hết giờ/có người rời) |
+| `FINISHED` | Trận kết thúc (thắng/thua/hòa/hết giờ); đủ 2 người thì có thể chơi lại |
 | `CLOSED` | Phòng đã đóng, bị xóa khỏi hệ thống |
 
 ```mermaid
@@ -76,9 +76,11 @@ stateDiagram-v2
     READY --> WAITING: Người chơi thứ 2 rời
     READY --> PLAYING: Chủ phòng bắt đầu
     PLAYING --> FINISHED: Thắng / thua / hòa / hết giờ
-    PLAYING --> FINISHED: Một người chơi rời trận
+    PLAYING --> WAITING: Một người chơi rời giữa trận (người còn lại thắng)
     FINISHED --> READY: Chơi lại (đổi X/O)
-    WAITING --> CLOSED: Chủ phòng rời, phòng trống
+    FINISHED --> WAITING: Một người chơi rời
+    WAITING --> CLOSED: Hết người chơi
+    READY --> CLOSED: Hết người chơi
     FINISHED --> CLOSED: Hết người chơi
     CLOSED --> [*]
 ```
@@ -126,8 +128,8 @@ flowchart TD
     C -- Khán giả --> D[Xóa khỏi danh sách khán giả]
     D --> Z([Trận không bị ảnh hưởng])
     C -- Người chơi --> F{Trạng thái phòng}
-    F -- PLAYING --> G[Kết thúc trận, đối thủ thắng]
-    F -- READY --> H[Quay về WAITING]
+    F -- PLAYING --> G[Hủy trận, người còn lại thắng, về WAITING]
+    F -- READY / FINISHED --> H[Quay về WAITING]
     F -- WAITING --> I[Phòng trống]
     G --> J{Còn người chơi?}
     H --> J
@@ -178,6 +180,7 @@ flowchart TD
 | Bắt đầu khi chưa đủ 2 người | Từ chối | `INVALID_STATE` |
 | Khán giả gửi nước đi | Từ chối | `SPECTATOR_FORBIDDEN` |
 | Người chơi mất kết nối giữa trận | Xử lý như rời phòng (chi tiết phối hợp TV1, TV5) | – |
+| `username` rỗng/không phải chuỗi, `time_limit` ngoài 5–600 giây | Từ chối | `INVALID_ARGUMENT` |
 | Hai người cùng vào ô chơi cuối cùng | Một người thành công nhờ khóa luồng | `ROOM_FULL` |
 
 ## 9. Điểm giao tiếp cần thống nhất với các thành viên

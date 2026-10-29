@@ -10,6 +10,7 @@ from typing import Dict, List, Optional
 
 from .errors import (
     ALREADY_IN_ROOM,
+    INVALID_ARGUMENT,
     INVALID_STATE,
     NOT_HOST,
     NOT_IN_ROOM,
@@ -19,6 +20,9 @@ from .errors import (
     RoomError,
 )
 from .models import Role, Room, RoomStatus
+
+MIN_TIME_LIMIT = 5      # giây/lượt
+MAX_TIME_LIMIT = 600
 
 
 class RoomManager:
@@ -36,15 +40,26 @@ class RoomManager:
             raise RoomError(ROOM_NOT_FOUND, f"Không có phòng {room_id}")
         return room
 
+    @staticmethod
+    def _check_username(username: str) -> None:
+        if not isinstance(username, str) or not username.strip():
+            raise RoomError(INVALID_ARGUMENT, "username không hợp lệ")
+
     # ---- tạo / vào / rời
     def create_room(self, host: str, name: str = "", time_limit: int = 30) -> Room:
+        self._check_username(host)
+        if (not isinstance(time_limit, int) or isinstance(time_limit, bool)
+                or not MIN_TIME_LIMIT <= time_limit <= MAX_TIME_LIMIT):
+            raise RoomError(
+                INVALID_ARGUMENT,
+                f"time_limit phải từ {MIN_TIME_LIMIT} đến {MAX_TIME_LIMIT} giây")
         with self._lock:
             if host in self._user_room:
                 raise RoomError(ALREADY_IN_ROOM)
             room = Room(
                 room_id=uuid.uuid4().hex[:6].upper(),
                 host=host,
-                name=name or f"Phòng của {host}",
+                name=(name or "").strip() or f"Phòng của {host}",
                 time_limit=time_limit,
             )
             room.players[Role.PLAYER_X] = host     # chủ phòng cầm X (có thể random)
@@ -53,19 +68,26 @@ class RoomManager:
             return room
 
     def join_as_player(self, room_id: str, username: str) -> Role:
+        self._check_username(username)
         with self._lock:
             room = self._get(room_id)
             if username in self._user_room:
                 raise RoomError(ALREADY_IN_ROOM)
             if room.status != RoomStatus.WAITING or room.is_full():
                 raise RoomError(ROOM_FULL)
-            room.players[Role.PLAYER_O] = username
-            room.status = RoomStatus.READY
+            # Gán vai còn trống (X nếu chủ phòng X đã rời, ngược lại O)
+            # -> không bao giờ ghi đè người chơi đang có trong phòng.
+            role = (Role.PLAYER_X if Role.PLAYER_X not in room.players
+                    else Role.PLAYER_O)
+            room.players[role] = username
+            if room.is_full():
+                room.status = RoomStatus.READY
             self._user_room[username] = room_id
-            return Role.PLAYER_O
+            return role
 
     def join_as_spectator(self, room_id: str, username: str) -> Role:
         """Vào xem giữa trận cũng được; TV5 sẽ gửi full GameState sau đó."""
+        self._check_username(username)
         with self._lock:
             room = self._get(room_id)
             if username in self._user_room:
@@ -87,27 +109,30 @@ class RoomManager:
             if role == Role.SPECTATOR:
                 room.spectators.remove(username)       # không ảnh hưởng trận
                 return {"room_id": room_id, "role": role, "match_aborted": False,
-                        "room_closed": False}
+                        "room_closed": False, "winner": None}
 
             # người chơi rời
             del room.players[role]
             aborted = room.status == RoomStatus.PLAYING
-            if aborted:
-                # TV4/TV5 xử lý: đối thủ thắng do đối phương rời trận
-                room.status = RoomStatus.FINISHED
-            elif room.status == RoomStatus.READY:
+            winner = None
+            if room.players:
+                # Còn 1 người chơi: trận (nếu đang đấu) bị hủy, người còn lại
+                # thắng do đối phương rời trận (TV4/TV5 ghi nhận kết quả).
+                # Phòng quay về WAITING để người khác có thể vào chơi,
+                # tránh phòng bị kẹt ở PLAYING/READY/FINISHED với 1 người.
+                if aborted:
+                    winner = next(iter(room.players.values()))
                 room.status = RoomStatus.WAITING
-
+                if room.host == username:
+                    room.host = next(iter(room.players.values()))  # chuyển chủ phòng
             closed = not room.players
             if closed:
                 for s in room.spectators:
                     self._user_room.pop(s, None)
                 room.status = RoomStatus.CLOSED
                 del self._rooms[room_id]
-            elif room.host == username:
-                room.host = next(iter(room.players.values()))  # chuyển chủ phòng
             return {"room_id": room_id, "role": role, "match_aborted": aborted,
-                    "room_closed": closed}
+                    "room_closed": closed, "winner": winner}
 
     # ---- vòng đời trận (TV4 gọi/được gọi qua các hàm này)
     def start_match(self, room_id: str, requester: str) -> Room:
