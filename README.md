@@ -3,6 +3,58 @@
 **Đồ án môn Lập trình mạng**  
 Nhóm NET_262701303_03 · Đề tài UDM_16: **Game Caro trực tuyến**
 
+## Cấu trúc repository
+
+```text
+.
+├── Code/
+│   ├── Client/
+│   │   ├── GUI/                 # Giao diện đăng nhập, sảnh chờ, phòng và bàn cờ
+│   │   ├── Network/             # Kết nối Server và gửi/nhận thông điệp
+│   │   ├── Room/                # Thao tác phòng và vai trò người chơi/khán giả
+│   │   └── Game/                # Hiển thị bàn cờ, lượt chơi và đồng hồ
+│   ├── Server/
+│   │   ├── Network/             # Quản lý kết nối và xử lý thông điệp
+│   │   ├── User_Lobby/          # Đăng nhập, người chơi online và lời mời
+│   │   ├── Room_Match/          # Phòng đấu, thành viên và khán giả
+│   │   ├── Game_Engine/         # Bàn cờ, luật chơi, lượt và kết quả
+│   │   ├── Synchronization/     # Đồng bộ, phát trạng thái trận đấu
+│   │   └── History/             # Lịch sử và kết quả các trận đấu
+│   ├── Shared/
+│   │   ├── Protocol/            # Định dạng và loại thông điệp Client–Server
+│   │   └── Models/              # Dữ liệu dùng chung giữa Client và Server
+│   └── Tests/
+│       ├── Unit/                # Kiểm thử từng module
+│       ├── Integration/         # Kiểm thử luồng Client–Server
+│       └── Performance/         # Kiểm thử nhiều người chơi/phòng
+├── DOCX/                        # Báo cáo Word
+├── Extra/                       # Tài liệu, hình ảnh và tư liệu minh chứng
+├── PPTX/                        # Slide thuyết trình
+└── README.md
+```
+
+### Thông tin và yêu cầu đề tài
+
+| Nội dung | Chi tiết |
+| --- | --- |
+| Mã đề tài | UDM_16 |
+| Số nhóm tối đa | 2 |
+| Mô tả | Game Caro nhiều người chơi qua Server, hỗ trợ phòng đấu và đồng bộ trạng thái trận đấu. |
+
+Các chức năng cần đáp ứng:
+
+- Client kết nối Server và xem danh sách người chơi đang online.
+- Người chơi gửi, chấp nhận hoặc từ chối lời mời thách đấu.
+- Server quản lý nhiều trận đấu đồng thời trong các phòng riêng biệt.
+- Server kiểm tra tính hợp lệ của nước đi và xác định kết quả thắng, thua hoặc hòa.
+- Mỗi lượt có giới hạn thời gian; hết giờ được xử lý theo luật nhóm công bố.
+- Người chơi có thể kết nối lại và tiếp tục trận đấu trong khoảng thời gian cho phép.
+- Server lưu lịch sử và kết quả các trận đấu.
+- Người dùng xem được danh sách trận đang diễn ra và tham gia phòng với vai trò khán giả.
+- Khán giả vào giữa trận nhận trạng thái hiện tại, sau đó nhận cập nhật bàn cờ và thời gian theo thời gian thực.
+- Server phân biệt người chơi và khán giả; khán giả chỉ được xem, không được đi nước hoặc thay đổi trạng thái trận đấu.
+- Khán giả có thể rời phòng mà không ảnh hưởng đến trận đấu.
+
 ## Danh sách thành viên
 
 | STT | Họ và tên | MSSV |
