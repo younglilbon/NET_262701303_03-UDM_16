@@ -35,13 +35,6 @@ Nhóm NET_262701303_03 · Đề tài UDM_16: **Game Caro trực tuyến**
 └── requirements.txt
 ```
 
-**Thông tin và yêu cầu đề tài**
-
-| Nội dung | Chi tiết |
-| --- | --- |
-| Mã đề tài | UDM_16 |
-| Số nhóm tối đa | 2 |
-| Mô tả | Game Caro nhiều người chơi qua Server, hỗ trợ phòng đấu và đồng bộ trạng thái trận đấu. |
 
 Các chức năng cần đáp ứng:
 
