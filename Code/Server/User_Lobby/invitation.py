@@ -12,9 +12,15 @@ SendMessage = Callable[[Any, dict[str, Any]], None]
 
 
 class InvitationManager:
-    def __init__(self, players: PlayerManager, send_message: SendMessage) -> None:
+    def __init__(
+        self,
+        players: PlayerManager,
+        send_message: SendMessage,
+        on_accept: Callable[[str, str], None] | None = None,
+    ) -> None:
         self._players = players
         self._send_message = send_message
+        self._on_accept = on_accept
         self._lock = threading.RLock()
         self._invitations: dict[str, Invitation] = {}
 
@@ -109,6 +115,8 @@ class InvitationManager:
             sender_connection = sender.connection
             recipient_connection = recipient.connection
 
+        if accepted and self._on_accept is not None:
+            self._on_accept(invitation.sender_name, invitation.recipient_name)
         self._send_message(sender_connection, result)
         self._send_message(recipient_connection, result)
         return True

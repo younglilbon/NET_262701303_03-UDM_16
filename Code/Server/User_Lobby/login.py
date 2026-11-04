@@ -32,6 +32,10 @@ class LoginService:
                 {"type": "ERROR", "message": error},
             )
             return False
+        self._send_message(
+            connection,
+            {"type": "LOGIN_RESULT", "status": "OK", "name": player.name},
+        )
         self._online_list.broadcast()
         return player is not None
 

@@ -1,0 +1,151 @@
+[
+  {
+    "room_id": "3DAF50",
+    "start_time": "2026-11-04 18:12:33",
+    "end_time": "2026-11-04 18:12:57",
+    "players": {
+      "X": "zczvdfsfs",
+      "O": "xvxxccxc"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "FIVE_IN_ROW",
+      "winner_id": "zczvdfsfs",
+      "loser_id": "xvxxccxc",
+      "winner_symbol": "X",
+      "winning_line": [
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          6,
+          10
+        ]
+      ],
+      "total_moves": 13
+    },
+    "total_moves": 13,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "zczvdfsfs",
+        "symbol": "X",
+        "row": 5,
+        "col": 7,
+        "timestamp": "18:12:37"
+      },
+      {
+        "move_number": 2,
+        "player": "xvxxccxc",
+        "symbol": "O",
+        "row": 5,
+        "col": 8,
+        "timestamp": "18:12:38"
+      },
+      {
+        "move_number": 3,
+        "player": "zczvdfsfs",
+        "symbol": "X",
+        "row": 6,
+        "col": 9,
+        "timestamp": "18:12:39"
+      },
+      {
+        "move_number": 4,
+        "player": "xvxxccxc",
+        "symbol": "O",
+        "row": 5,
+        "col": 9,
+        "timestamp": "18:12:40"
+      },
+      {
+        "move_number": 5,
+        "player": "zczvdfsfs",
+        "symbol": "X",
+        "row": 4,
+        "col": 8,
+        "timestamp": "18:12:42"
+      },
+      {
+        "move_number": 6,
+        "player": "xvxxccxc",
+        "symbol": "O",
+        "row": 4,
+        "col": 7,
+        "timestamp": "18:12:43"
+      },
+      {
+        "move_number": 7,
+        "player": "zczvdfsfs",
+        "symbol": "X",
+        "row": 6,
+        "col": 8,
+        "timestamp": "18:12:46"
+      },
+      {
+        "move_number": 8,
+        "player": "xvxxccxc",
+        "symbol": "O",
+        "row": 7,
+        "col": 9,
+        "timestamp": "18:12:48"
+      },
+      {
+        "move_number": 9,
+        "player": "zczvdfsfs",
+        "symbol": "X",
+        "row": 6,
+        "col": 10,
+        "timestamp": "18:12:51"
+      },
+      {
+        "move_number": 10,
+        "player": "xvxxccxc",
+        "symbol": "O",
+        "row": 5,
+        "col": 10,
+        "timestamp": "18:12:53"
+      },
+      {
+        "move_number": 11,
+        "player": "zczvdfsfs",
+        "symbol": "X",
+        "row": 6,
+        "col": 7,
+        "timestamp": "18:12:54"
+      },
+      {
+        "move_number": 12,
+        "player": "xvxxccxc",
+        "symbol": "O",
+        "row": 6,
+        "col": 11,
+        "timestamp": "18:12:56"
+      },
+      {
+        "move_number": 13,
+        "player": "zczvdfsfs",
+        "symbol": "X",
+        "row": 6,
+        "col": 6,
+        "timestamp": "18:12:57"
+      }
+    ],
+    "reason": "FIVE_IN_ROW"
+  }
+]
