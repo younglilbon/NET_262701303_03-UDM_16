@@ -4,7 +4,7 @@ import socketserver
 import threading
 from typing import Any
 
-from ..application import ServerApplication
+from ..Application.application import ServerApplication
 from ...Shared.Protocol.messages import (
     MAX_MESSAGE_BYTES,
     decode_message,

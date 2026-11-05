@@ -9,7 +9,7 @@ from Code.Client.Network.client_sync import ClientStateSync
 
 from Code.Server.Room_Match.models import RoomStatus
 from Code.Server.User_Lobby.models import PlayerStatus
-from Code.Server.application import ServerApplication
+from Code.Server.Application.application import ServerApplication
 
 
 class TestServerApplication(unittest.TestCase):

@@ -6,15 +6,15 @@ import logging
 
 from .coordination import Coordinator, coordinated
 
-from .Room_Match.errors import RoomError
-from .Room_Match.manager import RoomManager
-from .Room_Match.models import Role, RoomStatus
-from .Synchronization.sync_manager import SyncManager
-from .User_Lobby.invitation import InvitationManager
-from .User_Lobby.login import LoginService
-from .User_Lobby.models import PlayerStatus
-from .User_Lobby.online_list import OnlineList
-from .User_Lobby.player_management import PlayerManager
+from ..Room_Match.errors import RoomError
+from ..Room_Match.manager import RoomManager
+from ..Room_Match.models import Role, RoomStatus
+from ..Synchronization.sync_manager import SyncManager
+from ..User_Lobby.invitation import InvitationManager
+from ..User_Lobby.login import LoginService
+from ..User_Lobby.models import PlayerStatus
+from ..User_Lobby.online_list import OnlineList
+from ..User_Lobby.player_management import PlayerManager
 
 SendMessage = Callable[[Any, dict[str, Any]], None]
 

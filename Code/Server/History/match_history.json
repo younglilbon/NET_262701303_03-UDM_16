@@ -147,5 +147,131 @@
       }
     ],
     "reason": "FIVE_IN_ROW"
+  },
+  {
+    "room_id": "96A231",
+    "match_id": "d2a5a3e5071248189a7bffadae8cad1a",
+    "start_time": "2026-11-05 17:42:01",
+    "end_time": "2026-11-05 17:42:42",
+    "players": {
+      "X": "dsdafsdf",
+      "O": "dfaeefefsad"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "FIVE_IN_ROW",
+      "winner_id": "dfaeefefsad",
+      "loser_id": "dsdafsdf",
+      "winner_symbol": "O",
+      "winning_line": [
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          8
+        ]
+      ],
+      "total_moves": 10
+    },
+    "total_moves": 10,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "dsdafsdf",
+        "symbol": "X",
+        "row": 6,
+        "col": 7,
+        "timestamp": "17:42:07"
+      },
+      {
+        "move_number": 2,
+        "player": "dfaeefefsad",
+        "symbol": "O",
+        "row": 6,
+        "col": 8,
+        "timestamp": "17:42:09"
+      },
+      {
+        "move_number": 3,
+        "player": "dsdafsdf",
+        "symbol": "X",
+        "row": 5,
+        "col": 6,
+        "timestamp": "17:42:21"
+      },
+      {
+        "move_number": 4,
+        "player": "dfaeefefsad",
+        "symbol": "O",
+        "row": 7,
+        "col": 8,
+        "timestamp": "17:42:22"
+      },
+      {
+        "move_number": 5,
+        "player": "dsdafsdf",
+        "symbol": "X",
+        "row": 7,
+        "col": 7,
+        "timestamp": "17:42:27"
+      },
+      {
+        "move_number": 6,
+        "player": "dfaeefefsad",
+        "symbol": "O",
+        "row": 8,
+        "col": 8,
+        "timestamp": "17:42:29"
+      },
+      {
+        "move_number": 7,
+        "player": "dsdafsdf",
+        "symbol": "X",
+        "row": 8,
+        "col": 7,
+        "timestamp": "17:42:32"
+      },
+      {
+        "move_number": 8,
+        "player": "dfaeefefsad",
+        "symbol": "O",
+        "row": 9,
+        "col": 8,
+        "timestamp": "17:42:34"
+      },
+      {
+        "move_number": 9,
+        "player": "dsdafsdf",
+        "symbol": "X",
+        "row": 10,
+        "col": 8,
+        "timestamp": "17:42:35"
+      },
+      {
+        "move_number": 10,
+        "player": "dfaeefefsad",
+        "symbol": "O",
+        "row": 5,
+        "col": 8,
+        "timestamp": "17:42:42"
+      }
+    ],
+    "reason": "FIVE_IN_ROW"
   }
 ]

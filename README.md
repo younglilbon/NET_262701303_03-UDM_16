@@ -23,7 +23,12 @@
 │   │   │   └── tcp_client.py
 │   │   └── Room/
 │   ├── Server/
+│   │   ├── Application/
+│   │   │   ├── application.py
+│   │   │   ├── coordination.py
+│   │   │   └── __init__.py
 │   │   ├── Game_Engine/
+│   │   │   ├── board.py
 │   │   │   ├── engine.py
 │   │   │   └── models.py
 │   │   ├── History/
@@ -46,7 +51,6 @@
 │   │   │   ├── online_list.py
 │   │   │   ├── player_management.py
 │   │   │   └── __init__.py
-│   │   └── application.py
 │   ├── Shared/
 │   │   ├── Models/
 │   │   └── Protocol/
@@ -57,6 +61,7 @@
 │       │   └── test_synchronization.py
 │       ├── Performance/
 │       └── Unit/
+│           ├── test_client_room_updates.py
 │           ├── test_game_engine.py
 │           ├── test_protocol.py
 │           └── test_room_match.py
