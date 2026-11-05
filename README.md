@@ -117,7 +117,7 @@
 
 ## Chạy thử
 
-Mở hai terminal tại thư mục gốc repository.
+Mở hai terminal tại thư mục gốc repository (`NET_262701303_03-UDM_16`). Các lệnh bên dưới dùng module path của package `Code`, nên cần chạy từ thư mục này.
 
 **Terminal 1 — Server**
 
@@ -125,13 +125,17 @@ Mở hai terminal tại thư mục gốc repository.
 python -m Code.Server.Network.tcp_server
 ```
 
+Server lắng nghe trên cổng `8888` và hiển thị địa chỉ khi khởi động. Giữ terminal này mở trong lúc chơi; nhấn `Ctrl+C` để dừng server.
+
 **Terminal 2 — Client**
 
 ```powershell
 python -m Code.Client.GUI.app
 ```
 
-Server mặc định lắng nghe cổng `8888`. Các message TCP dùng JSON UTF-8, mỗi message trên một dòng và có trường `type`.
+Trong màn hình đăng nhập, dùng `127.0.0.1` nếu Client chạy trên cùng máy với Server; nếu chạy trên máy khác, nhập địa chỉ IP của máy Server. Cổng mặc định là `8888`.
+
+Server và Client trao đổi message JSON UTF-8, mỗi message nằm trên một dòng và có trường `type`.
 
 ### Chạy kiểm thử
 
