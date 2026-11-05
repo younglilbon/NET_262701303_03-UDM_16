@@ -119,4 +119,5 @@ class PlayerManager:
                 return False
             self._players_by_key.pop(player.name.casefold(), None)
             player.connection = None
+            player.status = PlayerStatus.OFFLINE
             return True

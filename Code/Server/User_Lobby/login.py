@@ -1,4 +1,4 @@
-"""Login request handling for the TV2 phase-3 sources."""
+"""Login and logout request handling for the server lobby."""
 
 from collections.abc import Callable
 from typing import Any

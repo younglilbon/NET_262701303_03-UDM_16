@@ -1,4 +1,4 @@
-"""Shared player and invitation models for the TV2 phase-3 sources."""
+"""Player and invitation data models used by the server lobby."""
 
 from dataclasses import dataclass
 from enum import Enum
