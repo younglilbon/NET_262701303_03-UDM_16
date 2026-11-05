@@ -6,7 +6,7 @@ from Server.sync_manager import SyncManager
 from Client.client_sync import ClientStateSync
 
 def run_integration_test():
-    print("=== BẮT ĐẦU KIỂM THỬ ĐỒNG BỘ HÓA TOÀN DIỆN (TV5) ===")
+    print("=== BẮT ĐẦU KIỂM THỬ ĐỒNG BỘ HÓA TÍCH HỢP V1.0 (TV5) ===")
 
     clients = {
         "Player_X": ClientStateSync("Player_X"),
@@ -20,8 +20,8 @@ def run_integration_test():
 
     sync = SyncManager(send_callback=mock_network_send)
 
-    print("\n[Test 1] Khởi tạo phòng ROOM_TEST và đánh 2 nước cờ...")
-    sync.create_or_init_match("ROOM_TEST", "Player_X", "Player_O", board_size=5)
+    print("\n[Test 1] Khởi tạo phòng ROOM_TEST (match_id: MATCH_001) và đánh 2 nước cờ...")
+    sync.create_or_init_match("ROOM_TEST", "MATCH_001", "Player_X", "Player_O", board_size=5)
     sync.sync_move("ROOM_TEST", "Player_X", 1, 1)
     sync.sync_move("ROOM_TEST", "Player_O", 1, 2)
     assert clients["Player_X"].board == clients["Player_O"].board
@@ -30,14 +30,21 @@ def run_integration_test():
     print("\n[Test 2] Khán giả Spectator_1 vào giữa trận...")
     sync.sync_spectator_join("ROOM_TEST", "Spectator_1")
     assert clients["Spectator_1"].board == clients["Player_X"].board
-    print(" -> PASS: Khán giả nhận đủ bàn cờ hiện tại và bị khóa quyền đánh cờ")
+    print(" -> PASS: Khán giả nhận đủ bàn cờ hiện tại và bị khóa quyền đánh cờ!")
 
     print("\n[Test 3] Player_O mất kết nối và kết nối lại...")
     sync.handle_disconnect("Player_O")
-    clients["Player_O"] = ClientStateSync("Player_O") # Giả lập reset app
+    clients["Player_O"] = ClientStateSync("Player_O") # Giả lập Player_O mở lại app
     sync.handle_reconnect("Player_O")
     assert clients["Player_O"].board == clients["Player_X"].board
     print(" -> PASS: Player_O kết nối lại và khôi phục bàn cờ thành công!")
+
+    print("\n[Test 4] Cả hai người chơi cùng mất kết nối (Luật ABORTED)...")
+    sync.handle_disconnect("Player_X")
+    sync.handle_disconnect("Player_O")
+    assert clients["Spectator_1"].status == "FINISHED" 
+    assert clients["Spectator_1"].winner is None
+    print(" -> PASS: Xử lý đúng luật BOTH_DISCONNECTED -> Hủy ván (ABORTED) thành công!")
 
     print("\n=== TẤT CẢ CÁC BÀI KIỂM THỬ ĐỒNG BỘ ĐỀU ĐẠT 100%! ===")
 
