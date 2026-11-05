@@ -3,6 +3,9 @@ import os
 import threading
 import logging
 import time
+import tempfile
+from copy import deepcopy
+from ..coordination import Coordinator, coordinated
 from .game_state import GameState
 
 # Cấu hình ghi log sự kiện quan trọng trên Server theo yêu cầu chung
@@ -20,9 +23,15 @@ class SyncManager:
     def __init__(
         self, send_callback=None, history_file="match_history.json",
         on_match_finished=None,
+        coordinator=None,
     ):
         # Quản lý nhiều phòng đấu cùng lúc: {room_id: GameState}
         self.rooms = {}
+        self.coordinator = coordinator or Coordinator()
+        self._room_members = {}
+        self._finished_matches = set()
+        self._pending_history = {}
+        self._history_lock = threading.Lock()
         # Ánh xạ username -> đối tượng kết nối (socket) do TV1 truyền vào
         self.user_connections = {}
         # Ánh xạ username -> room_id hiện tại để tìm phòng nhanh khi rớt mạng/reconnect
@@ -54,11 +63,15 @@ class SyncManager:
 
     def send_to_user(self, username, message_dict):
         """Gửi thông điệp tới 1 người dùng cụ thể"""
-        conn = self.user_connections.get(username, username)
-        try:
-            self.send_callback(conn, message_dict)
-        except Exception as e:
-            logging.error(f"Lỗi khi gửi tin cho {username}: {e}")
+        with self.lock:
+            conn = self.user_connections.get(username, username)
+            packet = deepcopy(message_dict)
+        def send():
+            try:
+                self.send_callback(conn, packet)
+            except Exception as e:
+                logging.error(f"Lỗi khi gửi tin cho {username}: {e}")
+        self.coordinator.defer(send)
 
     def broadcast_to_room(self, room_id, message_dict, exclude_user=None):
         """
@@ -75,6 +88,7 @@ class SyncManager:
             if state.players["O"]:
                 recipients.add(state.players["O"])
             recipients.update(state.spectators)
+            recipients = set(self._room_members.get(room_id, recipients))
 
             if exclude_user:
                 recipients.discard(exclude_user)
@@ -82,6 +96,7 @@ class SyncManager:
         for user in recipients:
             self.send_to_user(user, message_dict)
 
+    @coordinated
     def create_or_init_match(
         self, room_id, player_x, player_o, board_size=15,
         turn_timeout=30, spectators=(),
@@ -100,11 +115,13 @@ class SyncManager:
             if previous_state is not None:
                 for username in previous_state.players.values():
                     if username:
-                        self.user_room_map.pop(username, None)
+                        if self.user_room_map.get(username) == room_id:
+                            self.user_room_map.pop(username, None)
                 for username in previous_state.spectators:
-                    self.user_room_map.pop(username, None)
+                    if self.user_room_map.get(username) == room_id:
+                        self.user_room_map.pop(username, None)
             self.rooms[room_id] = state
-            self._saved_matches.discard(room_id)
+            self._room_members[room_id] = {player_x, player_o, *spectators}
             self.user_room_map[player_x] = room_id
             self.user_room_map[player_o] = room_id
             for spectator in spectators:
@@ -117,6 +134,7 @@ class SyncManager:
         self.broadcast_to_room(room_id, snapshot)
         return state
 
+    @coordinated
     def sync_move(self, room_id, username, row, col):
         """Nhận nước đi, cập nhật GameState và Broadcast cho cả phòng (gồm cả khán giả)"""
         with self.lock:
@@ -173,14 +191,10 @@ class SyncManager:
         self.broadcast_to_room(room_id, delta_packet)
         if finished:
             reason = "FIVE_IN_ROW" if state.winner != "DRAW" else "BOARD_FULL"
-            record = state.get_history_record()
-            record["reason"] = reason
-            self._append_history_to_file(record)
-            with self.lock:
-                self._saved_matches.add(room_id)
-            self._broadcast_finished(room_id, state, state.winner, reason)
+            self.finish_and_save_match(room_id, state.winner, reason)
         return True, result
 
+    @coordinated
     def sync_spectator_join(self, room_id, spectator_username):
         """
         Khán giả vào giữa trận: nhận ngay toàn bộ trạng thái hiện tại (Snapshot),
@@ -195,6 +209,7 @@ class SyncManager:
                 return False, "Người chơi chính không thể làm khán giả cùng phòng."
 
             self.user_room_map[spectator_username] = room_id
+            self._room_members.setdefault(room_id, set(state.players.values())).add(spectator_username)
             snapshot = state.get_full_snapshot()
             logging.info(f"Khán giả {spectator_username} tham gia xem phòng {room_id}")
 
@@ -209,14 +224,14 @@ class SyncManager:
         }, exclude_user=spectator_username)
         return True, "Tham gia xem thành công."
 
+    @coordinated
     def sync_spectator_leave(self, room_id, spectator_username):
         """Khán giả rời phòng mà không ảnh hưởng đến trận đấu"""
         with self.lock:
             state = self.rooms.get(room_id)
             if not state:
                 return
-            state.remove_spectator(spectator_username)
-            self.user_room_map.pop(spectator_username, None)
+            self.detach_member(room_id, spectator_username)
             logging.info(f"Khán giả {spectator_username} đã rời phòng {room_id}")
 
         self.broadcast_to_room(room_id, {
@@ -226,6 +241,7 @@ class SyncManager:
             "spectator_count": len(state.spectators)
         })
 
+    @coordinated
     def handle_disconnect(self, username):
         """Xử lý khi Client ngắt kết nối đột ngột"""
         with self.lock:
@@ -253,12 +269,13 @@ class SyncManager:
                 timer = threading.Timer(
                     state.reconnect_timeout,
                     self._expire_reconnect,
-                    args=(room_id, username),
+                    args=(room_id, username, state.match_id),
                 )
                 timer.daemon = True
                 self._reconnect_timers[(room_id, username)] = timer
                 timer.start()
 
+    @coordinated
     def handle_reconnect(self, username, new_conn=None):
         """Xử lý người chơi kết nối lại và đồng bộ lại toàn bộ ván đấu"""
         with self.lock:
@@ -295,13 +312,19 @@ class SyncManager:
             self._schedule_turn_timeout(room_id, state.current_turn)
         return True, msg
 
-    def finish_and_save_match(self, room_id, winner_symbol_or_draw, reason="NORMAL"):
+    @coordinated
+    def finish_and_save_match(
+        self, room_id, winner_symbol_or_draw, reason="NORMAL", *,
+        notify_callback=True, expected_match_id=None,
+    ):
         """Kết thúc trận đấu, thông báo kết quả và lưu lịch sử xuống file"""
         with self.lock:
             state = self.rooms.get(room_id)
             if not state:
                 return
-            if room_id in self._saved_matches:
+            if expected_match_id is not None and state.match_id != expected_match_id:
+                return
+            if state.match_id in self._finished_matches:
                 return
             if state.status != "FINISHED":
                 result_reason = {
@@ -313,29 +336,79 @@ class SyncManager:
                 }.get(reason, "TIMEOUT")
                 state.finish_match(winner_symbol_or_draw, reason=result_reason)
             record = state.get_history_record()
+            reason = state.result.reason.value
+            winner_symbol_or_draw = state.winner
             record["reason"] = reason
-            self._append_history_to_file(record)
-            self._saved_matches.add(room_id)
+            self._finished_matches.add(state.match_id)
+            self._pending_history[state.match_id] = record
+            self._cancel_turn_timeout(room_id)
+            for key, timer in list(self._reconnect_timers.items()):
+                if key[0] == room_id:
+                    timer.cancel()
+                    self._reconnect_timers.pop(key, None)
             logging.info(f"Kết thúc phòng {room_id} - Kết quả: {winner_symbol_or_draw} ({reason})")
 
-        self._cancel_turn_timeout(room_id)
-        self._broadcast_finished(room_id, state, winner_symbol_or_draw, reason)
+        self._broadcast_finished(room_id, state, winner_symbol_or_draw, reason, notify_callback)
+        self.coordinator.defer(lambda: self._save_pending_history(record))
 
-    def _broadcast_finished(self, room_id, state, winner, reason):
-        self._cancel_turn_timeout(room_id)
-        for timer_key, timer in list(self._reconnect_timers.items()):
-            if timer_key[0] == room_id:
-                timer.cancel()
-                self._reconnect_timers.pop(timer_key, None)
+    def _broadcast_finished(self, room_id, state, winner, reason, notify_callback=True):
         self.broadcast_to_room(room_id, {
             "type": "MATCH_FINISHED",
             "room_id": room_id,
+            "match_id": state.match_id,
             "winner": winner,
             "reason": reason,
-            "total_moves": len(state.move_history)
+            "total_moves": len(state.move_history),
+            "result": state.result.to_dict(),
         })
-        if self.on_match_finished is not None:
-            self.on_match_finished(room_id, winner, reason)
+        if notify_callback and self.on_match_finished is not None:
+            self.on_match_finished(room_id, winner, reason, state.match_id)
+
+    def _save_pending_history(self, record):
+        # Disk I/O runs after releasing the coordinator and SyncManager locks.
+        with self._history_lock:
+            with self.lock:
+                if record["match_id"] in self._saved_matches:
+                    return
+            if self._append_history_to_file(record):
+                with self.lock:
+                    self._saved_matches.add(record["match_id"])
+                    self._pending_history.pop(record["match_id"], None)
+
+    def match_snapshot(self, room_id):
+        with self.lock:
+            state = self.rooms.get(room_id)
+            return state.get_full_snapshot() if state is not None else None
+
+    @coordinated
+    def detach_member(self, room_id, username):
+        """Remove active membership, preserving the players recorded for this match."""
+        with self.lock:
+            self._room_members.get(room_id, set()).discard(username)
+            if self.user_room_map.get(username) == room_id:
+                self.user_room_map.pop(username, None)
+            timer = self._reconnect_timers.pop((room_id, username), None)
+            if timer is not None:
+                timer.cancel()
+            state = self.rooms.get(room_id)
+            if state is not None:
+                state.remove_spectator(username)
+                state.disconnected_players.pop(username, None)
+
+    @coordinated
+    def close_room(self, room_id):
+        """Cancel activity; pending immutable history remains available for saving."""
+        with self.lock:
+            self._cancel_turn_timeout(room_id)
+            for key, timer in list(self._reconnect_timers.items()):
+                if key[0] == room_id:
+                    timer.cancel()
+                    self._reconnect_timers.pop(key, None)
+            for username, mapped_room in list(self.user_room_map.items()):
+                if mapped_room == room_id:
+                    self.user_room_map.pop(username, None)
+            self._room_members.pop(room_id, None)
+            self.rooms.pop(room_id, None)
 
     def _schedule_turn_timeout(self, room_id, turn):
         self._cancel_turn_timeout(room_id)
@@ -345,7 +418,7 @@ class SyncManager:
         timer = threading.Timer(
             max(0, state.turn_start_time + state.turn_timeout - time.time()),
             self._expire_turn,
-            args=(room_id, turn),
+            args=(room_id, turn, state.match_id),
         )
         timer.daemon = True
         self._turn_timers[room_id] = timer
@@ -356,34 +429,38 @@ class SyncManager:
         if timer is not None:
             timer.cancel()
 
-    def _expire_turn(self, room_id, expected_turn):
+    @coordinated
+    def _expire_turn(self, room_id, expected_turn, expected_match_id=None):
         with self.lock:
             state = self.rooms.get(room_id)
             if (
                 state is None
                 or state.status != "PLAYING"
                 or state.current_turn != expected_turn
+                or (expected_match_id is not None and state.match_id != expected_match_id)
             ):
                 return
             remaining = state.turn_start_time + state.turn_timeout - time.time()
             if remaining > 0:
                 timer = threading.Timer(
-                    remaining, self._expire_turn, args=(room_id, expected_turn)
+                    remaining, self._expire_turn, args=(room_id, expected_turn, state.match_id)
                 )
                 timer.daemon = True
                 self._turn_timers[room_id] = timer
                 timer.start()
                 return
             winner = "O" if expected_turn == "X" else "X"
-        self.finish_and_save_match(room_id, winner, reason="TIMEOUT")
+        self.finish_and_save_match(room_id, winner, reason="TIMEOUT", expected_match_id=state.match_id)
 
-    def _expire_reconnect(self, room_id, username):
+    @coordinated
+    def _expire_reconnect(self, room_id, username, expected_match_id=None):
         with self.lock:
             state = self.rooms.get(room_id)
-            if state is None or username not in state.disconnected_players:
+            if (state is None or username not in state.disconnected_players
+                    or (expected_match_id is not None and state.match_id != expected_match_id)):
                 return
             winner = "O" if state.players.get("X") == username else "X"
-        self.finish_and_save_match(room_id, winner, reason="DISCONNECT")
+        self.finish_and_save_match(room_id, winner, reason="DISCONNECT", expected_match_id=state.match_id)
 
     def unregister_connection(self, username, connection):
         with self.lock:
@@ -404,13 +481,24 @@ class SyncManager:
                 logging.error("Tệp lịch sử trận đấu không chứa một JSON array: %s", self.history_file)
                 return False
 
+        if any(item.get("match_id") == record["match_id"] for item in history_data):
+            return True
         history_data.append(record)
+        temporary_path = None
         try:
-            with open(self.history_file, "w", encoding="utf-8") as f:
+            with tempfile.NamedTemporaryFile(
+                mode="w", encoding="utf-8", delete=False,
+                dir=os.path.dirname(os.path.abspath(self.history_file)),
+            ) as f:
+                temporary_path = f.name
                 json.dump(history_data, f, indent=2, ensure_ascii=False)
+            os.replace(temporary_path, self.history_file)
         except OSError as error:
             logging.error("Không thể ghi lịch sử trận đấu %s: %s", self.history_file, error)
             return False
+        finally:
+            if temporary_path is not None and os.path.exists(temporary_path):
+                os.unlink(temporary_path)
         return True
 
 

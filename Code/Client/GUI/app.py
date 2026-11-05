@@ -197,7 +197,18 @@ class CaroApp:
                         tk.END,
                         f'{room["room_id"]} — {room["name"]} [{room["status"]}]',
                     )
-        elif message_type in ("ROOM_CREATED", "ROOM_JOINED", "ROOM_UPDATED"):
+        elif message_type == "ROOM_UPDATED":
+            room = message.get("room")
+            if not room or room.get("room_id") != self.room_id:
+                return
+            self.room_info = room
+            # Membership updates must not replace an active/finished board
+            # with the waiting-room view (e.g. when a spectator leaves).
+            if (room.get("status") in ("PLAYING", "FINISHED")
+                    and self.sync.room_id == self.room_id and self.sync.board):
+                return
+            self.show_room_view(room)
+        elif message_type in ("ROOM_CREATED", "ROOM_JOINED"):
             room = message.get("room")
             if room:
                 self.room_id = room.get("room_id", self.room_id)

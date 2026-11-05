@@ -65,6 +65,20 @@ class PlayerManager:
         with self.lock:
             return list(self._players_by_key.values())
 
+    def connection_for(self, name: str) -> Any:
+        with self.lock:
+            player = self._players_by_key.get(name.casefold())
+            return player.connection if player is not None else None
+
+    def set_status_by_name(self, name: str, status: PlayerStatus) -> bool:
+        """Membership belongs to RoomManager; offline always means OFFLINE."""
+        with self.lock:
+            player = self._players_by_key.get(name.casefold())
+            if player is None:
+                return False
+            player.status = status if player.connection is not None else PlayerStatus.OFFLINE
+            return True
+
     def get_online_players(self) -> list[str]:
         with self.lock:
             return sorted(
@@ -95,8 +109,7 @@ class PlayerManager:
             if player is None:
                 return None
             player.connection = None
-            if player.status is not PlayerStatus.IN_ROOM:
-                player.status = PlayerStatus.OFFLINE
+            player.status = PlayerStatus.OFFLINE
             return player
 
     def logout(self, connection: Any) -> bool:
