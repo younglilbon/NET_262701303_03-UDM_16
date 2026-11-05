@@ -101,42 +101,73 @@ class RoomManager:
             return Role.SPECTATOR
 
     def leave_room(self, username: str) -> dict:
-        """Trả về thông tin để TV5 broadcast: role đã rời, phòng còn không."""
+        """Gỡ thành viên, trả danh sách độc lập để tầng ứng dụng dọn và thông báo.
+
+        Giữ các khóa kết quả cũ. removed_members gồm cả spectator bị đưa ra
+        khi đóng phòng; remaining_members là thành viên sau thao tác.
+        """
+        self._check_username(username)
+        with self._lock:
+            return self._remove_member(username, allow_resign=True)
+
+    def detach_disconnected_player(self, username: str) -> dict:
+        """Gỡ người chơi offline sau khi kết quả đã được chốt, không tạo RESIGN.
+
+        Tầng ứng dụng/TV2 phải xác nhận người này offline và TV5 đã kết thúc
+        ván trước khi gọi. Chấp nhận WAITING để dọn người offline thứ hai sau
+        lần detach đầu tiên; không gỡ chỗ reconnect trong PLAYING (kể cả PAUSED).
+        """
+        self._check_username(username)
         with self._lock:
             room_id = self._user_room.get(username)
             if room_id is None:
                 raise RoomError(NOT_IN_ROOM)
             room = self._get(room_id)
-            role = room.role_of(username)
-            del self._user_room[username]
+            if room.role_of(username) not in (Role.PLAYER_X, Role.PLAYER_O):
+                raise RoomError(SPECTATOR_FORBIDDEN)
+            if room.status not in (RoomStatus.FINISHED, RoomStatus.WAITING):
+                raise RoomError(INVALID_STATE, "Chỉ dọn người offline sau khi ván đã kết thúc")
+            return self._remove_member(username, allow_resign=False)
 
-            if role == Role.SPECTATOR:
-                room.spectators.remove(username)       # không ảnh hưởng trận
-                return {"room_id": room_id, "role": role, "match_aborted": False,
-                        "room_closed": False, "winner": None}
+    def _remove_member(self, username: str, *, allow_resign: bool) -> dict:
+        """Thay đổi thành viên; bên gọi phải giữ self._lock."""
+        room_id = self._user_room.get(username)
+        if room_id is None:
+            raise RoomError(NOT_IN_ROOM)
+        room = self._get(room_id)
+        role = room.role_of(username)
+        members_before = room.members()
+        removed_members = [username]
+        aborted = allow_resign and role != Role.SPECTATOR and room.status == RoomStatus.PLAYING
+        winner = None
+        del self._user_room[username]
 
-            # người chơi rời
+        if role == Role.SPECTATOR:
+            room.spectators.remove(username)
+        else:
             del room.players[role]
-            aborted = room.status == RoomStatus.PLAYING
-            winner = None
             if room.players:
-                # Còn 1 người chơi: trận (nếu đang đấu) bị hủy, người còn lại
-                # thắng do đối phương rời trận (TV4/TV5 ghi nhận kết quả).
-                # Phòng quay về WAITING để người khác có thể vào chơi,
-                # tránh phòng bị kẹt ở PLAYING/READY/FINISHED với 1 người.
                 if aborted:
                     winner = next(iter(room.players.values()))
                 room.status = RoomStatus.WAITING
                 if room.host == username:
-                    room.host = next(iter(room.players.values()))  # chuyển chủ phòng
-            closed = not room.players
-            if closed:
-                for s in room.spectators:
-                    self._user_room.pop(s, None)
+                    room.host = next(iter(room.players.values()))
+            else:
+                removed_members = members_before
+                for member in removed_members:
+                    self._user_room.pop(member, None)
+                room.spectators.clear()
                 room.status = RoomStatus.CLOSED
                 del self._rooms[room_id]
-            return {"room_id": room_id, "role": role, "match_aborted": aborted,
-                    "room_closed": closed, "winner": winner}
+        return {
+            "room_id": room_id,
+            "role": role,
+            "match_aborted": aborted,
+            "room_closed": room.status == RoomStatus.CLOSED,
+            "winner": winner,
+            "remaining_members": room.members(),
+            "removed_members": removed_members,
+        }
 
     # ---- vòng đời trận (TV4 gọi/được gọi qua các hàm này)
     def start_match(self, room_id: str, requester: str) -> Room:

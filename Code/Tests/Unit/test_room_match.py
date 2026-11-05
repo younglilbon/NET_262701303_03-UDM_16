@@ -148,6 +148,117 @@ class TestRoom(unittest.TestCase):
             self.m.leave_room("nobody")
         self.assertEqual(c.exception.code, NOT_IN_ROOM)
 
+    def test_leave_reports_remaining_members_without_changing_roles(self):
+        self.m.join_as_player(self.r.room_id, "binh")
+        self.m.join_as_spectator(self.r.room_id, "chi")
+        info = self.m.leave_room("an")
+        self.assertEqual(info["removed_members"], ["an"])
+        self.assertEqual(info["remaining_members"], ["binh", "chi"])
+        self.assertEqual(self.r.host, "binh")
+        self.assertEqual(self.r.players, {Role.PLAYER_O: "binh"})
+        self.assertIsNone(self.m.room_of("an"))
+        self.m.join_as_spectator(self.r.room_id, "dung")
+        self.assertEqual(info["remaining_members"], ["binh", "chi"])
+
+    def test_close_reports_and_frees_all_members(self):
+        for name in ("chi", "dung", "ha"):
+            self.m.join_as_spectator(self.r.room_id, name)
+        info = self.m.leave_room("an")
+        self.assertTrue(info["room_closed"])
+        self.assertEqual(info["removed_members"], ["an", "chi", "dung", "ha"])
+        self.assertEqual(info["remaining_members"], [])
+        self.assertEqual(self.r.status, RoomStatus.CLOSED)
+        self.assertEqual(self.r.members(), [])
+        for name in info["removed_members"]:
+            self.assertIsNone(self.m.room_of(name))
+            self.m.create_room(name)
+        with self.assertRaises(RoomError) as c:
+            self.m.get_room(self.r.room_id)
+        self.assertEqual(c.exception.code, ROOM_NOT_FOUND)
+
+    def test_spectator_leave_reports_members_and_preserves_match(self):
+        self.m.join_as_player(self.r.room_id, "binh")
+        self.m.join_as_spectator(self.r.room_id, "chi")
+        self.m.start_match(self.r.room_id, "an")
+        info = self.m.leave_room("chi")
+        self.assertEqual(info["removed_members"], ["chi"])
+        self.assertEqual(info["remaining_members"], ["an", "binh"])
+        self.assertFalse(info["match_aborted"])
+        self.assertIsNone(info["winner"])
+        self.assertEqual(self.r.status, RoomStatus.PLAYING)
+
+    def test_detach_finished_host_preserves_other_role_and_no_resign(self):
+        self.m.join_as_player(self.r.room_id, "binh")
+        self.m.join_as_spectator(self.r.room_id, "chi")
+        self.m.start_match(self.r.room_id, "an")
+        self.m.finish_match(self.r.room_id)
+        info = self.m.detach_disconnected_player("an")
+        self.assertFalse(info["match_aborted"])
+        self.assertIsNone(info["winner"])
+        self.assertFalse(info["room_closed"])
+        self.assertEqual(info["removed_members"], ["an"])
+        self.assertEqual(info["remaining_members"], ["binh", "chi"])
+        self.assertEqual(self.r.host, "binh")
+        self.assertEqual(self.r.players, {Role.PLAYER_O: "binh"})
+        self.assertEqual(self.r.status, RoomStatus.WAITING)
+        self.assertIsNone(self.m.room_of("an"))
+        self.assertEqual(self.m.join_as_player(self.r.room_id, "dung"), Role.PLAYER_X)
+
+    def test_detach_both_offline_closes_room_without_second_result(self):
+        self.m.join_as_player(self.r.room_id, "binh")
+        for name in ("chi", "dung"):
+            self.m.join_as_spectator(self.r.room_id, name)
+        self.m.start_match(self.r.room_id, "an")
+        self.m.finish_match(self.r.room_id)
+        first = self.m.detach_disconnected_player("binh")
+        self.assertFalse(first["match_aborted"])
+        self.assertEqual(first["remaining_members"], ["an", "chi", "dung"])
+        second = self.m.detach_disconnected_player("an")
+        self.assertFalse(second["match_aborted"])
+        self.assertIsNone(second["winner"])
+        self.assertTrue(second["room_closed"])
+        self.assertEqual(second["removed_members"], ["an", "chi", "dung"])
+        self.assertEqual(second["remaining_members"], [])
+        for name in ("an", "binh", "chi", "dung"):
+            self.assertIsNone(self.m.room_of(name))
+        with self.assertRaises(RoomError) as c:
+            self.m.detach_disconnected_player("binh")
+        self.assertEqual(c.exception.code, NOT_IN_ROOM)
+
+    def test_detach_rejects_ready_and_playing_without_removing_seat(self):
+        self.m.join_as_player(self.r.room_id, "binh")
+        for status in (RoomStatus.READY, RoomStatus.PLAYING):
+            if status == RoomStatus.PLAYING:
+                self.m.start_match(self.r.room_id, "an")
+            with self.subTest(status=status):
+                with self.assertRaises(RoomError) as c:
+                    self.m.detach_disconnected_player("an")
+                self.assertEqual(c.exception.code, INVALID_STATE)
+                self.assertEqual(self.r.status, status)
+                self.assertEqual(self.r.players, {Role.PLAYER_X: "an", Role.PLAYER_O: "binh"})
+                self.assertIs(self.m.room_of("an"), self.r)
+                with self.assertRaises(RoomError) as c:
+                    self.m.create_room("an")
+                self.assertEqual(c.exception.code, ALREADY_IN_ROOM)
+
+    def test_detach_rejects_spectator_and_unknown_user(self):
+        self.m.join_as_spectator(self.r.room_id, "chi")
+        for name, code in (("chi", SPECTATOR_FORBIDDEN), ("nobody", NOT_IN_ROOM)):
+            with self.subTest(name=name):
+                with self.assertRaises(RoomError) as c:
+                    self.m.detach_disconnected_player(name)
+                self.assertEqual(c.exception.code, code)
+        self.assertIs(self.m.room_of("chi"), self.r)
+
+    def test_removal_rejects_invalid_names(self):
+        for method in (self.m.leave_room, self.m.detach_disconnected_player):
+            for name in ("", "   ", None, 123, []):
+                with self.subTest(method=method.__name__, name=name):
+                    with self.assertRaises(RoomError) as c:
+                        method(name)
+                    self.assertEqual(c.exception.code, INVALID_ARGUMENT)
+        self.assertEqual(self.r.members(), ["an"])
+
     # ---- Vòng đời trận
     def test_start_needs_two_players(self):
         with self.assertRaises(RoomError) as c:

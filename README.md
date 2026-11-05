@@ -131,7 +131,7 @@ Server mặc định lắng nghe cổng `8888`. Các message TCP dùng JSON UTF-
 ### Chạy kiểm thử
 
 ```powershell
-python -m unittest Code.Tests.Unit.test_room_match Code.Tests.Unit.test_game_engine Code.Tests.Unit.test_protocol Code.Tests.Integration.test_server_application Code.Tests.Integration.test_synchronization -v
+python -m unittest Code.Tests.Unit.test_room_match Code.Tests.Unit.test_game_engine Code.Tests.Unit.test_protocol Code.Tests.Unit.test_client_room_updates Code.Tests.Integration.test_server_application Code.Tests.Integration.test_synchronization -v
 ```
 
 ---

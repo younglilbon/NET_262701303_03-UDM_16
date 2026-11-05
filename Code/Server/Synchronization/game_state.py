@@ -1,5 +1,7 @@
 import time
 import json
+import uuid
+from copy import deepcopy
 from datetime import datetime
 from ..Game_Engine.engine import GameEngine
 from ..Game_Engine.models import EndReason
@@ -11,6 +13,7 @@ class GameState:
     """
     def __init__(self, room_id, board_size=15, turn_timeout=30, reconnect_timeout=60):
         self.room_id = room_id
+        self.match_id = uuid.uuid4().hex
         self.board_size = board_size
         # Ma trận bàn cờ: 0 là ô trống, 'X' và 'O' là quân cờ
         self.board = [["" for _ in range(board_size)] for _ in range(board_size)]
@@ -182,9 +185,10 @@ class GameState:
         Lấy toàn bộ trạng thái bàn cờ hiện tại (Snapshot).
         Dùng để đồng bộ cho Khán giả vào giữa trận hoặc Người chơi vừa Reconnect.
         """
-        return {
+        return deepcopy({
             "type": "SYNC_FULL_STATE",
             "room_id": self.room_id,
+            "match_id": self.match_id,
             "status": self.status,
             "players": self.players,
             "spectators": list(self.spectators),
@@ -193,12 +197,13 @@ class GameState:
             "board": self.board,
             "move_history": self.move_history,
             "winner": self.winner
-        }
+        })
 
     def get_history_record(self):
         """Xuất dữ liệu lịch sử trận đấu để lưu xuống Server"""
-        return {
+        return deepcopy({
             "room_id": self.room_id,
+            "match_id": self.match_id,
             "start_time": self.match_start_time,
             "end_time": self.match_end_time,
             "players": self.players,
@@ -206,7 +211,7 @@ class GameState:
             "result": self.result.to_dict() if self.result else None,
             "total_moves": len(self.move_history),
             "moves": self.move_history
-        }
+        })
 
 
 # --- Khối code chạy thử nghiệm độc lập (Mock Test cho TV5) ---
