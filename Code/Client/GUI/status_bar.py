@@ -1,6 +1,6 @@
 import tkinter as tk
 
-from GUI.style import (
+from .style import (
     bg_color,
     primary_color,
     border_color,
