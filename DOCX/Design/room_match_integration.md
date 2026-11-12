@@ -54,3 +54,24 @@ Còn cần TV6 xử lý ROOM_CLOSED và chỉ về lobby sau xác nhận server.
 thiện spectator vào PAUSED/FINISHED, giữ thời gian còn lại khi resume,
 BOTH_DISCONNECTED/ABORTED, rematch có chấp thuận hoặc toàn bộ trường match_id
 trong protocol/GUI. Chưa nghiệm thu các phần đó bằng các test rời/đóng phòng.
+
+## Cập nhật module độc lập ngày 12/11/2026
+
+- `RoomManager.create_room()` kiểm tra mã phòng trong cùng khóa với thao tác
+  lưu phòng và ánh xạ người–phòng; sinh lại nếu trùng. Test ép trùng nhiều lần
+  xác nhận không mất chủ phòng, X/O, spectator hoặc cấu hình của phòng cũ.
+- Bổ sung test cho `RoomManager.rematch()`: chỉ đổi X/O và trạng thái sang READY;
+  giữ nguyên room_id, host, name, spectators, time_limit, created_at và ánh xạ.
+  Phòng khác không đổi; chủ phòng cầm O vẫn có quyền bắt đầu. Gọi lặp khi READY
+  hoặc gọi ở WAITING/READY/PLAYING trả INVALID_STATE và không sửa dữ liệu.
+- Các test này xác minh API nội bộ. Không bổ sung lệnh REMATCH/REMATCH_RESPONSE,
+  timeout yêu cầu hay GUI; không đánh dấu luồng chơi lại hai bên đồng ý đã xong.
+- Sơ đồ trạng thái, tạo/vào, rời/reconnect và rematch hiện hành được nhúng
+  trực tiếp trong [room_match_analysis.md](room_match_analysis.md).
+
+Kiểm tra tại workspace ngày 12/11/2026: chạy cả sáu module unittest được README
+hướng dẫn (Room, Game Engine, Protocol, GUI message handler, ServerApplication,
+Synchronization), **70/70 test đạt**. `git diff --check` không báo lỗi khoảng trắng.
+Kết quả áp dụng cho phiên bản workspace lúc kiểm tra. Sơ đồ
+Mermaid được nhúng trong tài liệu; chưa xác minh hiển thị bằng trình render hoặc
+xuất ảnh. Chưa nghiệm thu GUI thật trong lần cập nhật này.

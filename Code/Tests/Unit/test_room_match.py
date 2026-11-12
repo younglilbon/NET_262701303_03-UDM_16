@@ -6,6 +6,9 @@ Chạy từ thư mục gốc dự án:
     python -m unittest Code.Tests.Unit.test_room_match -v
 """
 import unittest
+from copy import deepcopy
+from unittest.mock import patch
+from uuid import UUID
 
 import threading
 
@@ -35,6 +38,35 @@ class TestRoom(unittest.TestCase):
     def test_create_assigns_x_to_host(self):
         self.assertEqual(self.r.players[Role.PLAYER_X], "an")
         self.assertEqual(self.r.status, RoomStatus.WAITING)
+
+    def test_create_retries_collisions_without_overwriting_existing_room(self):
+        manager = RoomManager()
+        first_id = UUID("abcdef00-0000-0000-0000-000000000001")
+        # Different UUIDs can still collide after truncation to six characters.
+        collision = UUID("abcdef11-0000-0000-0000-000000000002")
+        next_id = UUID("123abc00-0000-0000-0000-000000000003")
+        with patch("Code.Server.Room_Match.manager.uuid.uuid4",
+                   side_effect=[first_id, collision, first_id, next_id]) as generate:
+            original = manager.create_room("an", name="Original", time_limit=45)
+            manager.join_as_player(original.room_id, "binh")
+            manager.join_as_spectator(original.room_id, "chi")
+            created = manager.create_room("dung")
+
+        self.assertEqual(generate.call_count, 4)
+        self.assertEqual(original.room_id, "ABCDEF")
+        self.assertEqual(created.room_id, "123ABC")
+        self.assertEqual(len(manager.list_rooms()), 2)
+        self.assertIs(manager.get_room("ABCDEF"), original)
+        self.assertEqual(original.host, "an")
+        self.assertEqual(original.name, "Original")
+        self.assertEqual(original.time_limit, 45)
+        self.assertEqual(original.status, RoomStatus.READY)
+        self.assertEqual(original.players, {Role.PLAYER_X: "an", Role.PLAYER_O: "binh"})
+        self.assertEqual(original.spectators, ["chi"])
+        for username in ("an", "binh", "chi"):
+            self.assertIs(manager.room_of(username), original)
+        self.assertIs(manager.room_of("dung"), created)
+        self.assertEqual(created.players, {Role.PLAYER_X: "dung"})
 
     def test_join_makes_ready(self):
         self.assertEqual(self.m.join_as_player(self.r.room_id, "binh"), Role.PLAYER_O)
@@ -291,6 +323,66 @@ class TestRoom(unittest.TestCase):
         with self.assertRaises(RoomError) as c:
             self.m.rematch(self.r.room_id)
         self.assertEqual(c.exception.code, INVALID_STATE)
+
+    def test_rematch_preserves_room_data_membership_and_other_rooms(self):
+        room = self.m.create_room("host", name="Phong rematch", time_limit=45)
+        self.m.join_as_player(room.room_id, "opponent")
+        for name in ("viewer1", "viewer2"):
+            self.m.join_as_spectator(room.room_id, name)
+        self.m.start_match(room.room_id, "host")
+        self.m.finish_match(room.room_id)
+        before = deepcopy(vars(room))
+        other_before = deepcopy(vars(self.r))
+
+        returned = self.m.rematch(room.room_id)
+
+        expected = deepcopy(before)
+        expected["players"] = {Role.PLAYER_X: "opponent", Role.PLAYER_O: "host"}
+        expected["status"] = RoomStatus.READY
+        self.assertIs(returned, room)
+        self.assertEqual(vars(room), expected)
+        self.assertIs(self.m.get_room(room.room_id), room)
+        for name in ("host", "opponent", "viewer1", "viewer2"):
+            self.assertIs(self.m.room_of(name), room)
+        self.assertEqual(vars(self.r), other_before)
+        self.assertIs(self.m.room_of("an"), self.r)
+        # The original host can start again even though they now hold O.
+        self.m.start_match(room.room_id, "host")
+        self.assertEqual(room.status, RoomStatus.PLAYING)
+
+    def test_repeated_rematch_is_rejected_without_swapping_again(self):
+        self.m.join_as_player(self.r.room_id, "binh")
+        self.m.join_as_spectator(self.r.room_id, "chi")
+        self.m.start_match(self.r.room_id, "an")
+        self.m.finish_match(self.r.room_id)
+        self.m.rematch(self.r.room_id)
+        before = deepcopy(vars(self.r))
+
+        with self.assertRaises(RoomError) as caught:
+            self.m.rematch(self.r.room_id)
+
+        self.assertEqual(caught.exception.code, INVALID_STATE)
+        self.assertEqual(vars(self.r), before)
+        for name in ("an", "binh", "chi"):
+            self.assertIs(self.m.room_of(name), self.r)
+
+    def test_rematch_in_waiting_ready_and_playing_preserves_data(self):
+        for status in (RoomStatus.WAITING, RoomStatus.READY, RoomStatus.PLAYING):
+            with self.subTest(status=status):
+                manager = RoomManager()
+                room = manager.create_room("host")
+                manager.join_as_spectator(room.room_id, "viewer")
+                if status != RoomStatus.WAITING:
+                    manager.join_as_player(room.room_id, "opponent")
+                if status == RoomStatus.PLAYING:
+                    manager.start_match(room.room_id, "host")
+                before = deepcopy(vars(room))
+                with self.assertRaises(RoomError) as caught:
+                    manager.rematch(room.room_id)
+                self.assertEqual(caught.exception.code, INVALID_STATE)
+                self.assertEqual(vars(room), before)
+                for name in room.members():
+                    self.assertIs(manager.room_of(name), room)
 
     def test_move_permission_rules(self):
         self.m.join_as_player(self.r.room_id, "binh")
