@@ -20,12 +20,14 @@ class PlayerManager:
         if not isinstance(name, str):
             return False
         cleaned = name.strip()
-        return (
-            cls.MIN_NAME_LENGTH <= len(cleaned) <= cls.MAX_NAME_LENGTH
-            and cleaned[0].isalnum()
-            and cleaned[-1].isalnum()
-            and all(character.isalnum() or character in "_-" for character in cleaned)
-        )
+        if len(cleaned) < cls.MIN_NAME_LENGTH or len(cleaned) > cls.MAX_NAME_LENGTH:
+            return False
+        if not cleaned[0].isalnum() or not cleaned[-1].isalnum():
+            return False
+        for character in cleaned:
+            if not character.isalnum() and character not in "_-":
+                return False
+        return True
 
     def login(
         self,
@@ -65,6 +67,10 @@ class PlayerManager:
         with self.lock:
             return list(self._players_by_key.values())
 
+    def get_player_by_name(self, name: str) -> Player | None:
+        with self.lock:
+            return self._players_by_key.get(name.casefold())
+
     def connection_for(self, name: str) -> Any:
         with self.lock:
             player = self._players_by_key.get(name.casefold())
@@ -79,16 +85,19 @@ class PlayerManager:
             player.status = status if player.connection is not None else PlayerStatus.OFFLINE
             return True
 
+    def get_status_by_name(self, name: str) -> PlayerStatus | None:
+        with self.lock:
+            player = self._players_by_key.get(name.casefold())
+            return player.status if player is not None else None
+
     def get_online_players(self) -> list[str]:
         with self.lock:
-            return sorted(
-                (
-                    player.name
-                    for player in self._players_by_key.values()
-                    if player.connection is not None
-                ),
-                key=str.casefold,
-            )
+            names = []
+            for player in self._players_by_key.values():
+                if player.connection is not None:
+                    names.append(player.name)
+            names.sort(key=str.casefold)
+            return names
 
     def set_status(
         self,

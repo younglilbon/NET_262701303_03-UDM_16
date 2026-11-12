@@ -330,17 +330,63 @@ class TestServerApplication(unittest.TestCase):
             "type": "CREATE_ROOM",
             "name": "Test room",
         })
-        room_id = self._last_message(self.alice, "ROOM_CREATED")["room"]["room_id"]
+        created = self._last_message(self.alice, "ROOM_CREATED")["room"]
+        room_id = created["room_id"]
+        self.assertEqual(created["players"], {"X": "Alice"})
+        self.assertEqual(self.app.players.get_player(self.alice).status, PlayerStatus.IN_ROOM)
         self.app.handle_message(self.bob, {
             "type": "JOIN_ROOM",
             "room_id": room_id,
         })
+        joined = self._last_message(self.bob, "ROOM_JOINED")
+        self.assertEqual(joined["role"], "O")
+        self.assertEqual(
+            joined["room"]["players"],
+            {"X": "Alice", "O": "Bobby"},
+        )
+        self.assertEqual(self.app.players.get_player(self.bob).status, PlayerStatus.IN_ROOM)
         self.app.handle_message(self.alice, {
             "type": "START_MATCH",
             "room_id": room_id,
         })
         self.assertEqual(self.app.rooms.get_room(room_id).status, RoomStatus.PLAYING)
         self.assertEqual(self.app.sync.rooms[room_id].status, "PLAYING")
+
+    def test_rejected_invitation_returns_both_players_to_lobby(self):
+        self.app.handle_message(self.alice, {"type": "INVITE", "target": "Bobby"})
+        invite = self._last_message(self.bob, "INVITE")
+        self.app.handle_message(self.bob, {
+            "type": "INVITE_RESPONSE",
+            "invite_id": invite["invite_id"],
+            "accepted": False,
+        })
+
+        self.assertEqual(self.app.rooms.list_rooms(), [])
+        self.assertEqual(self.app.players.get_player(self.alice).status, PlayerStatus.ONLINE)
+        self.assertEqual(self.app.players.get_player(self.bob).status, PlayerStatus.ONLINE)
+        self.assertEqual(
+            self._last_message(self.alice, "INVITE_RESULT")["status"],
+            "REJECTED",
+        )
+
+    def test_invite_pending_players_cannot_join_or_create_rooms(self):
+        self.app.handle_message(self.alice, {"type": "INVITE", "target": "Bobby"})
+        invite = self._last_message(self.bob, "INVITE")
+
+        self.app.handle_message(self.bob, {"type": "CREATE_ROOM"})
+        self.assertEqual(self._last_message(self.bob, "ERROR")["code"], "INVALID_STATE")
+        self.app.handle_message(self.alice, {"type": "JOIN_ROOM", "room_id": "MISSING"})
+        self.assertEqual(self._last_message(self.alice, "ERROR")["code"], "INVALID_STATE")
+        self.assertEqual(self.app.rooms.list_rooms(), [])
+
+        self.app.handle_message(self.bob, {
+            "type": "INVITE_RESPONSE",
+            "invite_id": invite["invite_id"],
+            "accepted": False,
+        })
+        self.app.handle_message(self.bob, {"type": "CREATE_ROOM"})
+        self.assertEqual(self._last_message(self.bob, "ROOM_CREATED")["room"]["players"],
+                         {"X": "Bobby"})
 
 
 if __name__ == "__main__":

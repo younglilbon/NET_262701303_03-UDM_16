@@ -119,6 +119,7 @@ class ServerApplication:
                 message.get("accepted") is True,
             )
         elif message_type == "CREATE_ROOM":
+            self._require_lobby_status(username)
             room = self.rooms.create_room(
                 username,
                 name=message.get("name", ""),
@@ -130,6 +131,7 @@ class ServerApplication:
                 "room": room.to_dict(),
             })
         elif message_type == "JOIN_ROOM":
+            self._require_lobby_status(username)
             role = self.rooms.join_as_player(message.get("room_id"), username)
             room = self.rooms.room_of(username)
             # A new opponent must not receive events or reconnect into the old match.
@@ -142,6 +144,7 @@ class ServerApplication:
                 "room": room.to_dict(),
             })
         elif message_type == "JOIN_AS_SPECTATOR":
+            self._require_lobby_status(username)
             role = self.rooms.join_as_spectator(message.get("room_id"), username)
             room = self.rooms.room_of(username)
             self._set_player_status(username, PlayerStatus.IN_ROOM)
@@ -324,6 +327,13 @@ class ServerApplication:
 
     def _connection_for(self, username: str) -> Any:
         return self.players.connection_for(username)
+
+    def _require_lobby_status(self, username: str) -> None:
+        if self.players.get_status_by_name(username) is not PlayerStatus.ONLINE:
+            raise RoomError(
+                "INVALID_STATE",
+                "Player must be available in the lobby to join or create a room.",
+            )
 
     def _set_player_status(self, username: str, status: PlayerStatus) -> None:
         self.players.set_status_by_name(username, status)
