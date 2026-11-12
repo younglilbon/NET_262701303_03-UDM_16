@@ -7,8 +7,8 @@ from ..Network.client_sync import ClientStateSync
 from ..Network.tcp_client import TCPClient
 from .status_bar import StatusBar
 from .style import bg_color, window_height, window_width
+from .board_widget import BoardWidget 
 
-BOARD_SIZE = 15
 
 
 class CaroApp:
@@ -99,7 +99,16 @@ class CaroApp:
             text=f"Phòng {self.room_id or ''} — {room.get('status', 'WAITING')}",
             font=("Segoe UI", 18, "bold"),
         ).pack(pady=14)
-        ttk.Label(frame, text=str(room.get("players", {}))).pack(pady=6)
+        players = room.get("player", {})
+        if isinstance(players, dict):
+            players_text="\n".join(f"{name}: {role}" for name, role in players.item())
+        else:
+            players_text="\n".join(str(p) for p in players)
+        ttk.Label(
+            frame, 
+            text=players_text or "Chưa có người chơi",
+            justify=tk.CENTER,
+        ).pack(pady=6)
         ttk.Button(
             frame, text="Bắt đầu trận",
             command=lambda: self.client.send({
@@ -115,20 +124,19 @@ class CaroApp:
         self.turn_label.pack(pady=6)
         board_frame = ttk.Frame(frame)
         board_frame.pack(expand=True)
-        self.cells: list[list[ttk.Button]] = []
-        for row in range(BOARD_SIZE):
-            button_row = []
-            for col in range(BOARD_SIZE):
-                button = ttk.Button(
-                    board_frame,
-                    text="",
-                    width=2,
-                    command=lambda r=row, c=col: self.make_move(r, c),
-                )
-                button.grid(row=row, column=col, padx=1, pady=1)
-                button_row.append(button)
-            self.cells.append(button_row)
-        ttk.Button(frame, text="Rời phòng", command=self.leave_room).pack(pady=6)
+        self.board_widget = BoardWidget(
+            board_frame,
+            on_move=self.make_move
+        )
+        self.board_widget.pack(
+            padx=10,
+            pady=10
+        )
+        ttk.Button(
+            frame,
+            text="Rời phòng",
+            command=self.leave_room
+        ).pack(pady=6)
         self._show(frame)
         self._render_board()
 
@@ -259,14 +267,16 @@ class CaroApp:
             self.status_bar.set_message(data.get("message", "Lỗi đồng bộ"))
 
     def _render_board(self) -> None:
-        if not hasattr(self, "cells"):
+        if not hasattr(self, "board_widget") or not self.board_widget.winfo_exists():
             return
-        for row, values in enumerate(self.sync.board):
-            for col, value in enumerate(values):
-                self.cells[row][col].configure(text=value or "")
+        if self.sync.board:
+            try:
+                self.board_widget.render_board(self.sync.board)
+            except ValueError as error:
+                self.status_bar.set_message(str(error))
         self.turn_label.configure(
-            text=f"Vai: {self.sync.role} | Lượt: {self.sync.current_turn} "
-                 f"| Còn: {self.sync.remaining_time}s | Trạng thái: {self.sync.status}"
+            text=f"Vai: {self.sync.role} | Lượt: {self.sync.current_turn}"
+                f"| Còn: {self.sync.remaining_time}s | Trạng thái: {self.sync.status}"
         )
 
     def _show(self, view: tk.Widget) -> None:
