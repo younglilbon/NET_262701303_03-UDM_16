@@ -1,202 +1,150 @@
-# Phân tích Room & Match – Game Caro trực tuyến (UDM_16)
+﻿# Room & Match — hiện trạng module TV3
 
-- **Người phụ trách:** TV3 – Room & Match
-- **Giai đoạn:** 1 – Phân tích yêu cầu và thiết kế hệ thống
-- **Sản phẩm bàn giao:** Sơ đồ hoạt động Room & Match
+Cập nhật: 12/11/2026. Tài liệu mô tả mã nguồn hiện tại; phân biệt API nội bộ với chức năng đã tích hợp.
 
----
+## 1. Phạm vi và trách nhiệm
 
-## 1. Phạm vi
+TV3 quản lý Room, RoomManager, RoomStatus, Role, chủ phòng, X/O, spectator và ánh xạ người–phòng tại `Code/Server/Room_Match/`.
 
-Module Room & Match chịu trách nhiệm quản lý phòng đấu trên Server:
+TV3 chủ trì luồng tạo/vào/rời/đóng phòng, rematch và chuyển trạng thái phòng trong tầng application; không sở hữu toàn bộ application.py. TV1 quản lý mạng/protocol; TV2 danh tính/PlayerStatus; TV4 luật/kết quả; TV5 GameState/timer/snapshot/reconnect/lịch sử; TV6 GUI. Quyết định tích hợp 1.0 là mục tiêu tham chiếu, không phải bằng chứng nghiệm thu hoặc xác nhận đồng thuận cả nhóm.
 
-- Tạo phòng, tham gia phòng, rời phòng.
-- Danh sách phòng (kể cả danh sách trận đang diễn ra để khán giả vào xem).
-- Phân chia quân X/O.
-- Quản lý vai trò người chơi / khán giả.
-- Quản lý trạng thái phòng.
+## 2. Quy tắc hiện hành
 
-Module **không** đảm nhiệm: truyền nhận socket (TV1), đăng nhập (TV2), luật chơi và kiểm tra thắng thua (TV4), đồng bộ bàn cờ (TV5), giao diện (TV6).
+- Mỗi người chỉ thuộc một phòng, kể cả spectator hoặc người đang giữ chỗ reconnect.
+- Mỗi phòng tối đa hai người chơi; spectator không chiếm X/O và không tự trở thành chủ.
+- Tạo phòng: chủ cầm X, trạng thái WAITING. time_limit là số nguyên 5–600 giây, không nhận bool.
+- Mã phòng là 6 ký tự hex viết hoa. Sinh mã, kiểm tra trùng, sinh lại nếu cần và lưu phòng trong cùng khóa RLock để không ghi đè phòng cũ.
+- Vào chơi chỉ khi WAITING và còn vai trống. Người mới nhận X hoặc O còn trống; không đổi quân của người đang ở phòng. Đủ hai người chuyển READY.
+- Chỉ chủ phòng được bắt đầu khi READY. Chủ có thể cầm O sau chuyển chủ hoặc rematch.
+- Spectator được đăng ký vào phòng tồn tại; không đổi trạng thái phòng. Snapshot do tầng tích hợp phối hợp TV5 cung cấp.
+- Chủ động rời ván PLAYING/PAUSED: application yêu cầu TV5 chốt RESIGN rồi gỡ thành viên. Còn người chơi thì WAITING và chuyển chủ nếu cần; hết người chơi thì CLOSED, xóa phòng và giải phóng spectator.
+- Mất kết nối khi đang đấu: giữ chỗ trong RoomManager; TV5 chuyển GameState sang PAUSED và quản lý hạn reconnect. RoomStatus vẫn PLAYING. Spectator, người chưa có ván hoặc người có ván FINISHED được application dọn ngay.
+- detach_disconnected_player() chỉ gỡ người chơi khi phòng FINISHED/WAITING; bên gọi xác nhận offline và hết quyền giữ chỗ. Hàm không tự quyết định kết quả hay tạo RESIGN thứ hai.
+- rematch() nội bộ yêu cầu FINISHED và đủ hai người; đổi X/O, chuyển READY. Giữ room_id, host, name, spectator, time_limit, created_at và ánh xạ. Gọi lại khi READY bị từ chối. Hàm không thu thập đồng ý hai bên hoặc tạo GameState mới.
 
-## 2. Yêu cầu từ đề bài
-
-| Yêu cầu đề bài | Cách module Room & Match đáp ứng |
-|---|---|
-| Server hỗ trợ nhiều trận đấu đồng thời, quản lý trạng thái riêng từng phòng | `RoomManager` giữ nhiều đối tượng `Room` độc lập, có khóa luồng |
-| Xem danh sách trận đang diễn ra, tham gia với vai trò khán giả | `list_rooms(only_playing=True)` và `join_as_spectator` |
-| Khán giả vào giữa trận được nhận đủ trạng thái hiện tại | Room báo có khán giả mới, TV5 gửi toàn bộ trạng thái bàn cờ |
-| Server phân biệt người chơi và khán giả; khán giả không được đánh | `role_of()`, `can_move()`, `validate_move_permission()` |
-| Khán giả rời phòng không ảnh hưởng trận | `leave_room` chỉ xóa khỏi danh sách khán giả |
-
-## 3. Tác nhân và use case
-
-| Tác nhân | Use case |
-|---|---|
-| Chủ phòng (quân X) | Tạo phòng, bắt đầu trận, rời phòng, chơi lại |
-| Người chơi thứ hai (quân O) | Xem danh sách phòng, vào phòng chơi, rời phòng |
-| Khán giả | Xem danh sách trận đang diễn ra, vào xem, rời phòng |
-| Server | Quản lý nhiều phòng, phân vai, chặn thao tác không hợp lệ |
-
-## 4. Quy tắc nghiệp vụ
-
-1. Mỗi người chỉ ở **một phòng** tại một thời điểm.
-2. Mỗi phòng có tối đa **2 người chơi** (X và O); số khán giả không giới hạn.
-3. Chủ phòng cầm quân X, người vào chơi sau cầm quân O. Nếu người cầm X rời phòng khi chưa đấu, người vào sau nhận **vai còn trống** (không ghi đè người đang có trong phòng).
-4. Chỉ vào chơi được khi phòng ở trạng thái `WAITING`. Vào xem được ở mọi trạng thái, kể cả giữa trận.
-5. Chỉ chủ phòng được bắt đầu trận, và phòng phải đủ 2 người chơi.
-6. Khán giả không được gửi nước đi; Server từ chối.
-7. Khán giả rời phòng không ảnh hưởng đến trận đấu.
-8. Người chơi rời phòng giữa trận: trận bị hủy, người còn lại thắng do đối phương rời trận (`leave_room` trả `match_aborted=True` và `winner`; **cần thống nhất với TV4, TV5**). Phòng quay về `WAITING` để người khác vào chơi, không bị kẹt.
-9. Chủ phòng rời khi phòng còn người chơi: quyền chủ phòng chuyển cho người còn lại. Không còn người chơi: phòng đóng.
-10. Sau khi trận kết thúc, có thể chơi lại và đổi quân X/O.
-11. Các phòng độc lập, thao tác ở phòng này không ảnh hưởng phòng khác.
-
-## 5. Vai trò trong phòng
-
-| Vai trò | Giá trị | Được đánh cờ | Nhận cập nhật bàn cờ |
-|---|---|---|---|
-| Người chơi X | `X` | Có (đúng lượt) | Có |
-| Người chơi O | `O` | Có (đúng lượt) | Có |
-| Khán giả | `SPECTATOR` | Không | Có |
-
-## 6. Trạng thái phòng
+## 3. Trạng thái phòng
 
 | Trạng thái | Ý nghĩa |
 |---|---|
-| `WAITING` | Có chủ phòng, đang chờ người chơi thứ hai |
-| `READY` | Đủ 2 người chơi, chưa bắt đầu |
-| `PLAYING` | Trận đang diễn ra |
-| `FINISHED` | Trận kết thúc (thắng/thua/hòa/hết giờ); đủ 2 người thì có thể chơi lại |
-| `CLOSED` | Phòng đã đóng, bị xóa khỏi hệ thống |
+| WAITING | Một người chơi; có thể có spectator |
+| READY | Hai người chơi, chưa bắt đầu ván |
+| PLAYING | GameState PLAYING hoặc PAUSED; giữ chỗ reconnect |
+| FINISHED | Ván kết thúc, chờ thao tác tiếp theo hoặc dọn offline |
+| CLOSED | Không còn người chơi; đã xóa khỏi danh sách phòng |
 
 ```mermaid
 stateDiagram-v2
-    [*] --> WAITING: Chủ phòng tạo phòng
-    WAITING --> READY: Người chơi thứ 2 vào
-    READY --> WAITING: Người chơi thứ 2 rời
-    READY --> PLAYING: Chủ phòng bắt đầu
-    PLAYING --> FINISHED: Thắng / thua / hòa / hết giờ
-    PLAYING --> WAITING: Một người chơi rời giữa trận (người còn lại thắng)
-    FINISHED --> READY: Chơi lại (đổi X/O)
-    FINISHED --> WAITING: Một người chơi rời
-    WAITING --> CLOSED: Hết người chơi
-    READY --> CLOSED: Hết người chơi
-    FINISHED --> CLOSED: Hết người chơi
+    [*] --> WAITING: Tạo phòng
+    WAITING --> READY: Người thứ hai nhận vai trống
+    READY --> PLAYING: Chủ bắt đầu
+    PLAYING --> FINISHED: Kết quả từ TV5
+    READY --> WAITING: Người chơi rời
+    PLAYING --> WAITING: Application chốt RESIGN rồi gỡ người rời
+    FINISHED --> WAITING: Người chơi rời hoặc được dọn offline
+    FINISHED --> READY: Rematch nội bộ đổi X/O
+    WAITING --> CLOSED: Người chơi cuối rời, giải phóng spectator
     CLOSED --> [*]
 ```
 
-## 7. Sơ đồ hoạt động
+## 4. API nội bộ
 
-### 7.1 Tạo phòng
+| API | Hành vi |
+|---|---|
+| create_room(host, name, time_limit) | Tạo phòng, chống trùng mã |
+| join_as_player(room_id, username) | Nhận vai trống, đủ người thì READY |
+| join_as_spectator(room_id, username) | Thêm spectator và ánh xạ thành viên |
+| leave_room(username) | Gỡ thành viên và trả thông tin thay đổi |
+| detach_disconnected_player(username) | Gỡ người offline sau kết thúc theo điều kiện bên gọi |
+| start_match(room_id, requester) | Kiểm tra chủ và READY, chuyển PLAYING |
+| finish_match(room_id) | PLAYING → FINISHED |
+| rematch(room_id) | FINISHED đủ hai người → đổi quân, READY |
+| list_rooms(only_playing=False) | Summary phòng; lọc PLAYING bao gồm ván PAUSED |
+| validate_move_permission(username, room_id) | Chặn người ngoài, spectator hoặc phòng chưa PLAYING; TV5 kiểm tra tiếp trạng thái trận và lượt |
+
+Thông tin rời/detach gồm room_id, role, match_aborted, room_closed, winner, remaining_members, removed_members. Các danh sách là bản chụp độc lập; khi đóng phòng, removed_members gồm cả spectator. match_aborted là trường tương thích nội bộ, không phải kết quả ABORTED của GameResult.
+
+Room.to_summary() gồm room_id/name/host/status/players/spectator_count; to_dict() thêm spectators/time_limit. Chưa có match_id/match_status trong payload phòng; cần ghép dữ liệu TV5 ở tầng tích hợp.
+
+## 5. Sơ đồ hoạt động
+
+### Tạo và vào phòng
 
 ```mermaid
 flowchart TD
-    A([Client gửi CREATE_ROOM]) --> B{Đã ở trong phòng khác?}
-    B -- Có --> E1[/Trả lỗi ALREADY_IN_ROOM/]
-    B -- Không --> C[Server tạo Room, sinh room_id]
-    C --> D[Gán chủ phòng = X, trạng thái WAITING]
-    D --> F[/Trả ROOM_CREATED kèm thông tin phòng/]
-    F --> G([Cập nhật Room List cho các client khác])
+    A[create_room] --> B[Kiểm tra đầu vào và lấy khóa]
+    B --> C{Người đã ở phòng?}
+    C -- Có --> D[ALREADY_IN_ROOM]
+    C -- Không --> E[Sinh mã phòng]
+    E --> F{Mã đã tồn tại?}
+    F -- Có --> E
+    F -- Không --> G[Lưu Room WAITING, chủ X và ánh xạ]
+    H[join_as_player] --> I[Trong khóa: kiểm tra phòng và người]
+    I --> J{WAITING và còn vai trống?}
+    J -- Không --> K[ROOM_FULL]
+    J -- Có --> L[Gán vai trống và chuyển READY]
+    M[join_as_spectator] --> N[Kiểm tra phòng và người, thêm spectator]
+    N --> O[Application phối hợp TV5 gửi snapshot]
 ```
 
-### 7.2 Vào phòng (chơi hoặc xem)
+### Rời phòng và reconnect
 
 ```mermaid
 flowchart TD
-    A([Client gửi JOIN_ROOM + vai trò]) --> B{Phòng tồn tại?}
-    B -- Không --> E1[/ROOM_NOT_FOUND/]
-    B -- Có --> C{Đã ở phòng khác?}
-    C -- Có --> E2[/ALREADY_IN_ROOM/]
-    C -- Không --> D{Vai trò yêu cầu?}
-    D -- Chơi --> E{Phòng WAITING và chưa đủ 2 người?}
-    E -- Không --> E3[/ROOM_FULL/]
-    E -- Có --> F[Gán O, trạng thái READY]
-    D -- Xem --> G[Thêm vào danh sách khán giả]
-    F --> H[/Trả JOIN_OK kèm vai trò/]
-    G --> H
-    H --> I([Thông báo cho mọi người trong phòng])
-    G --> J([Báo TV5 gửi full trạng thái bàn cờ cho khán giả mới])
-```
-
-### 7.3 Rời phòng
-
-```mermaid
-flowchart TD
-    A([Client gửi LEAVE_ROOM hoặc mất kết nối]) --> B{Có trong phòng?}
-    B -- Không --> E1[/NOT_IN_ROOM/]
-    B -- Có --> C{Vai trò?}
-    C -- Khán giả --> D[Xóa khỏi danh sách khán giả]
-    D --> Z([Trận không bị ảnh hưởng])
-    C -- Người chơi --> F{Trạng thái phòng}
-    F -- PLAYING --> G[Hủy trận, người còn lại thắng, về WAITING]
-    F -- READY / FINISHED --> H[Quay về WAITING]
-    F -- WAITING --> I[Phòng trống]
-    G --> J{Còn người chơi?}
-    H --> J
+    A[Sự kiện rời hoặc mất kết nối] --> B{Chủ động rời?}
+    B -- Có --> C[Application chụp thành viên và trạng thái ván]
+    C --> D{Người chơi trong ván PLAYING hoặc PAUSED?}
+    D -- Có --> E[TV5 chốt RESIGN, application cập nhật FINISHED]
+    D -- Không --> F[RoomManager.leave_room]
+    E --> F
+    F --> G{Còn người chơi?}
+    G -- Có --> H[Nếu người chơi rời: WAITING, chuyển chủ nếu cần]
+    G -- Không --> I[CLOSED, giải phóng mọi spectator và ánh xạ]
+    H --> J[Application dọn TV2/TV5 rồi gửi sự kiện]
     I --> J
-    J -- Có --> K[Chuyển chủ phòng nếu cần]
-    J -- Không --> L[Đóng phòng, đưa khán giả ra]
-    K --> M([Thông báo cho người còn lại])
-    L --> M
+    B -- Không --> K{Spectator hoặc chưa có ván hoặc ván FINISHED?}
+    K -- Có --> C
+    K -- Không --> L[Giữ chỗ; TV5 tạm dừng và chờ reconnect]
+    L --> M[TV5 xử lý reconnect hoặc kết thúc ván]
+    M --> N[Application gọi detach để dọn offline sau kết thúc]
+    N --> G
 ```
 
-### 7.4 Bắt đầu trận
+### Rematch nội bộ
 
 ```mermaid
 flowchart TD
-    A([Client gửi START_MATCH]) --> B{Phòng tồn tại?}
-    B -- Không --> E1[/ROOM_NOT_FOUND/]
-    B -- Có --> C{Là chủ phòng?}
-    C -- Không --> E2[/NOT_HOST/]
-    C -- Có --> D{Trạng thái READY?}
-    D -- Không --> E3[/INVALID_STATE/]
-    D -- Có --> F[Đổi trạng thái PLAYING]
-    F --> G([Báo TV4 khởi tạo ván, TV5 broadcast cho cả phòng])
+    A[Tầng điều phối gọi rematch] --> B[Lấy khóa và tìm phòng]
+    B --> C{FINISHED và đủ hai người?}
+    C -- Không --> D[INVALID_STATE, giữ nguyên dữ liệu]
+    C -- Có --> E[Đổi X/O, chuyển READY]
+    E --> F[Giữ chủ, spectator, cấu hình, mã phòng và ánh xạ]
+    F --> G[Trả cùng đối tượng Room]
+    G --> H[Gọi lặp khi READY bị từ chối, không đổi lần hai]
 ```
 
-### 7.5 Chặn khán giả đánh cờ
+Sơ đồ rematch mô tả API nội bộ, không khẳng định quy trình chấp thuận hai bên qua mạng đã có.
 
-```mermaid
-flowchart TD
-    A([Server nhận MOVE]) --> B[Room.validate_move_permission]
-    B --> C{Người gửi có trong phòng?}
-    C -- Không --> E1[/NOT_IN_ROOM/]
-    C -- Có --> D{Là khán giả?}
-    D -- Có --> E2[/SPECTATOR_FORBIDDEN/]
-    D -- Không --> F{Phòng PLAYING?}
-    F -- Không --> E3[/INVALID_STATE/]
-    F -- Có --> G([Chuyển nước đi cho Game Engine của TV4])
+## 6. Tích hợp đã có và còn thiếu
+
+Đã nối CREATE_ROOM, JOIN_ROOM, JOIN_AS_SPECTATOR, LIST_ROOMS, START_MATCH, LEAVE_ROOM qua ServerApplication. Rời/đóng phòng đã phối hợp TV2/TV5 để chốt kết quả một lần và dọn thành viên; xem [room_match_integration.md](room_match_integration.md).
+
+Còn thiếu hoặc cần phối hợp:
+
+- REMATCH/REMATCH_RESPONSE, hai bên đồng ý, hạn 30 giây và hủy yêu cầu khi rời/disconnect.
+- Snapshot cho spectator vào PAUSED/FINISHED; thứ tự ROOM_JOINED/ROOM_STARTED trước snapshot.
+- Phát ROOM_LIST sau mọi thay đổi; metadata trận trong payload phòng.
+- Chặn INVITE_PENDING tại lệnh tạo/vào phòng, phối hợp TV2.
+- TV6 xử lý ROOM_CLOSED, xác nhận rời phòng và sửa màn hình phòng.
+- Giữ thời gian reconnect và BOTH_DISCONNECTED/ABORTED do TV5/TV4 chủ trì; TV3 hỗ trợ dọn thành viên.
+
+## 7. Kiểm chứng
+
+Test module: Code/Tests/Unit/test_room_match.py. Test tích hợp: Code/Tests/Integration/test_server_application.py; dùng callback mạng giả và lịch sử trong thư mục tạm.
+
+```powershell
+python -m unittest Code.Tests.Unit.test_room_match Code.Tests.Integration.test_server_application -v
 ```
 
-## 8. Tình huống ngoại lệ
+Test trùng mã ép nhiều lần trùng phần UUID rút gọn, xác nhận phòng cũ không mất dữ liệu. Test rematch kiểm tra bảo toàn dữ liệu và ánh xạ, phòng khác không đổi, chủ cầm O vẫn bắt đầu được, gọi lặp/sai trạng thái không sửa dữ liệu.
 
-| Tình huống | Server xử lý | Mã lỗi |
-|---|---|---|
-| Vào phòng không tồn tại | Từ chối | `ROOM_NOT_FOUND` |
-| Vào chơi khi phòng đã đủ 2 người | Từ chối, gợi ý vào xem | `ROOM_FULL` |
-| Đang trong phòng mà vào phòng khác | Từ chối | `ALREADY_IN_ROOM` |
-| Rời phòng khi không ở phòng nào | Từ chối | `NOT_IN_ROOM` |
-| Người không phải chủ phòng bấm bắt đầu | Từ chối | `NOT_HOST` |
-| Bắt đầu khi chưa đủ 2 người | Từ chối | `INVALID_STATE` |
-| Khán giả gửi nước đi | Từ chối | `SPECTATOR_FORBIDDEN` |
-| Người chơi mất kết nối giữa trận | Xử lý như rời phòng (chi tiết phối hợp TV1, TV5) | – |
-| `username` rỗng/không phải chuỗi, `time_limit` ngoài 5–600 giây | Từ chối | `INVALID_ARGUMENT` |
-| Hai người cùng vào ô chơi cuối cùng | Một người thành công nhờ khóa luồng | `ROOM_FULL` |
-
-## 9. Điểm giao tiếp cần thống nhất với các thành viên
-
-| Với | Nội dung cần thống nhất | Trạng thái |
-|---|---|---|
-| TV1 | Định dạng message, tên lệnh (`CREATE_ROOM`, `JOIN_ROOM`, `LEAVE_ROOM`, `LIST_ROOMS`, `START_MATCH`), bảng mã lỗi | Chưa chốt |
-| TV2 | Định danh người chơi dùng `username` hay `player_id` | Chưa chốt |
-| TV4 | Người chơi rời giữa trận ghi là "đối thủ thắng" hay "hủy trận"; ai gọi `finish_match` | Chưa chốt |
-| TV5 | Khi khán giả vào giữa trận, TV5 gửi full trạng thái; TV3 chỉ báo có khán giả mới | Chưa chốt |
-| TV6 | Dữ liệu hiển thị Room List và thông tin phòng (`to_summary`, `to_dict`) | Chưa chốt |
-
-## 10. Sản phẩm bàn giao giai đoạn 1
-
-- [ ] Tài liệu này (`room_match_analysis.md`)
-- [ ] Ảnh sơ đồ trạng thái phòng
-- [ ] Ảnh các sơ đồ hoạt động (tạo phòng, vào phòng, rời phòng, bắt đầu trận, chặn khán giả)
-- [ ] File nguồn sơ đồ (`.mmd` hoặc `.drawio`)
-- [ ] Các điểm ở mục 9 đã được thống nhất với nhóm
+Lần kiểm tra ngày 12/11/2026: sáu module unittest theo README, 70/70 test đạt. Đây là kiểm chứng mã tại workspace, không thay thế nghiệm thu GUI hoặc rematch hai bên đồng ý. Sơ đồ Mermaid chưa được xác minh bằng trình render; minh chứng GUI và demo nhiều phòng vẫn cần bổ sung cùng nhóm.

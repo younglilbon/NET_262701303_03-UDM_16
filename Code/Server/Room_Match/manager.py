@@ -60,8 +60,12 @@ class RoomManager:
         with self._lock:
             if host in self._user_room:
                 raise RoomError(ALREADY_IN_ROOM)
+            # Check and reserve the ID under the same lock as room insertion.
+            room_id = uuid.uuid4().hex[:6].upper()
+            while room_id in self._rooms:
+                room_id = uuid.uuid4().hex[:6].upper()
             room = Room(
-                room_id=uuid.uuid4().hex[:6].upper(),
+                room_id=room_id,
                 host=host,
                 name=(name or "").strip() or f"Phòng của {host}",
                 time_limit=time_limit,

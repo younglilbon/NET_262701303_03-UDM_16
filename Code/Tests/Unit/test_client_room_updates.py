@@ -58,6 +58,17 @@ class TestClientRoomUpdates(unittest.TestCase):
         self.app._handle_message({"type": "ROOM_JOINED", "room": room})
         self.app.show_room_view.assert_called_once_with(room)
 
+    def test_room_player_text_uses_server_role_mapping(self):
+        room = {
+            "room_id": "ROOM_B",
+            "status": "READY",
+            "players": {"X": "Alice", "O": "Bobby"},
+        }
+        self.assertEqual(
+            CaroApp._format_room_players(room),
+            "Alice: X\nBobby: O",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

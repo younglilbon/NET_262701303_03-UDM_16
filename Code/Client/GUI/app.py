@@ -99,13 +99,13 @@ class CaroApp:
             text=f"Phòng {self.room_id or ''} — {room.get('status', 'WAITING')}",
             font=("Segoe UI", 18, "bold"),
         ).pack(pady=14)
-        players = room.get("players", {})
+        players = room.get("player", {})
         if isinstance(players, dict):
-            players_text="\n".join(f"{name}: {role}" for name, role in players.items())
+            players_text="\n".join(f"{name}: {role}" for name, role in players.item())
         else:
             players_text="\n".join(str(p) for p in players)
         ttk.Label(
-            frame, 
+            frame,
             text=players_text or "Chưa có người chơi",
             justify=tk.CENTER,
         ).pack(pady=6)
@@ -117,6 +117,15 @@ class CaroApp:
         ).pack(pady=6)
         ttk.Button(frame, text="Rời phòng", command=self.leave_room).pack(pady=6)
         self._show(frame)
+
+    @staticmethod
+    def _format_room_players(room: dict) -> str:
+        players = room.get("players", {})
+        if isinstance(players, dict):
+            return "\n".join(
+                f"{name}: {role}" for role, name in players.items()
+            )
+        return "\n".join(str(player) for player in players)
 
     def show_game_view(self) -> None:
         frame = ttk.Frame(self.root, padding=8)

@@ -58,7 +58,8 @@
 │   └── Tests/
 │       ├── Integration/
 │       │   ├── test_server_application.py
-│       │   └── test_synchronization.py
+│       │   ├── test_synchronization.py
+│       │   └── test_user_lobby_tcp.py
 │       ├── Performance/
 │       └── Unit/
 │           ├── test_client_room_updates.py
@@ -140,7 +141,7 @@ Server và Client trao đổi message JSON UTF-8, mỗi message nằm trên mộ
 ### Chạy kiểm thử
 
 ```powershell
-python -m unittest Code.Tests.Unit.test_room_match Code.Tests.Unit.test_game_engine Code.Tests.Unit.test_protocol Code.Tests.Unit.test_client_room_updates Code.Tests.Integration.test_server_application Code.Tests.Integration.test_synchronization -v
+python -m unittest Code.Tests.Unit.test_user_lobby Code.Tests.Integration.test_user_lobby_tcp Code.Tests.Unit.test_room_match Code.Tests.Unit.test_game_engine Code.Tests.Unit.test_protocol Code.Tests.Unit.test_client_room_updates Code.Tests.Integration.test_server_application Code.Tests.Integration.test_synchronization -v
 ```
 
 ---

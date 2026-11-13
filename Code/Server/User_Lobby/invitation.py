@@ -34,14 +34,7 @@ class InvitationManager:
                 error = "Invalid target name"
             else:
                 target_key = requested_target.strip().casefold()
-                recipient = next(
-                    (
-                        player
-                        for player in self._players.get_players()
-                        if player.name.casefold() == target_key
-                    ),
-                    None,
-                )
+                recipient = self._players.get_player_by_name(target_key)
                 if recipient is None or recipient.connection is None:
                     error = "Target player is not online"
                 elif recipient is sender:
@@ -95,14 +88,7 @@ class InvitationManager:
             elif recipient.name.casefold() != invitation.recipient_key:
                 error = "Only the invited player can respond"
             else:
-                sender = next(
-                    (
-                        player
-                        for player in self._players.get_players()
-                        if player.name.casefold() == invitation.sender_key
-                    ),
-                    None,
-                )
+                sender = self._players.get_player_by_name(invitation.sender_key)
                 if (
                     sender is None
                     or sender.connection is None
@@ -159,14 +145,7 @@ class InvitationManager:
                 if player_key not in (invitation.sender_key, invitation.recipient_key):
                     continue
                 del self._invitations[invite_id]
-                participant = next(
-                    (
-                        player
-                        for player in self._players.get_players()
-                        if player.name.casefold() == player_key
-                    ),
-                    None,
-                )
+                participant = self._players.get_player_by_name(player_key)
                 if (
                     participant is not None
                     and participant.status is PlayerStatus.INVITE_PENDING
@@ -181,14 +160,7 @@ class InvitationManager:
                     if invitation.sender_key == player_key
                     else invitation.sender_key
                 )
-                other = next(
-                    (
-                        player
-                        for player in self._players.get_players()
-                        if player.name.casefold() == other_key
-                    ),
-                    None,
-                )
+                other = self._players.get_player_by_name(other_key)
                 if other is not None:
                     if other.status is PlayerStatus.INVITE_PENDING:
                         other.status = (
