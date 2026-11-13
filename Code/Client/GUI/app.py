@@ -99,9 +99,9 @@ class CaroApp:
             text=f"Phòng {self.room_id or ''} — {room.get('status', 'WAITING')}",
             font=("Segoe UI", 18, "bold"),
         ).pack(pady=14)
-        players = room.get("player", {})
+        players = room.get("players", {})
         if isinstance(players, dict):
-            players_text="\n".join(f"{name}: {role}" for name, role in players.item())
+            players_text="\n".join(f"{name}: {role}" for name, role in players.items())
         else:
             players_text="\n".join(str(p) for p in players)
         ttk.Label(
