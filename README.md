@@ -153,7 +153,7 @@ python -m unittest Code.Tests.Unit.test_user_lobby Code.Tests.Integration.test_u
 
 ## Danh sách thành viên
 
-| STT | Họ và tên               | MSSV         |
+| STT |      Họ và tên          |     MSSV     |
 |----:|-------------------------|-------------:|
 |   1 | Lê Văn Khải             | 051206008834 |
 |   2 | Trần Nguyễn Hoàng Minh  | 083206001369 |
@@ -164,7 +164,7 @@ python -m unittest Code.Tests.Unit.test_user_lobby Code.Tests.Integration.test_u
 
 ## Phân chia công việc
 
-| STT | Thành viên              | Phần phụ trách      | Công việc chính |
+| STT |       Thành viên        |    Phần phụ trách   | Công việc chính |
 |----:|-------------------------|---------------------|-----------------|
 |   1 | Lê Văn Khải             | Network & Protocol  | Phân tích và xây dựng kết nối Socket Client–Server; thiết kế Protocol, Message và mã thông điệp; xử lý gửi/nhận dữ liệu, timeout, mất kết nối và lỗi mạng. |
 |   2 | Trần Nguyễn Hoàng Minh  | User & Lobby         | Phân tích và xây dựng chức năng người chơi, đăng nhập, trạng thái Online/Offline, danh sách người chơi trực tuyến và lời mời đấu (gửi, chấp nhận hoặc từ chối). |
