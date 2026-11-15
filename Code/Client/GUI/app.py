@@ -21,6 +21,8 @@ class CaroApp:
         self.username = ""
         self.room_id: str | None = None
         self.rooms: list[dict] = []
+        self._room_action_pending = False
+        self._leaving_room = False
         self.sync = ClientStateSync("", ui_callback=self._sync_event)
         self.current_view: tk.Widget | None = None
         self.status_bar = StatusBar(root)
@@ -99,14 +101,9 @@ class CaroApp:
             text=f"Phòng {self.room_id or ''} — {room.get('status', 'WAITING')}",
             font=("Segoe UI", 18, "bold"),
         ).pack(pady=14)
-        players = room.get("player", {})
-        if isinstance(players, dict):
-            players_text="\n".join(f"{name}: {role}" for name, role in players.item())
-        else:
-            players_text="\n".join(str(p) for p in players)
         ttk.Label(
             frame,
-            text=players_text or "Chưa có người chơi",
+            text=self._format_room_players(room) or "Chưa có người chơi",
             justify=tk.CENTER,
         ).pack(pady=6)
         ttk.Button(
@@ -161,10 +158,15 @@ class CaroApp:
         })
 
     def create_room(self) -> None:
+        if self.room_id is not None or self._room_action_pending:
+            return
         name = simpledialog.askstring("Tạo phòng", "Tên phòng:", parent=self.root) or ""
         self.client.send({"type": "CREATE_ROOM", "name": name, "time_limit": 30})
+        self._room_action_pending = True
 
     def join_room(self, spectator: bool) -> None:
+        if self.room_id is not None or self._room_action_pending:
+            return
         selection = self.room_list.curselection()
         if not selection:
             messagebox.showinfo("Chọn phòng", "Hãy chọn một phòng trước.")
@@ -172,6 +174,7 @@ class CaroApp:
         room = self.rooms[selection[0]]
         message_type = "JOIN_AS_SPECTATOR" if spectator else "JOIN_ROOM"
         self.client.send({"type": message_type, "room_id": room["room_id"]})
+        self._room_action_pending = True
 
     def invite_player(self) -> None:
         selection = self.player_list.curselection()
@@ -184,9 +187,10 @@ class CaroApp:
         })
 
     def leave_room(self) -> None:
+        if self.room_id is None or self._leaving_room:
+            return
         self.client.send({"type": "LEAVE_ROOM"})
-        self.room_id = None
-        self.show_lobby_view()
+        self._leaving_room = True
 
     def list_rooms(self) -> None:
         self.client.send({"type": "LIST_ROOMS"})
@@ -226,6 +230,7 @@ class CaroApp:
                 return
             self.show_room_view(room)
         elif message_type in ("ROOM_CREATED", "ROOM_JOINED"):
+            self._room_action_pending = False
             room = message.get("room")
             if room:
                 self.room_id = room.get("room_id", self.room_id)
@@ -251,14 +256,23 @@ class CaroApp:
                 "invite_id": message.get("invite_id"),
                 "accepted": accepted,
             })
-        elif message_type == "ROOM_LEFT":
-            self.list_rooms()
+        elif message_type in ("ROOM_LEFT", "ROOM_CLOSED"):
+            self._return_to_lobby()
         elif message_type in ("ERROR", "CONNECTION_ERROR"):
+            self._room_action_pending = False
+            self._leaving_room = False
             self.status_bar.set_message(message.get("message", "Lỗi kết nối"))
             if message_type == "CONNECTION_ERROR":
                 self.status_bar.set_connection("Mất kết nối")
             else:
                 messagebox.showerror("Lỗi", message.get("message", "Yêu cầu thất bại"))
+
+    def _return_to_lobby(self) -> None:
+        self.room_id = None
+        self._room_action_pending = False
+        self._leaving_room = False
+        self.sync = ClientStateSync(self.username, ui_callback=self._sync_event)
+        self.show_lobby_view()
 
     def _sync_event(self, event_type: str, data: dict) -> None:
         self.root.after(0, self._show_sync_event, event_type, data)
