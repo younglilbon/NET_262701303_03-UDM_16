@@ -10,7 +10,7 @@
 ## Cấu trúc repository
 
 ```text
-.
+UDM_16 — Game Caro trực tuyến
 ├── Code/
 │   ├── Client/
 │   │   ├── Game/
@@ -74,11 +74,11 @@
 │       ├── room_match_analysis.md
 │       ├── room_match_integration.md
 │       ├── synchronization_design.md
-│       └── user_lobby.md
+│       ├── user_lobby.md
+│       └── synchronization_design.md
 ├── Extra/
-│   ├── Assign tasks-Test plan/
+│   └── Assign tasks-Test plan/
 │       └── ggsheet.md
-│   └── TV5_Synchronization_Design.md
 ├── PPTX/
 ├── .gitignore
 ├── README.md
