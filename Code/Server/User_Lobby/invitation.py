@@ -131,10 +131,10 @@ class InvitationManager:
                 self._send_message(cancelled_connection, packet)
             return self._error(connection, error)
 
-        if accepted and self._on_accept is not None:
-            self._on_accept(invitation.sender_name, invitation.recipient_name)
         self._send_message(sender_connection, result)
         self._send_message(recipient_connection, result)
+        if accepted and self._on_accept is not None:
+            self._on_accept(invitation.sender_name, invitation.recipient_name)
         return True
 
     def cancel_for(self, player_name: str) -> None:

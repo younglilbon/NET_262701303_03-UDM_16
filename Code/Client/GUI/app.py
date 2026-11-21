@@ -256,6 +256,30 @@ class CaroApp:
                 "invite_id": message.get("invite_id"),
                 "accepted": accepted,
             })
+        elif message_type == "INVITE_RESULT":
+            status = message.get("status")
+            sender = message.get("from", "")
+            recipient = message.get("to", "")
+
+            if status == "PENDING" and self.username == sender:
+                self.status_bar.set_message(
+                    f"Đang chờ {recipient} phản hồi lời mời...", "warning"
+                )
+            elif status == "REJECTED":
+                if self.username == sender:
+                    text = f"{recipient} đã từ chối lời mời đấu."
+                    self.status_bar.set_message(text, "warning")
+                    messagebox.showinfo("Lời mời bị từ chối", text)
+                elif self.username == recipient:
+                    self.status_bar.set_message("Bạn đã từ chối lời mời đấu.", "info")
+            elif status == "ACCEPTED":
+                if self.username == sender:
+                    text = f"{recipient} đã chấp nhận lời mời đấu."
+                else:
+                    text = "Bạn đã chấp nhận lời mời đấu."
+                self.status_bar.set_message(text, "success")
+            elif status == "CANCELLED":
+                self.status_bar.set_message("Lời mời đấu đã bị hủy.", "warning")
         elif message_type in ("ROOM_LEFT", "ROOM_CLOSED"):
             self._return_to_lobby()
         elif message_type in ("ERROR", "CONNECTION_ERROR"):
