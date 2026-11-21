@@ -1,10 +1,3 @@
-"""
-TV3 - Room & Match
-Unit Test cho module Room & Match.
-
-Chạy từ thư mục gốc dự án:
-    python -m unittest Code.Tests.Unit.test_room_match -v
-"""
 import unittest
 from copy import deepcopy
 from unittest.mock import patch
@@ -82,6 +75,19 @@ class TestRoom(unittest.TestCase):
         with self.assertRaises(RoomError) as c:
             self.m.join_as_spectator(self.r.room_id, "an")
         self.assertEqual(c.exception.code, ALREADY_IN_ROOM)
+
+    def test_spectator_cannot_join_another_room_as_player(self):
+        other_room = self.m.create_room("dung")
+        self.m.join_as_spectator(self.r.room_id, "chi")
+
+        with self.assertRaises(RoomError) as ctx:
+            self.m.join_as_player(other_room.room_id, "chi")
+
+        self.assertEqual(ctx.exception.code, ALREADY_IN_ROOM)
+        self.assertIs(self.m.room_of("chi"), self.r)
+        self.assertEqual(self.r.role_of("chi"), Role.SPECTATOR)
+        self.assertEqual(other_room.status, RoomStatus.WAITING)
+        self.assertEqual(other_room.players, {Role.PLAYER_X: "dung"})
 
     def test_unknown_room(self):
         with self.assertRaises(RoomError) as c:
