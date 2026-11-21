@@ -118,6 +118,40 @@ class TestClientRoomUpdates(unittest.TestCase):
         self.assertIsNone(self.app.room_id)
         self.app.show_lobby_view.assert_called_once_with()
 
+    def test_invitation_rejection_is_shown_to_sender(self):
+        self.app.username = "Alice"
+        self.app.status_bar = Mock()
+
+        with patch.object(app_module.messagebox, "showinfo") as showinfo:
+            self.app._handle_message({
+                "type": "INVITE_RESULT",
+                "from": "Alice",
+                "to": "Bobby",
+                "status": "REJECTED",
+            })
+
+        self.app.status_bar.set_message.assert_called_once_with(
+            "Bobby đã từ chối lời mời đấu.", "warning"
+        )
+        showinfo.assert_called_once_with(
+            "Lời mời bị từ chối", "Bobby đã từ chối lời mời đấu."
+        )
+
+    def test_invitation_acceptance_is_shown_before_entering_game(self):
+        self.app.username = "Alice"
+        self.app.status_bar = Mock()
+
+        self.app._handle_message({
+            "type": "INVITE_RESULT",
+            "from": "Alice",
+            "to": "Bobby",
+            "status": "ACCEPTED",
+        })
+
+        self.app.status_bar.set_message.assert_called_once_with(
+            "Bobby đã chấp nhận lời mời đấu.", "success"
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
