@@ -1,5 +1,7 @@
 """Tkinter client for the Caro TCP server."""
 
+import math
+import time
 import tkinter as tk
 from tkinter import messagebox, simpledialog, ttk
 
@@ -23,12 +25,15 @@ class CaroApp:
         self.rooms: list[dict] = []
         self._room_action_pending = False
         self._leaving_room = False
+        self._turn_clock_remaining = 0.0
+        self._turn_clock_deadline: float | None = None
         self.sync = ClientStateSync("", ui_callback=self._sync_event)
         self.current_view: tk.Widget | None = None
         self.status_bar = StatusBar(root)
         self.status_bar.pack(side=tk.BOTTOM, fill=tk.X)
         self.root.protocol("WM_DELETE_WINDOW", self.close)
         self.show_login_view()
+        self.root.after(1000, self._update_turn_clock)
 
     def show_login_view(self) -> None:
         frame = ttk.Frame(self.root, padding=24)
@@ -302,16 +307,59 @@ class CaroApp:
         self.root.after(0, self._show_sync_event, event_type, data)
 
     def _show_sync_event(self, event_type: str, data: dict) -> None:
-        if event_type == "MOVE_UPDATED":
-            self._render_board()
-        elif event_type == "MATCH_OVER":
-            messagebox.showinfo("Kết thúc trận", f"Kết quả: {data.get('winner')}")
-        elif event_type == "MATCH_PAUSED":
+        if event_type in ("FULL_SYNC", "MOVE_UPDATED", "MATCH_RESUMED"):
+            remaining_time = (
+                data.get("remaining_time", self.sync.remaining_time)
+                if self.sync.status == "PLAYING"
+                else 0
+            )
+            self._set_turn_clock(
+                remaining_time,
+                running=self.sync.status == "PLAYING",
+            )
+            if event_type in ("FULL_SYNC", "MOVE_UPDATED"):
+                self._render_board()
+        if event_type == "MATCH_PAUSED":
+            self._pause_turn_clock()
+            self._refresh_turn_label()
             self.status_bar.set_message("Đối thủ mất kết nối; đang chờ kết nối lại.")
         elif event_type == "MATCH_RESUMED":
             self.status_bar.set_message("Trận đấu tiếp tục.")
+            self._refresh_turn_label()
+        elif event_type == "MATCH_OVER":
+            self._set_turn_clock(0, running=False)
+            self._refresh_turn_label()
+            messagebox.showinfo("Kết thúc trận", f"Kết quả: {data.get('winner')}")
         elif event_type == "SYNC_ERROR":
             self.status_bar.set_message(data.get("message", "Lỗi đồng bộ"))
+
+    def _set_turn_clock(self, remaining_time: float, *, running: bool) -> None:
+        self._turn_clock_remaining = max(0.0, float(remaining_time))
+        self._turn_clock_deadline = (
+            time.monotonic() + self._turn_clock_remaining if running else None
+        )
+
+    def _current_turn_remaining(self) -> float:
+        if self._turn_clock_deadline is None:
+            return self._turn_clock_remaining
+        return max(0.0, self._turn_clock_deadline - time.monotonic())
+
+    def _pause_turn_clock(self) -> None:
+        self._turn_clock_remaining = self._current_turn_remaining()
+        self._turn_clock_deadline = None
+
+    def _update_turn_clock(self) -> None:
+        self._refresh_turn_label()
+        self.root.after(1000, self._update_turn_clock)
+
+    def _refresh_turn_label(self) -> None:
+        if not hasattr(self, "turn_label") or not self.turn_label.winfo_exists():
+            return
+        self.turn_label.configure(
+            text=f"Vai: {self.sync.role} | Lượt: {self.sync.current_turn}"
+                f" | Còn: {math.ceil(self._current_turn_remaining())}s"
+                f" | Trạng thái: {self.sync.status}"
+        )
 
     def _render_board(self) -> None:
         if not hasattr(self, "board_widget") or not self.board_widget.winfo_exists():
@@ -321,10 +369,7 @@ class CaroApp:
                 self.board_widget.render_board(self.sync.board)
             except ValueError as error:
                 self.status_bar.set_message(str(error))
-        self.turn_label.configure(
-            text=f"Vai: {self.sync.role} | Lượt: {self.sync.current_turn}"
-                f"| Còn: {self.sync.remaining_time}s | Trạng thái: {self.sync.status}"
-        )
+        self._refresh_turn_label()
 
     def _show(self, view: tk.Widget) -> None:
         if self.current_view is not None:

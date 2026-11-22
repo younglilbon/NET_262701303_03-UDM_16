@@ -70,6 +70,39 @@ class TestClientRoomUpdates(unittest.TestCase):
             "Alice: X\nBobby: O",
         )
 
+    def test_turn_clock_counts_down_from_server_time(self):
+        self.app._turn_clock_remaining = 0.0
+        self.app._turn_clock_deadline = None
+        with patch.object(app_module.time, "monotonic", side_effect=[100.0, 102.1]):
+            self.app._set_turn_clock(30, running=True)
+            self.assertAlmostEqual(self.app._current_turn_remaining(), 27.9)
+
+    def test_turn_clock_stays_paused_until_resumed(self):
+        self.app._turn_clock_remaining = 0.0
+        self.app._turn_clock_deadline = None
+        with patch.object(
+            app_module.time, "monotonic", side_effect=[100.0, 104.0, 200.0]
+        ):
+            self.app._set_turn_clock(30, running=True)
+            self.app._pause_turn_clock()
+            self.assertAlmostEqual(self.app._current_turn_remaining(), 26.0)
+
+    def test_turn_clock_tick_updates_label_and_reschedules(self):
+        self.app.root = Mock()
+        self.app.turn_label = Mock()
+        self.app.turn_label.winfo_exists.return_value = True
+        self.app.sync.role = "X"
+        self.app.sync.current_turn = "X"
+        self.app.sync.status = "PLAYING"
+        self.app._turn_clock_deadline = 102.1
+
+        with patch.object(app_module.time, "monotonic", return_value=100.1):
+            self.app._update_turn_clock()
+
+        self.app.turn_label.configure.assert_called_once()
+        self.assertIn(" | Còn: 2s", self.app.turn_label.configure.call_args.kwargs["text"])
+        self.app.root.after.assert_called_once_with(1000, self.app._update_turn_clock)
+
     def test_room_view_displays_server_players(self):
         self.app.root = Mock()
         self.app.client = Mock()
