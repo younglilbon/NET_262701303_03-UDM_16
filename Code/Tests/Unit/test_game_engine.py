@@ -32,3 +32,44 @@ class TestGameEngine(unittest.TestCase):
     def test_detects_full_board(self):
         self.assertTrue(GameEngine.is_board_full([["X", "O"], ["O", "X"]]))
         self.assertFalse(GameEngine.is_board_full([["X", ""], ["O", "X"]]))
+
+    def test_detects_draw_on_full_board_without_winner(self):
+        size = 15
+
+        # Tao ban co day X/O, khong co 5 quan lien tiep
+        board = [
+            [
+                "X" if (row + 2 * col) % 4 < 2 else "O"
+                for col in range(size)
+            ]
+            for row in range(size)
+        ]
+
+        # 1. Kiem tra ban co da day
+        self.assertTrue(GameEngine.is_board_full(board))
+
+        # 2. Kiem tra khong co nguoi choi nao thang
+        for row in range(size):
+            for col in range(size):
+                symbol = board[row][col]
+                self.assertEqual(
+                    GameEngine.winning_line(board, row, col, symbol),
+                    (),
+                    f"Phat hien 5 quan lien tiep tai ({row}, {col})"
+                )
+
+        # 3. Tao ket qua hoa
+        result = GameEngine.result(
+            None,
+            {"X": "alice", "O": "bob"},
+            EndReason.BOARD_FULL,
+            size * size,
+        )
+
+        # 4. Kiem tra ket qua
+        self.assertTrue(result.is_draw)
+        self.assertEqual(result.reason, EndReason.BOARD_FULL)
+        self.assertIsNone(result.winner_id)
+        self.assertIsNone(result.loser_id)
+        self.assertIsNone(result.winner_symbol)
+        self.assertEqual(result.total_moves, 225)

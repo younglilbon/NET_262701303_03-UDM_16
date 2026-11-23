@@ -273,5 +273,6857 @@
       }
     ],
     "reason": "FIVE_IN_ROW"
+  },
+  {
+    "room_id": "887846",
+    "match_id": "d06a186c1c404cf085fc044623085725",
+    "start_time": "2026-11-15 22:10:16",
+    "end_time": "2026-11-15 22:10:29",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "Alice",
+      "loser_id": "Bob",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 0
+    },
+    "total_moves": 0,
+    "moves": [],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "722839",
+    "match_id": "f4edbda7def948f39718bbdb99618fdf",
+    "start_time": "2026-11-15 22:16:31",
+    "end_time": "2026-11-15 22:17:01",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "TIMEOUT",
+      "winner_id": "Bob",
+      "loser_id": "Alice",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 0
+    },
+    "total_moves": 0,
+    "moves": [],
+    "reason": "TIMEOUT"
+  },
+  {
+    "room_id": "722839",
+    "match_id": "9f473ca458254495a47d65a4337e5528",
+    "start_time": "2026-11-15 22:17:44",
+    "end_time": "2026-11-15 22:19:00",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "DISCONNECT",
+      "winner_id": "Alice",
+      "loser_id": "Bob",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 4
+    },
+    "total_moves": 4,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 8,
+        "timestamp": "22:17:46"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 8,
+        "timestamp": "22:17:48"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 12,
+        "timestamp": "22:17:49"
+      },
+      {
+        "move_number": 4,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 11,
+        "timestamp": "22:17:55"
+      }
+    ],
+    "reason": "DISCONNECT"
+  },
+  {
+    "room_id": "B2951B",
+    "match_id": "186fbf8f49834668acfd1c8f40bdfe35",
+    "start_time": "2026-11-16 20:36:26",
+    "end_time": "2026-11-16 20:36:56",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "TIMEOUT",
+      "winner_id": "Bob",
+      "loser_id": "Alice",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 0
+    },
+    "total_moves": 0,
+    "moves": [],
+    "reason": "TIMEOUT"
+  },
+  {
+    "room_id": "B2951B",
+    "match_id": "cfa8452d926e48b895545eb2d77b013a",
+    "start_time": "2026-11-16 20:38:13",
+    "end_time": "2026-11-16 20:38:16",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "Alice",
+      "loser_id": "Bob",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 0
+    },
+    "total_moves": 0,
+    "moves": [],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "707722",
+    "match_id": "972419527832450ca4e5c69ee53ffb59",
+    "start_time": "2026-11-16 20:45:13",
+    "end_time": "2026-11-16 20:46:20",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "DISCONNECT",
+      "winner_id": "Bob",
+      "loser_id": "Alice",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 2
+    },
+    "total_moves": 2,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 9,
+        "timestamp": "20:45:14"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 7,
+        "timestamp": "20:45:16"
+      }
+    ],
+    "reason": "DISCONNECT"
+  },
+  {
+    "room_id": "F273F6",
+    "match_id": "1d4e8597b1ee4956a118e9068e89b78c",
+    "start_time": "2026-11-16 20:49:20",
+    "end_time": "2026-11-16 20:50:01",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "FIVE_IN_ROW",
+      "winner_id": "Alice",
+      "loser_id": "Bob",
+      "winner_symbol": "X",
+      "winning_line": [
+        [
+          0,
+          11
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "total_moves": 15
+    },
+    "total_moves": 15,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 7,
+        "timestamp": "20:49:21"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 7,
+        "timestamp": "20:49:23"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 8,
+        "timestamp": "20:49:25"
+      },
+      {
+        "move_number": 4,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 6,
+        "timestamp": "20:49:26"
+      },
+      {
+        "move_number": 5,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 7,
+        "timestamp": "20:49:28"
+      },
+      {
+        "move_number": 6,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 8,
+        "timestamp": "20:49:30"
+      },
+      {
+        "move_number": 7,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 6,
+        "timestamp": "20:49:32"
+      },
+      {
+        "move_number": 8,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 8,
+        "timestamp": "20:49:36"
+      },
+      {
+        "move_number": 9,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 9,
+        "timestamp": "20:49:38"
+      },
+      {
+        "move_number": 10,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 1,
+        "col": 5,
+        "timestamp": "20:49:46"
+      },
+      {
+        "move_number": 11,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 10,
+        "timestamp": "20:49:51"
+      },
+      {
+        "move_number": 12,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 1,
+        "col": 6,
+        "timestamp": "20:49:53"
+      },
+      {
+        "move_number": 13,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 7,
+        "timestamp": "20:49:55"
+      },
+      {
+        "move_number": 14,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 1,
+        "col": 8,
+        "timestamp": "20:49:57"
+      },
+      {
+        "move_number": 15,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 0,
+        "col": 11,
+        "timestamp": "20:50:01"
+      }
+    ],
+    "reason": "FIVE_IN_ROW"
+  },
+  {
+    "room_id": "9515B6",
+    "match_id": "e11a18c5f6e9452fa0934a7ec1fbb739",
+    "start_time": "2026-11-16 21:10:23",
+    "end_time": "2026-11-16 21:10:53",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "TIMEOUT",
+      "winner_id": "Bob",
+      "loser_id": "Alice",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 0
+    },
+    "total_moves": 0,
+    "moves": [],
+    "reason": "TIMEOUT"
+  },
+  {
+    "room_id": "E7E4A3",
+    "match_id": "739a42a8d92e4fdf90d6b3273f057217",
+    "start_time": "2026-11-16 21:19:28",
+    "end_time": "2026-11-16 21:19:37",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "Bob",
+      "loser_id": "Alice",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 8,
+        "timestamp": "21:19:31"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "B662EA",
+    "match_id": "eb5ea40a3821475db614626d6783d8d7",
+    "start_time": "2026-11-21 19:25:51",
+    "end_time": "2026-11-21 19:26:27",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "TIMEOUT",
+      "winner_id": "Alice",
+      "loser_id": "Bob",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 10,
+        "col": 9,
+        "timestamp": "19:25:57"
+      }
+    ],
+    "reason": "TIMEOUT"
+  },
+  {
+    "room_id": "051DD7",
+    "match_id": "fed7008591504c60aeba7c087cfc49b9",
+    "start_time": "2026-11-21 19:33:29",
+    "end_time": "2026-11-21 19:33:36",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "Bob",
+      "loser_id": "Alice",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "19:33:31"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "CC6021",
+    "match_id": "896aeb5fe68d494895d7e8dd8cb6a54c",
+    "start_time": "2026-11-21 19:33:52",
+    "end_time": "2026-11-21 19:34:59",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "DISCONNECT",
+      "winner_id": "Bob",
+      "loser_id": "Alice",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 0
+    },
+    "total_moves": 0,
+    "moves": [],
+    "reason": "DISCONNECT"
+  },
+  {
+    "room_id": "6D7866",
+    "match_id": "4f2096a5bde84449b0b1b8ea3987dbad",
+    "start_time": "2026-11-21 19:38:08",
+    "end_time": "2026-11-21 19:38:38",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "TIMEOUT",
+      "winner_id": "Bob",
+      "loser_id": "Alice",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 0
+    },
+    "total_moves": 0,
+    "moves": [],
+    "reason": "TIMEOUT"
+  },
+  {
+    "room_id": "BC6BC5",
+    "match_id": "38964ba950024b8a9bc06fc26460b60b",
+    "start_time": "2026-11-21 19:39:37",
+    "end_time": "2026-11-21 19:41:11",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "DISCONNECT",
+      "winner_id": "Bob",
+      "loser_id": "Alice",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 2
+    },
+    "total_moves": 2,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 7,
+        "timestamp": "19:39:55"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 8,
+        "timestamp": "19:40:06"
+      }
+    ],
+    "reason": "DISCONNECT"
+  },
+  {
+    "room_id": "1EAA04",
+    "match_id": "3dd19c5dd08f446b89a445f14bfb7a45",
+    "start_time": "2026-11-21 19:57:24",
+    "end_time": "2026-11-21 19:58:55",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "TIMEOUT",
+      "winner_id": "Alice",
+      "loser_id": "Bob",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 9
+    },
+    "total_moves": 9,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 6,
+        "timestamp": "19:57:41"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 7,
+        "timestamp": "19:57:44"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 5,
+        "timestamp": "19:57:55"
+      },
+      {
+        "move_number": 4,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 5,
+        "timestamp": "19:57:58"
+      },
+      {
+        "move_number": 5,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 6,
+        "timestamp": "19:58:02"
+      },
+      {
+        "move_number": 6,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 8,
+        "timestamp": "19:58:05"
+      },
+      {
+        "move_number": 7,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 7,
+        "timestamp": "19:58:09"
+      },
+      {
+        "move_number": 8,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 7,
+        "timestamp": "19:58:19"
+      },
+      {
+        "move_number": 9,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 8,
+        "timestamp": "19:58:25"
+      }
+    ],
+    "reason": "TIMEOUT"
+  },
+  {
+    "room_id": "0956B1",
+    "match_id": "f135633519134c65830933e7fc844c0a",
+    "start_time": "2026-11-23 18:47:25",
+    "end_time": "2026-11-23 18:48:13",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "FIVE_IN_ROW",
+      "winner_id": "Alice",
+      "loser_id": "Bob",
+      "winner_symbol": "X",
+      "winning_line": [
+        [
+          7,
+          6
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          7,
+          2
+        ]
+      ],
+      "total_moves": 9
+    },
+    "total_moves": 9,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 3,
+        "timestamp": "18:47:42"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 4,
+        "timestamp": "18:47:46"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 4,
+        "timestamp": "18:47:49"
+      },
+      {
+        "move_number": 4,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 5,
+        "timestamp": "18:47:52"
+      },
+      {
+        "move_number": 5,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 5,
+        "timestamp": "18:47:54"
+      },
+      {
+        "move_number": 6,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 5,
+        "timestamp": "18:47:59"
+      },
+      {
+        "move_number": 7,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 2,
+        "timestamp": "18:48:03"
+      },
+      {
+        "move_number": 8,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 1,
+        "timestamp": "18:48:06"
+      },
+      {
+        "move_number": 9,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 6,
+        "timestamp": "18:48:13"
+      }
+    ],
+    "reason": "FIVE_IN_ROW"
+  },
+  {
+    "room_id": "0956B1",
+    "match_id": "8144984faab34f2f9fce0733cfedbea6",
+    "start_time": "2026-11-23 18:51:41",
+    "end_time": "2026-11-23 18:52:29",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "FIVE_IN_ROW",
+      "winner_id": "Bob",
+      "loser_id": "Alice",
+      "winner_symbol": "O",
+      "winning_line": [
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "total_moves": 16
+    },
+    "total_moves": 16,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 5,
+        "timestamp": "18:51:43"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 6,
+        "timestamp": "18:51:48"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 5,
+        "timestamp": "18:51:52"
+      },
+      {
+        "move_number": 4,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 5,
+        "timestamp": "18:51:56"
+      },
+      {
+        "move_number": 5,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 6,
+        "timestamp": "18:52:00"
+      },
+      {
+        "move_number": 6,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 7,
+        "timestamp": "18:52:03"
+      },
+      {
+        "move_number": 7,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 6,
+        "timestamp": "18:52:06"
+      },
+      {
+        "move_number": 8,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 7,
+        "timestamp": "18:52:07"
+      },
+      {
+        "move_number": 9,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 6,
+        "timestamp": "18:52:13"
+      },
+      {
+        "move_number": 10,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 6,
+        "timestamp": "18:52:15"
+      },
+      {
+        "move_number": 11,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 5,
+        "timestamp": "18:52:16"
+      },
+      {
+        "move_number": 12,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 7,
+        "timestamp": "18:52:18"
+      },
+      {
+        "move_number": 13,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 7,
+        "timestamp": "18:52:22"
+      },
+      {
+        "move_number": 14,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 7,
+        "timestamp": "18:52:25"
+      },
+      {
+        "move_number": 15,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 8,
+        "timestamp": "18:52:27"
+      },
+      {
+        "move_number": 16,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 7,
+        "timestamp": "18:52:29"
+      }
+    ],
+    "reason": "FIVE_IN_ROW"
+  },
+  {
+    "room_id": "0956B1",
+    "match_id": "ff95f3bf60d4462287b7e35f93469b89",
+    "start_time": "2026-11-23 18:57:33",
+    "end_time": "2026-11-23 18:58:07",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "FIVE_IN_ROW",
+      "winner_id": "Alice",
+      "loser_id": "Bob",
+      "winner_symbol": "X",
+      "winning_line": [
+        [
+          6,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          2,
+          9
+        ]
+      ],
+      "total_moves": 13
+    },
+    "total_moves": 13,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 5,
+        "timestamp": "18:57:35"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 5,
+        "timestamp": "18:57:37"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 6,
+        "timestamp": "18:57:39"
+      },
+      {
+        "move_number": 4,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 7,
+        "timestamp": "18:57:41"
+      },
+      {
+        "move_number": 5,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 7,
+        "timestamp": "18:57:44"
+      },
+      {
+        "move_number": 6,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 7,
+        "timestamp": "18:57:48"
+      },
+      {
+        "move_number": 7,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 8,
+        "timestamp": "18:57:52"
+      },
+      {
+        "move_number": 8,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 8,
+        "timestamp": "18:57:54"
+      },
+      {
+        "move_number": 9,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 6,
+        "timestamp": "18:57:56"
+      },
+      {
+        "move_number": 10,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 6,
+        "timestamp": "18:57:58"
+      },
+      {
+        "move_number": 11,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 9,
+        "timestamp": "18:58:00"
+      },
+      {
+        "move_number": 12,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 1,
+        "col": 10,
+        "timestamp": "18:58:02"
+      },
+      {
+        "move_number": 13,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 5,
+        "timestamp": "18:58:07"
+      }
+    ],
+    "reason": "FIVE_IN_ROW"
+  },
+  {
+    "room_id": "0956B1",
+    "match_id": "f2daa0174f3643418a41914378f1e001",
+    "start_time": "2026-11-23 19:02:17",
+    "end_time": "2026-11-23 19:02:41",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "FIVE_IN_ROW",
+      "winner_id": "Alice",
+      "loser_id": "Bob",
+      "winner_symbol": "X",
+      "winning_line": [
+        [
+          7,
+          7
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "total_moves": 9
+    },
+    "total_moves": 9,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 3,
+        "timestamp": "19:02:23"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 4,
+        "timestamp": "19:02:26"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 4,
+        "timestamp": "19:02:29"
+      },
+      {
+        "move_number": 4,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 4,
+        "timestamp": "19:02:30"
+      },
+      {
+        "move_number": 5,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 5,
+        "timestamp": "19:02:32"
+      },
+      {
+        "move_number": 6,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 5,
+        "timestamp": "19:02:35"
+      },
+      {
+        "move_number": 7,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 6,
+        "timestamp": "19:02:38"
+      },
+      {
+        "move_number": 8,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 6,
+        "timestamp": "19:02:39"
+      },
+      {
+        "move_number": 9,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 7,
+        "timestamp": "19:02:41"
+      }
+    ],
+    "reason": "FIVE_IN_ROW"
+  },
+  {
+    "room_id": "0956B1",
+    "match_id": "3d75067fd12c427c9952597228b2bd6d",
+    "start_time": "2026-11-23 19:04:32",
+    "end_time": "2026-11-23 19:08:22",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "FIVE_IN_ROW",
+      "winner_id": "Bob",
+      "loser_id": "Alice",
+      "winner_symbol": "O",
+      "winning_line": [
+        [
+          4,
+          9
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          8,
+          5
+        ]
+      ],
+      "total_moves": 84
+    },
+    "total_moves": 84,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 1,
+        "timestamp": "19:04:34"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 0,
+        "col": 2,
+        "timestamp": "19:04:36"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 0,
+        "col": 1,
+        "timestamp": "19:04:37"
+      },
+      {
+        "move_number": 4,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 1,
+        "timestamp": "19:04:39"
+      },
+      {
+        "move_number": 5,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 0,
+        "timestamp": "19:04:40"
+      },
+      {
+        "move_number": 6,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 1,
+        "col": 2,
+        "timestamp": "19:04:42"
+      },
+      {
+        "move_number": 7,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 2,
+        "timestamp": "19:04:46"
+      },
+      {
+        "move_number": 8,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 3,
+        "timestamp": "19:04:50"
+      },
+      {
+        "move_number": 9,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "19:04:53"
+      },
+      {
+        "move_number": 10,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 0,
+        "timestamp": "19:04:55"
+      },
+      {
+        "move_number": 11,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 2,
+        "timestamp": "19:05:01"
+      },
+      {
+        "move_number": 12,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 3,
+        "timestamp": "19:05:02"
+      },
+      {
+        "move_number": 13,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 1,
+        "timestamp": "19:05:04"
+      },
+      {
+        "move_number": 14,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 9,
+        "timestamp": "19:05:09"
+      },
+      {
+        "move_number": 15,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 8,
+        "timestamp": "19:05:10"
+      },
+      {
+        "move_number": 16,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 5,
+        "timestamp": "19:05:13"
+      },
+      {
+        "move_number": 17,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 6,
+        "timestamp": "19:05:15"
+      },
+      {
+        "move_number": 18,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 8,
+        "timestamp": "19:05:20"
+      },
+      {
+        "move_number": 19,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 6,
+        "timestamp": "19:05:21"
+      },
+      {
+        "move_number": 20,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 6,
+        "timestamp": "19:05:23"
+      },
+      {
+        "move_number": 21,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 7,
+        "timestamp": "19:05:26"
+      },
+      {
+        "move_number": 22,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 5,
+        "timestamp": "19:05:28"
+      },
+      {
+        "move_number": 23,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 5,
+        "timestamp": "19:05:30"
+      },
+      {
+        "move_number": 24,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 6,
+        "timestamp": "19:05:32"
+      },
+      {
+        "move_number": 25,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 4,
+        "timestamp": "19:05:35"
+      },
+      {
+        "move_number": 26,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 4,
+        "timestamp": "19:05:37"
+      },
+      {
+        "move_number": 27,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 3,
+        "timestamp": "19:05:39"
+      },
+      {
+        "move_number": 28,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 7,
+        "timestamp": "19:05:44"
+      },
+      {
+        "move_number": 29,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 8,
+        "timestamp": "19:05:46"
+      },
+      {
+        "move_number": 30,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 8,
+        "timestamp": "19:05:50"
+      },
+      {
+        "move_number": 31,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 6,
+        "timestamp": "19:05:52"
+      },
+      {
+        "move_number": 32,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 7,
+        "timestamp": "19:05:56"
+      },
+      {
+        "move_number": 33,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 10,
+        "timestamp": "19:05:59"
+      },
+      {
+        "move_number": 34,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 9,
+        "col": 7,
+        "timestamp": "19:06:01"
+      },
+      {
+        "move_number": 35,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 7,
+        "timestamp": "19:06:04"
+      },
+      {
+        "move_number": 36,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 6,
+        "timestamp": "19:06:07"
+      },
+      {
+        "move_number": 37,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 8,
+        "col": 8,
+        "timestamp": "19:06:09"
+      },
+      {
+        "move_number": 38,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 10,
+        "col": 8,
+        "timestamp": "19:06:11"
+      },
+      {
+        "move_number": 39,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 5,
+        "timestamp": "19:06:14"
+      },
+      {
+        "move_number": 40,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 11,
+        "col": 9,
+        "timestamp": "19:06:17"
+      },
+      {
+        "move_number": 41,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 12,
+        "col": 10,
+        "timestamp": "19:06:18"
+      },
+      {
+        "move_number": 42,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 11,
+        "col": 10,
+        "timestamp": "19:06:21"
+      },
+      {
+        "move_number": 43,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 11,
+        "col": 8,
+        "timestamp": "19:06:24"
+      },
+      {
+        "move_number": 44,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 10,
+        "col": 9,
+        "timestamp": "19:06:28"
+      },
+      {
+        "move_number": 45,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 9,
+        "timestamp": "19:06:30"
+      },
+      {
+        "move_number": 46,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 12,
+        "col": 9,
+        "timestamp": "19:06:32"
+      },
+      {
+        "move_number": 47,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 13,
+        "col": 9,
+        "timestamp": "19:06:34"
+      },
+      {
+        "move_number": 48,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 9,
+        "col": 11,
+        "timestamp": "19:06:37"
+      },
+      {
+        "move_number": 49,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 12,
+        "col": 8,
+        "timestamp": "19:06:39"
+      },
+      {
+        "move_number": 50,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 11,
+        "col": 7,
+        "timestamp": "19:06:42"
+      },
+      {
+        "move_number": 51,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 10,
+        "col": 7,
+        "timestamp": "19:06:45"
+      },
+      {
+        "move_number": 52,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 5,
+        "timestamp": "19:06:50"
+      },
+      {
+        "move_number": 53,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 8,
+        "col": 4,
+        "timestamp": "19:06:53"
+      },
+      {
+        "move_number": 54,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 8,
+        "timestamp": "19:06:57"
+      },
+      {
+        "move_number": 55,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 4,
+        "timestamp": "19:07:02"
+      },
+      {
+        "move_number": 56,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 9,
+        "col": 3,
+        "timestamp": "19:07:04"
+      },
+      {
+        "move_number": 57,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 4,
+        "timestamp": "19:07:11"
+      },
+      {
+        "move_number": 58,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 10,
+        "col": 4,
+        "timestamp": "19:07:14"
+      },
+      {
+        "move_number": 59,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 5,
+        "timestamp": "19:07:16"
+      },
+      {
+        "move_number": 60,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 10,
+        "col": 5,
+        "timestamp": "19:07:21"
+      },
+      {
+        "move_number": 61,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 10,
+        "col": 6,
+        "timestamp": "19:07:23"
+      },
+      {
+        "move_number": 62,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 11,
+        "col": 6,
+        "timestamp": "19:07:25"
+      },
+      {
+        "move_number": 63,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 11,
+        "col": 5,
+        "timestamp": "19:07:27"
+      },
+      {
+        "move_number": 64,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 2,
+        "timestamp": "19:07:30"
+      },
+      {
+        "move_number": 65,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 1,
+        "timestamp": "19:07:32"
+      },
+      {
+        "move_number": 66,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 3,
+        "timestamp": "19:07:35"
+      },
+      {
+        "move_number": 67,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 2,
+        "timestamp": "19:07:37"
+      },
+      {
+        "move_number": 68,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 3,
+        "timestamp": "19:07:39"
+      },
+      {
+        "move_number": 69,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 8,
+        "col": 3,
+        "timestamp": "19:07:42"
+      },
+      {
+        "move_number": 70,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 3,
+        "timestamp": "19:07:44"
+      },
+      {
+        "move_number": 71,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 2,
+        "timestamp": "19:07:47"
+      },
+      {
+        "move_number": 72,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 2,
+        "timestamp": "19:07:48"
+      },
+      {
+        "move_number": 73,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 2,
+        "timestamp": "19:07:50"
+      },
+      {
+        "move_number": 74,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 4,
+        "timestamp": "19:07:54"
+      },
+      {
+        "move_number": 75,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 1,
+        "timestamp": "19:07:56"
+      },
+      {
+        "move_number": 76,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 1,
+        "timestamp": "19:07:57"
+      },
+      {
+        "move_number": 77,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 0,
+        "timestamp": "19:08:01"
+      },
+      {
+        "move_number": 78,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 0,
+        "timestamp": "19:08:04"
+      },
+      {
+        "move_number": 79,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 0,
+        "timestamp": "19:08:06"
+      },
+      {
+        "move_number": 80,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 1,
+        "timestamp": "19:08:09"
+      },
+      {
+        "move_number": 81,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 12,
+        "timestamp": "19:08:17"
+      },
+      {
+        "move_number": 82,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 11,
+        "timestamp": "19:08:19"
+      },
+      {
+        "move_number": 83,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 10,
+        "timestamp": "19:08:21"
+      },
+      {
+        "move_number": 84,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 9,
+        "timestamp": "19:08:22"
+      }
+    ],
+    "reason": "FIVE_IN_ROW"
+  },
+  {
+    "room_id": "0956B1",
+    "match_id": "da7543183f654fae939b61a9d33629c8",
+    "start_time": "2026-11-23 19:08:47",
+    "end_time": "2026-11-23 19:09:43",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "TIMEOUT",
+      "winner_id": "Alice",
+      "loser_id": "Bob",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 13
+    },
+    "total_moves": 13,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 10,
+        "timestamp": "19:08:48"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 7,
+        "timestamp": "19:08:50"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 8,
+        "timestamp": "19:08:51"
+      },
+      {
+        "move_number": 4,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 7,
+        "timestamp": "19:08:52"
+      },
+      {
+        "move_number": 5,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 5,
+        "timestamp": "19:08:54"
+      },
+      {
+        "move_number": 6,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 7,
+        "timestamp": "19:08:56"
+      },
+      {
+        "move_number": 7,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 7,
+        "timestamp": "19:08:57"
+      },
+      {
+        "move_number": 8,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 6,
+        "timestamp": "19:08:59"
+      },
+      {
+        "move_number": 9,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 5,
+        "timestamp": "19:09:01"
+      },
+      {
+        "move_number": 10,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 5,
+        "timestamp": "19:09:03"
+      },
+      {
+        "move_number": 11,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 6,
+        "timestamp": "19:09:04"
+      },
+      {
+        "move_number": 12,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 6,
+        "timestamp": "19:09:07"
+      },
+      {
+        "move_number": 13,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 5,
+        "timestamp": "19:09:13"
+      }
+    ],
+    "reason": "TIMEOUT"
+  },
+  {
+    "room_id": "0956B1",
+    "match_id": "5548ce319cd14a35af296c341ed15f24",
+    "start_time": "2026-11-23 19:10:34",
+    "end_time": "2026-11-23 19:12:30",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "FIVE_IN_ROW",
+      "winner_id": "Alice",
+      "loser_id": "Bob",
+      "winner_symbol": "X",
+      "winning_line": [
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          5
+        ]
+      ],
+      "total_moves": 45
+    },
+    "total_moves": 45,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 10,
+        "timestamp": "19:10:36"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 1,
+        "col": 8,
+        "timestamp": "19:10:38"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 6,
+        "timestamp": "19:10:41"
+      },
+      {
+        "move_number": 4,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 8,
+        "timestamp": "19:10:43"
+      },
+      {
+        "move_number": 5,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 8,
+        "col": 5,
+        "timestamp": "19:10:45"
+      },
+      {
+        "move_number": 6,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 8,
+        "timestamp": "19:10:47"
+      },
+      {
+        "move_number": 7,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 4,
+        "timestamp": "19:10:48"
+      },
+      {
+        "move_number": 8,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 5,
+        "timestamp": "19:10:50"
+      },
+      {
+        "move_number": 9,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 5,
+        "timestamp": "19:10:52"
+      },
+      {
+        "move_number": 10,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 6,
+        "timestamp": "19:10:55"
+      },
+      {
+        "move_number": 11,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 5,
+        "timestamp": "19:10:57"
+      },
+      {
+        "move_number": 12,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 5,
+        "timestamp": "19:10:59"
+      },
+      {
+        "move_number": 13,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 6,
+        "timestamp": "19:11:01"
+      },
+      {
+        "move_number": 14,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 1,
+        "col": 7,
+        "timestamp": "19:11:03"
+      },
+      {
+        "move_number": 15,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 4,
+        "timestamp": "19:11:05"
+      },
+      {
+        "move_number": 16,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 3,
+        "timestamp": "19:11:08"
+      },
+      {
+        "move_number": 17,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 7,
+        "timestamp": "19:11:11"
+      },
+      {
+        "move_number": 18,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 7,
+        "timestamp": "19:11:13"
+      },
+      {
+        "move_number": 19,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 3,
+        "timestamp": "19:11:15"
+      },
+      {
+        "move_number": 20,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 2,
+        "timestamp": "19:11:17"
+      },
+      {
+        "move_number": 21,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 1,
+        "timestamp": "19:11:20"
+      },
+      {
+        "move_number": 22,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 2,
+        "timestamp": "19:11:23"
+      },
+      {
+        "move_number": 23,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 2,
+        "timestamp": "19:11:25"
+      },
+      {
+        "move_number": 24,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 2,
+        "timestamp": "19:11:27"
+      },
+      {
+        "move_number": 25,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 2,
+        "timestamp": "19:11:29"
+      },
+      {
+        "move_number": 26,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 3,
+        "timestamp": "19:11:31"
+      },
+      {
+        "move_number": 27,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 4,
+        "timestamp": "19:11:32"
+      },
+      {
+        "move_number": 28,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 4,
+        "timestamp": "19:11:35"
+      },
+      {
+        "move_number": 29,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 4,
+        "timestamp": "19:11:37"
+      },
+      {
+        "move_number": 30,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 4,
+        "timestamp": "19:11:39"
+      },
+      {
+        "move_number": 31,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 9,
+        "timestamp": "19:11:42"
+      },
+      {
+        "move_number": 32,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 7,
+        "timestamp": "19:11:45"
+      },
+      {
+        "move_number": 33,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 6,
+        "timestamp": "19:11:46"
+      },
+      {
+        "move_number": 34,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 6,
+        "timestamp": "19:11:50"
+      },
+      {
+        "move_number": 35,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 5,
+        "timestamp": "19:11:53"
+      },
+      {
+        "move_number": 36,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 6,
+        "timestamp": "19:11:56"
+      },
+      {
+        "move_number": 37,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 3,
+        "timestamp": "19:11:59"
+      },
+      {
+        "move_number": 38,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 3,
+        "timestamp": "19:12:04"
+      },
+      {
+        "move_number": 39,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 5,
+        "timestamp": "19:12:07"
+      },
+      {
+        "move_number": 40,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 9,
+        "col": 5,
+        "timestamp": "19:12:10"
+      },
+      {
+        "move_number": 41,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 11,
+        "timestamp": "19:12:12"
+      },
+      {
+        "move_number": 42,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 2,
+        "timestamp": "19:12:22"
+      },
+      {
+        "move_number": 43,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 1,
+        "timestamp": "19:12:25"
+      },
+      {
+        "move_number": 44,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 3,
+        "timestamp": "19:12:28"
+      },
+      {
+        "move_number": 45,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 1,
+        "timestamp": "19:12:30"
+      }
+    ],
+    "reason": "FIVE_IN_ROW"
+  },
+  {
+    "room_id": "0956B1",
+    "match_id": "133ba766e704496cbd25701e79f5f759",
+    "start_time": "2026-11-23 19:12:50",
+    "end_time": "2026-11-23 19:13:16",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "Bob",
+      "loser_id": "Alice",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 9
+    },
+    "total_moves": 9,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 7,
+        "timestamp": "19:12:56"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 6,
+        "timestamp": "19:12:58"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 7,
+        "timestamp": "19:13:00"
+      },
+      {
+        "move_number": 4,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 1,
+        "col": 6,
+        "timestamp": "19:13:01"
+      },
+      {
+        "move_number": 5,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 8,
+        "timestamp": "19:13:04"
+      },
+      {
+        "move_number": 6,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 8,
+        "timestamp": "19:13:05"
+      },
+      {
+        "move_number": 7,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 9,
+        "timestamp": "19:13:07"
+      },
+      {
+        "move_number": 8,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 1,
+        "col": 10,
+        "timestamp": "19:13:09"
+      },
+      {
+        "move_number": 9,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 9,
+        "timestamp": "19:13:13"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "0956B1",
+    "match_id": "3eb9aa78b6754441a8fea665e4c62c7c",
+    "start_time": "2026-11-23 19:13:26",
+    "end_time": "2026-11-23 19:18:51",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "FIVE_IN_ROW",
+      "winner_id": "Bob",
+      "loser_id": "Alice",
+      "winner_symbol": "O",
+      "winning_line": [
+        [
+          7,
+          6
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          9,
+          8
+        ]
+      ],
+      "total_moves": 106
+    },
+    "total_moves": 106,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "19:13:28"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 0,
+        "col": 1,
+        "timestamp": "19:13:30"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 0,
+        "timestamp": "19:13:31"
+      },
+      {
+        "move_number": 4,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 1,
+        "col": 1,
+        "timestamp": "19:13:33"
+      },
+      {
+        "move_number": 5,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 0,
+        "timestamp": "19:13:35"
+      },
+      {
+        "move_number": 6,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 0,
+        "timestamp": "19:13:36"
+      },
+      {
+        "move_number": 7,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 1,
+        "timestamp": "19:13:38"
+      },
+      {
+        "move_number": 8,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 2,
+        "timestamp": "19:13:40"
+      },
+      {
+        "move_number": 9,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 1,
+        "timestamp": "19:13:43"
+      },
+      {
+        "move_number": 10,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 1,
+        "timestamp": "19:13:44"
+      },
+      {
+        "move_number": 11,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 2,
+        "timestamp": "19:13:46"
+      },
+      {
+        "move_number": 12,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 2,
+        "timestamp": "19:13:48"
+      },
+      {
+        "move_number": 13,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 2,
+        "timestamp": "19:13:50"
+      },
+      {
+        "move_number": 14,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 3,
+        "timestamp": "19:13:52"
+      },
+      {
+        "move_number": 15,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 3,
+        "timestamp": "19:13:54"
+      },
+      {
+        "move_number": 16,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 4,
+        "timestamp": "19:13:56"
+      },
+      {
+        "move_number": 17,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 3,
+        "timestamp": "19:13:59"
+      },
+      {
+        "move_number": 18,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 4,
+        "timestamp": "19:14:00"
+      },
+      {
+        "move_number": 19,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 4,
+        "timestamp": "19:14:03"
+      },
+      {
+        "move_number": 20,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 4,
+        "timestamp": "19:14:08"
+      },
+      {
+        "move_number": 21,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 3,
+        "timestamp": "19:14:11"
+      },
+      {
+        "move_number": 22,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 3,
+        "timestamp": "19:14:13"
+      },
+      {
+        "move_number": 23,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 2,
+        "timestamp": "19:14:15"
+      },
+      {
+        "move_number": 24,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 5,
+        "timestamp": "19:14:17"
+      },
+      {
+        "move_number": 25,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 5,
+        "timestamp": "19:14:20"
+      },
+      {
+        "move_number": 26,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 5,
+        "timestamp": "19:14:22"
+      },
+      {
+        "move_number": 27,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 6,
+        "timestamp": "19:14:24"
+      },
+      {
+        "move_number": 28,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 7,
+        "timestamp": "19:14:26"
+      },
+      {
+        "move_number": 29,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 6,
+        "timestamp": "19:14:28"
+      },
+      {
+        "move_number": 30,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 6,
+        "timestamp": "19:14:30"
+      },
+      {
+        "move_number": 31,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 4,
+        "timestamp": "19:14:33"
+      },
+      {
+        "move_number": 32,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 3,
+        "timestamp": "19:14:35"
+      },
+      {
+        "move_number": 33,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 3,
+        "timestamp": "19:14:37"
+      },
+      {
+        "move_number": 34,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 4,
+        "timestamp": "19:14:40"
+      },
+      {
+        "move_number": 35,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 8,
+        "col": 2,
+        "timestamp": "19:14:41"
+      },
+      {
+        "move_number": 36,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 2,
+        "timestamp": "19:14:43"
+      },
+      {
+        "move_number": 37,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 1,
+        "timestamp": "19:14:46"
+      },
+      {
+        "move_number": 38,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 0,
+        "timestamp": "19:14:49"
+      },
+      {
+        "move_number": 39,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 1,
+        "timestamp": "19:14:52"
+      },
+      {
+        "move_number": 40,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 0,
+        "timestamp": "19:14:58"
+      },
+      {
+        "move_number": 41,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 0,
+        "timestamp": "19:15:00"
+      },
+      {
+        "move_number": 42,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 1,
+        "timestamp": "19:15:07"
+      },
+      {
+        "move_number": 43,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 0,
+        "timestamp": "19:15:10"
+      },
+      {
+        "move_number": 44,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 9,
+        "col": 2,
+        "timestamp": "19:15:15"
+      },
+      {
+        "move_number": 45,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 4,
+        "timestamp": "19:15:20"
+      },
+      {
+        "move_number": 46,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 9,
+        "col": 5,
+        "timestamp": "19:15:22"
+      },
+      {
+        "move_number": 47,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 10,
+        "col": 6,
+        "timestamp": "19:15:25"
+      },
+      {
+        "move_number": 48,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 9,
+        "col": 6,
+        "timestamp": "19:15:27"
+      },
+      {
+        "move_number": 49,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 7,
+        "timestamp": "19:15:32"
+      },
+      {
+        "move_number": 50,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 8,
+        "timestamp": "19:15:34"
+      },
+      {
+        "move_number": 51,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 7,
+        "timestamp": "19:15:37"
+      },
+      {
+        "move_number": 52,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 7,
+        "timestamp": "19:15:40"
+      },
+      {
+        "move_number": 53,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 8,
+        "timestamp": "19:15:43"
+      },
+      {
+        "move_number": 54,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 6,
+        "timestamp": "19:15:45"
+      },
+      {
+        "move_number": 55,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 5,
+        "timestamp": "19:15:49"
+      },
+      {
+        "move_number": 56,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 4,
+        "timestamp": "19:15:52"
+      },
+      {
+        "move_number": 57,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 4,
+        "timestamp": "19:15:55"
+      },
+      {
+        "move_number": 58,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 1,
+        "col": 6,
+        "timestamp": "19:15:58"
+      },
+      {
+        "move_number": 59,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 0,
+        "col": 6,
+        "timestamp": "19:16:01"
+      },
+      {
+        "move_number": 60,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 1,
+        "col": 7,
+        "timestamp": "19:16:05"
+      },
+      {
+        "move_number": 61,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 8,
+        "timestamp": "19:16:06"
+      },
+      {
+        "move_number": 62,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 1,
+        "col": 5,
+        "timestamp": "19:16:08"
+      },
+      {
+        "move_number": 63,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 9,
+        "timestamp": "19:16:12"
+      },
+      {
+        "move_number": 64,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 8,
+        "timestamp": "19:16:15"
+      },
+      {
+        "move_number": 65,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 9,
+        "timestamp": "19:16:17"
+      },
+      {
+        "move_number": 66,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 9,
+        "timestamp": "19:16:19"
+      },
+      {
+        "move_number": 67,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 9,
+        "timestamp": "19:16:21"
+      },
+      {
+        "move_number": 68,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 7,
+        "timestamp": "19:16:27"
+      },
+      {
+        "move_number": 69,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 7,
+        "timestamp": "19:16:30"
+      },
+      {
+        "move_number": 70,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 3,
+        "timestamp": "19:16:37"
+      },
+      {
+        "move_number": 71,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 0,
+        "col": 7,
+        "timestamp": "19:16:40"
+      },
+      {
+        "move_number": 72,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 11,
+        "col": 11,
+        "timestamp": "19:16:44"
+      },
+      {
+        "move_number": 73,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 2,
+        "timestamp": "19:16:47"
+      },
+      {
+        "move_number": 74,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 1,
+        "col": 3,
+        "timestamp": "19:16:50"
+      },
+      {
+        "move_number": 75,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 0,
+        "col": 3,
+        "timestamp": "19:16:53"
+      },
+      {
+        "move_number": 76,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 12,
+        "col": 9,
+        "timestamp": "19:16:55"
+      },
+      {
+        "move_number": 77,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 0,
+        "col": 2,
+        "timestamp": "19:17:00"
+      },
+      {
+        "move_number": 78,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 9,
+        "col": 13,
+        "timestamp": "19:17:07"
+      },
+      {
+        "move_number": 79,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 0,
+        "col": 4,
+        "timestamp": "19:17:10"
+      },
+      {
+        "move_number": 80,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 0,
+        "col": 5,
+        "timestamp": "19:17:13"
+      },
+      {
+        "move_number": 81,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 5,
+        "timestamp": "19:17:19"
+      },
+      {
+        "move_number": 82,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 1,
+        "col": 11,
+        "timestamp": "19:17:22"
+      },
+      {
+        "move_number": 83,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 8,
+        "col": 10,
+        "timestamp": "19:17:30"
+      },
+      {
+        "move_number": 84,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 10,
+        "timestamp": "19:17:34"
+      },
+      {
+        "move_number": 85,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 10,
+        "timestamp": "19:17:37"
+      },
+      {
+        "move_number": 86,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 8,
+        "timestamp": "19:17:40"
+      },
+      {
+        "move_number": 87,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 10,
+        "col": 9,
+        "timestamp": "19:17:44"
+      },
+      {
+        "move_number": 88,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 5,
+        "timestamp": "19:17:49"
+      },
+      {
+        "move_number": 89,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 8,
+        "col": 6,
+        "timestamp": "19:17:52"
+      },
+      {
+        "move_number": 90,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 5,
+        "timestamp": "19:17:57"
+      },
+      {
+        "move_number": 91,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 10,
+        "col": 5,
+        "timestamp": "19:18:00"
+      },
+      {
+        "move_number": 92,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 10,
+        "col": 7,
+        "timestamp": "19:18:04"
+      },
+      {
+        "move_number": 93,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 11,
+        "col": 8,
+        "timestamp": "19:18:07"
+      },
+      {
+        "move_number": 94,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 9,
+        "col": 10,
+        "timestamp": "19:18:11"
+      },
+      {
+        "move_number": 95,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 11,
+        "col": 7,
+        "timestamp": "19:18:17"
+      },
+      {
+        "move_number": 96,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 11,
+        "col": 6,
+        "timestamp": "19:18:20"
+      },
+      {
+        "move_number": 97,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 10,
+        "col": 8,
+        "timestamp": "19:18:23"
+      },
+      {
+        "move_number": 98,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 9,
+        "col": 8,
+        "timestamp": "19:18:25"
+      },
+      {
+        "move_number": 99,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 9,
+        "timestamp": "19:18:27"
+      },
+      {
+        "move_number": 100,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 11,
+        "timestamp": "19:18:30"
+      },
+      {
+        "move_number": 101,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 9,
+        "timestamp": "19:18:34"
+      },
+      {
+        "move_number": 102,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 9,
+        "timestamp": "19:18:37"
+      },
+      {
+        "move_number": 103,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 7,
+        "timestamp": "19:18:41"
+      },
+      {
+        "move_number": 104,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 7,
+        "timestamp": "19:18:43"
+      },
+      {
+        "move_number": 105,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 6,
+        "timestamp": "19:18:48"
+      },
+      {
+        "move_number": 106,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 6,
+        "timestamp": "19:18:51"
+      }
+    ],
+    "reason": "FIVE_IN_ROW"
+  },
+  {
+    "room_id": "0956B1",
+    "match_id": "3bb74c772d8f40ed8c76b39ceb480aaf",
+    "start_time": "2026-11-23 19:19:17",
+    "end_time": "2026-11-23 19:22:20",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "FIVE_IN_ROW",
+      "winner_id": "Alice",
+      "loser_id": "Bob",
+      "winner_symbol": "X",
+      "winning_line": [
+        [
+          8,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          9,
+          5
+        ]
+      ],
+      "total_moves": 71
+    },
+    "total_moves": 71,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "19:19:19"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 14,
+        "col": 14,
+        "timestamp": "19:19:21"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 6,
+        "timestamp": "19:19:25"
+      },
+      {
+        "move_number": 4,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 10,
+        "timestamp": "19:19:27"
+      },
+      {
+        "move_number": 5,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 10,
+        "col": 11,
+        "timestamp": "19:19:29"
+      },
+      {
+        "move_number": 6,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 11,
+        "col": 6,
+        "timestamp": "19:19:31"
+      },
+      {
+        "move_number": 7,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 12,
+        "col": 7,
+        "timestamp": "19:19:33"
+      },
+      {
+        "move_number": 8,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 9,
+        "col": 3,
+        "timestamp": "19:19:35"
+      },
+      {
+        "move_number": 9,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 8,
+        "col": 11,
+        "timestamp": "19:19:36"
+      },
+      {
+        "move_number": 10,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 12,
+        "timestamp": "19:19:39"
+      },
+      {
+        "move_number": 11,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 8,
+        "col": 8,
+        "timestamp": "19:19:40"
+      },
+      {
+        "move_number": 12,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 9,
+        "col": 9,
+        "timestamp": "19:19:45"
+      },
+      {
+        "move_number": 13,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 10,
+        "col": 9,
+        "timestamp": "19:19:47"
+      },
+      {
+        "move_number": 14,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 9,
+        "col": 10,
+        "timestamp": "19:19:49"
+      },
+      {
+        "move_number": 15,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 11,
+        "col": 8,
+        "timestamp": "19:19:51"
+      },
+      {
+        "move_number": 16,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 10,
+        "col": 8,
+        "timestamp": "19:19:55"
+      },
+      {
+        "move_number": 17,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 11,
+        "col": 7,
+        "timestamp": "19:19:57"
+      },
+      {
+        "move_number": 18,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 11,
+        "col": 9,
+        "timestamp": "19:20:00"
+      },
+      {
+        "move_number": 19,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 10,
+        "col": 10,
+        "timestamp": "19:20:01"
+      },
+      {
+        "move_number": 20,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 10,
+        "col": 12,
+        "timestamp": "19:20:04"
+      },
+      {
+        "move_number": 21,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 11,
+        "timestamp": "19:20:06"
+      },
+      {
+        "move_number": 22,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 11,
+        "col": 11,
+        "timestamp": "19:20:09"
+      },
+      {
+        "move_number": 23,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 11,
+        "timestamp": "19:20:12"
+      },
+      {
+        "move_number": 24,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 11,
+        "timestamp": "19:20:14"
+      },
+      {
+        "move_number": 25,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 11,
+        "timestamp": "19:20:16"
+      },
+      {
+        "move_number": 26,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 8,
+        "timestamp": "19:20:20"
+      },
+      {
+        "move_number": 27,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 10,
+        "timestamp": "19:20:22"
+      },
+      {
+        "move_number": 28,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 9,
+        "col": 12,
+        "timestamp": "19:20:27"
+      },
+      {
+        "move_number": 29,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 11,
+        "col": 12,
+        "timestamp": "19:20:29"
+      },
+      {
+        "move_number": 30,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 9,
+        "col": 6,
+        "timestamp": "19:20:38"
+      },
+      {
+        "move_number": 31,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 7,
+        "timestamp": "19:20:41"
+      },
+      {
+        "move_number": 32,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 9,
+        "timestamp": "19:20:45"
+      },
+      {
+        "move_number": 33,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 7,
+        "timestamp": "19:20:48"
+      },
+      {
+        "move_number": 34,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 9,
+        "timestamp": "19:20:50"
+      },
+      {
+        "move_number": 35,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 9,
+        "timestamp": "19:20:52"
+      },
+      {
+        "move_number": 36,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 10,
+        "timestamp": "19:20:55"
+      },
+      {
+        "move_number": 37,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 8,
+        "timestamp": "19:20:57"
+      },
+      {
+        "move_number": 38,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 7,
+        "timestamp": "19:20:59"
+      },
+      {
+        "move_number": 39,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 8,
+        "timestamp": "19:21:01"
+      },
+      {
+        "move_number": 40,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 8,
+        "timestamp": "19:21:03"
+      },
+      {
+        "move_number": 41,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 9,
+        "timestamp": "19:21:05"
+      },
+      {
+        "move_number": 42,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 7,
+        "timestamp": "19:21:07"
+      },
+      {
+        "move_number": 43,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 6,
+        "timestamp": "19:21:09"
+      },
+      {
+        "move_number": 44,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 7,
+        "timestamp": "19:21:11"
+      },
+      {
+        "move_number": 45,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 7,
+        "timestamp": "19:21:13"
+      },
+      {
+        "move_number": 46,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 8,
+        "timestamp": "19:21:15"
+      },
+      {
+        "move_number": 47,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 5,
+        "timestamp": "19:21:17"
+      },
+      {
+        "move_number": 48,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 4,
+        "timestamp": "19:21:19"
+      },
+      {
+        "move_number": 49,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 6,
+        "timestamp": "19:21:23"
+      },
+      {
+        "move_number": 50,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 6,
+        "timestamp": "19:21:26"
+      },
+      {
+        "move_number": 51,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 5,
+        "timestamp": "19:21:28"
+      },
+      {
+        "move_number": 52,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 5,
+        "timestamp": "19:21:31"
+      },
+      {
+        "move_number": 53,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 5,
+        "timestamp": "19:21:37"
+      },
+      {
+        "move_number": 54,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 6,
+        "timestamp": "19:21:39"
+      },
+      {
+        "move_number": 55,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 7,
+        "timestamp": "19:21:42"
+      },
+      {
+        "move_number": 56,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 1,
+        "col": 8,
+        "timestamp": "19:21:46"
+      },
+      {
+        "move_number": 57,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 8,
+        "timestamp": "19:21:48"
+      },
+      {
+        "move_number": 58,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 7,
+        "timestamp": "19:21:51"
+      },
+      {
+        "move_number": 59,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 5,
+        "timestamp": "19:21:53"
+      },
+      {
+        "move_number": 60,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 1,
+        "col": 6,
+        "timestamp": "19:21:55"
+      },
+      {
+        "move_number": 61,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 8,
+        "col": 1,
+        "timestamp": "19:21:57"
+      },
+      {
+        "move_number": 62,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 3,
+        "timestamp": "19:21:59"
+      },
+      {
+        "move_number": 63,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 8,
+        "col": 3,
+        "timestamp": "19:22:02"
+      },
+      {
+        "move_number": 64,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 2,
+        "timestamp": "19:22:04"
+      },
+      {
+        "move_number": 65,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 1,
+        "timestamp": "19:22:06"
+      },
+      {
+        "move_number": 66,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 1,
+        "timestamp": "19:22:08"
+      },
+      {
+        "move_number": 67,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 2,
+        "timestamp": "19:22:10"
+      },
+      {
+        "move_number": 68,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 4,
+        "timestamp": "19:22:12"
+      },
+      {
+        "move_number": 69,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 5,
+        "timestamp": "19:22:15"
+      },
+      {
+        "move_number": 70,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 10,
+        "col": 6,
+        "timestamp": "19:22:18"
+      },
+      {
+        "move_number": 71,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 8,
+        "col": 6,
+        "timestamp": "19:22:20"
+      }
+    ],
+    "reason": "FIVE_IN_ROW"
+  },
+  {
+    "room_id": "0956B1",
+    "match_id": "8b42da216f084f6e87e0d25e35c86bea",
+    "start_time": "2026-11-23 19:22:49",
+    "end_time": "2026-11-23 19:32:00",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "FIVE_IN_ROW",
+      "winner_id": "Bob",
+      "loser_id": "Alice",
+      "winner_symbol": "O",
+      "winning_line": [
+        [
+          8,
+          2
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          9,
+          3
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          11,
+          5
+        ]
+      ],
+      "total_moves": 168
+    },
+    "total_moves": 168,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 10,
+        "timestamp": "19:22:51"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 4,
+        "timestamp": "19:22:53"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 10,
+        "timestamp": "19:22:54"
+      },
+      {
+        "move_number": 4,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 7,
+        "timestamp": "19:22:56"
+      },
+      {
+        "move_number": 5,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 8,
+        "timestamp": "19:22:57"
+      },
+      {
+        "move_number": 6,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 8,
+        "timestamp": "19:22:59"
+      },
+      {
+        "move_number": 7,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 9,
+        "timestamp": "19:23:01"
+      },
+      {
+        "move_number": 8,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 10,
+        "timestamp": "19:23:03"
+      },
+      {
+        "move_number": 9,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 9,
+        "timestamp": "19:23:05"
+      },
+      {
+        "move_number": 10,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 11,
+        "timestamp": "19:23:07"
+      },
+      {
+        "move_number": 11,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 10,
+        "col": 10,
+        "timestamp": "19:23:09"
+      },
+      {
+        "move_number": 12,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 9,
+        "col": 10,
+        "timestamp": "19:23:10"
+      },
+      {
+        "move_number": 13,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 8,
+        "timestamp": "19:23:13"
+      },
+      {
+        "move_number": 14,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 8,
+        "timestamp": "19:23:16"
+      },
+      {
+        "move_number": 15,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 8,
+        "col": 5,
+        "timestamp": "19:23:19"
+      },
+      {
+        "move_number": 16,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 7,
+        "timestamp": "19:23:21"
+      },
+      {
+        "move_number": 17,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 8,
+        "col": 6,
+        "timestamp": "19:23:23"
+      },
+      {
+        "move_number": 18,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 8,
+        "timestamp": "19:23:25"
+      },
+      {
+        "move_number": 19,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 8,
+        "timestamp": "19:23:27"
+      },
+      {
+        "move_number": 20,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 7,
+        "timestamp": "19:23:29"
+      },
+      {
+        "move_number": 21,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 9,
+        "timestamp": "19:23:31"
+      },
+      {
+        "move_number": 22,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 9,
+        "timestamp": "19:23:33"
+      },
+      {
+        "move_number": 23,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 10,
+        "timestamp": "19:23:36"
+      },
+      {
+        "move_number": 24,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 10,
+        "timestamp": "19:23:38"
+      },
+      {
+        "move_number": 25,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 8,
+        "col": 9,
+        "timestamp": "19:23:41"
+      },
+      {
+        "move_number": 26,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 10,
+        "timestamp": "19:23:43"
+      },
+      {
+        "move_number": 27,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 9,
+        "timestamp": "19:23:45"
+      },
+      {
+        "move_number": 28,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 9,
+        "col": 9,
+        "timestamp": "19:23:47"
+      },
+      {
+        "move_number": 29,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 6,
+        "timestamp": "19:23:50"
+      },
+      {
+        "move_number": 30,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 10,
+        "col": 6,
+        "timestamp": "19:23:53"
+      },
+      {
+        "move_number": 31,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 7,
+        "timestamp": "19:23:55"
+      },
+      {
+        "move_number": 32,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 9,
+        "col": 5,
+        "timestamp": "19:23:56"
+      },
+      {
+        "move_number": 33,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 8,
+        "col": 4,
+        "timestamp": "19:23:59"
+      },
+      {
+        "move_number": 34,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 3,
+        "timestamp": "19:24:01"
+      },
+      {
+        "move_number": 35,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 4,
+        "timestamp": "19:24:03"
+      },
+      {
+        "move_number": 36,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 10,
+        "col": 4,
+        "timestamp": "19:24:05"
+      },
+      {
+        "move_number": 37,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 10,
+        "col": 5,
+        "timestamp": "19:24:08"
+      },
+      {
+        "move_number": 38,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 9,
+        "col": 3,
+        "timestamp": "19:24:11"
+      },
+      {
+        "move_number": 39,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 10,
+        "col": 3,
+        "timestamp": "19:24:12"
+      },
+      {
+        "move_number": 40,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 6,
+        "timestamp": "19:24:15"
+      },
+      {
+        "move_number": 41,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 7,
+        "timestamp": "19:24:22"
+      },
+      {
+        "move_number": 42,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 8,
+        "timestamp": "19:24:27"
+      },
+      {
+        "move_number": 43,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 7,
+        "timestamp": "19:24:29"
+      },
+      {
+        "move_number": 44,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 6,
+        "timestamp": "19:24:32"
+      },
+      {
+        "move_number": 45,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 5,
+        "timestamp": "19:24:35"
+      },
+      {
+        "move_number": 46,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 5,
+        "timestamp": "19:24:40"
+      },
+      {
+        "move_number": 47,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 10,
+        "col": 8,
+        "timestamp": "19:24:51"
+      },
+      {
+        "move_number": 48,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 1,
+        "col": 11,
+        "timestamp": "19:24:53"
+      },
+      {
+        "move_number": 49,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 11,
+        "timestamp": "19:24:55"
+      },
+      {
+        "move_number": 50,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 12,
+        "timestamp": "19:24:57"
+      },
+      {
+        "move_number": 51,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 11,
+        "timestamp": "19:25:01"
+      },
+      {
+        "move_number": 52,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 12,
+        "timestamp": "19:25:06"
+      },
+      {
+        "move_number": 53,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 12,
+        "timestamp": "19:25:07"
+      },
+      {
+        "move_number": 54,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 13,
+        "timestamp": "19:25:09"
+      },
+      {
+        "move_number": 55,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 11,
+        "timestamp": "19:25:12"
+      },
+      {
+        "move_number": 56,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 11,
+        "timestamp": "19:25:14"
+      },
+      {
+        "move_number": 57,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 8,
+        "col": 10,
+        "timestamp": "19:25:21"
+      },
+      {
+        "move_number": 58,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 9,
+        "col": 11,
+        "timestamp": "19:25:26"
+      },
+      {
+        "move_number": 59,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 12,
+        "timestamp": "19:25:31"
+      },
+      {
+        "move_number": 60,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 10,
+        "col": 9,
+        "timestamp": "19:25:35"
+      },
+      {
+        "move_number": 61,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 8,
+        "col": 11,
+        "timestamp": "19:25:40"
+      },
+      {
+        "move_number": 62,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 12,
+        "timestamp": "19:25:44"
+      },
+      {
+        "move_number": 63,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 13,
+        "timestamp": "19:25:50"
+      },
+      {
+        "move_number": 64,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 9,
+        "col": 14,
+        "timestamp": "19:25:53"
+      },
+      {
+        "move_number": 65,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 10,
+        "col": 12,
+        "timestamp": "19:26:00"
+      },
+      {
+        "move_number": 66,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 10,
+        "col": 11,
+        "timestamp": "19:26:03"
+      },
+      {
+        "move_number": 67,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 10,
+        "col": 1,
+        "timestamp": "19:26:06"
+      },
+      {
+        "move_number": 68,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 10,
+        "col": 2,
+        "timestamp": "19:26:09"
+      },
+      {
+        "move_number": 69,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 12,
+        "col": 2,
+        "timestamp": "19:26:11"
+      },
+      {
+        "move_number": 70,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 11,
+        "col": 2,
+        "timestamp": "19:26:14"
+      },
+      {
+        "move_number": 71,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 2,
+        "timestamp": "19:26:17"
+      },
+      {
+        "move_number": 72,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 10,
+        "col": 7,
+        "timestamp": "19:26:21"
+      },
+      {
+        "move_number": 73,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 4,
+        "timestamp": "19:26:26"
+      },
+      {
+        "move_number": 74,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 6,
+        "timestamp": "19:26:31"
+      },
+      {
+        "move_number": 75,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 5,
+        "timestamp": "19:26:33"
+      },
+      {
+        "move_number": 76,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 5,
+        "timestamp": "19:26:36"
+      },
+      {
+        "move_number": 77,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 7,
+        "timestamp": "19:26:43"
+      },
+      {
+        "move_number": 78,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 6,
+        "timestamp": "19:26:47"
+      },
+      {
+        "move_number": 79,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 6,
+        "timestamp": "19:26:51"
+      },
+      {
+        "move_number": 80,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 2,
+        "timestamp": "19:26:56"
+      },
+      {
+        "move_number": 81,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 4,
+        "timestamp": "19:27:01"
+      },
+      {
+        "move_number": 82,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 4,
+        "timestamp": "19:27:05"
+      },
+      {
+        "move_number": 83,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 3,
+        "timestamp": "19:27:08"
+      },
+      {
+        "move_number": 84,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 12,
+        "col": 9,
+        "timestamp": "19:27:12"
+      },
+      {
+        "move_number": 85,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 8,
+        "timestamp": "19:27:19"
+      },
+      {
+        "move_number": 86,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 9,
+        "timestamp": "19:27:22"
+      },
+      {
+        "move_number": 87,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 11,
+        "col": 9,
+        "timestamp": "19:27:26"
+      },
+      {
+        "move_number": 88,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 12,
+        "col": 10,
+        "timestamp": "19:27:31"
+      },
+      {
+        "move_number": 89,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 6,
+        "timestamp": "19:27:41"
+      },
+      {
+        "move_number": 90,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 1,
+        "col": 7,
+        "timestamp": "19:27:44"
+      },
+      {
+        "move_number": 91,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 1,
+        "timestamp": "19:27:49"
+      },
+      {
+        "move_number": 92,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 4,
+        "timestamp": "19:27:53"
+      },
+      {
+        "move_number": 93,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 5,
+        "timestamp": "19:27:56"
+      },
+      {
+        "move_number": 94,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 6,
+        "timestamp": "19:28:02"
+      },
+      {
+        "move_number": 95,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 7,
+        "timestamp": "19:28:06"
+      },
+      {
+        "move_number": 96,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 1,
+        "col": 8,
+        "timestamp": "19:28:08"
+      },
+      {
+        "move_number": 97,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 9,
+        "timestamp": "19:28:10"
+      },
+      {
+        "move_number": 98,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 0,
+        "col": 8,
+        "timestamp": "19:28:12"
+      },
+      {
+        "move_number": 99,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 11,
+        "col": 8,
+        "timestamp": "19:28:16"
+      },
+      {
+        "move_number": 100,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 12,
+        "col": 8,
+        "timestamp": "19:28:18"
+      },
+      {
+        "move_number": 101,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 12,
+        "col": 11,
+        "timestamp": "19:28:20"
+      },
+      {
+        "move_number": 102,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 12,
+        "col": 7,
+        "timestamp": "19:28:22"
+      },
+      {
+        "move_number": 103,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 12,
+        "col": 6,
+        "timestamp": "19:28:25"
+      },
+      {
+        "move_number": 104,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 11,
+        "col": 7,
+        "timestamp": "19:28:28"
+      },
+      {
+        "move_number": 105,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 13,
+        "col": 7,
+        "timestamp": "19:28:31"
+      },
+      {
+        "move_number": 106,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 11,
+        "col": 5,
+        "timestamp": "19:28:34"
+      },
+      {
+        "move_number": 107,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 11,
+        "col": 6,
+        "timestamp": "19:28:36"
+      },
+      {
+        "move_number": 108,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 11,
+        "col": 4,
+        "timestamp": "19:28:38"
+      },
+      {
+        "move_number": 109,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 11,
+        "col": 3,
+        "timestamp": "19:28:41"
+      },
+      {
+        "move_number": 110,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 12,
+        "col": 3,
+        "timestamp": "19:28:43"
+      },
+      {
+        "move_number": 111,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 12,
+        "col": 4,
+        "timestamp": "19:28:47"
+      },
+      {
+        "move_number": 112,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 14,
+        "col": 3,
+        "timestamp": "19:28:50"
+      },
+      {
+        "move_number": 113,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 13,
+        "col": 3,
+        "timestamp": "19:28:53"
+      },
+      {
+        "move_number": 114,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 11,
+        "col": 1,
+        "timestamp": "19:28:57"
+      },
+      {
+        "move_number": 115,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 11,
+        "col": 0,
+        "timestamp": "19:29:00"
+      },
+      {
+        "move_number": 116,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 11,
+        "col": 10,
+        "timestamp": "19:29:06"
+      },
+      {
+        "move_number": 117,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 13,
+        "col": 8,
+        "timestamp": "19:29:14"
+      },
+      {
+        "move_number": 118,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 13,
+        "col": 10,
+        "timestamp": "19:29:17"
+      },
+      {
+        "move_number": 119,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 13,
+        "col": 9,
+        "timestamp": "19:29:20"
+      },
+      {
+        "move_number": 120,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 13,
+        "col": 6,
+        "timestamp": "19:29:22"
+      },
+      {
+        "move_number": 121,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 12,
+        "col": 5,
+        "timestamp": "19:29:27"
+      },
+      {
+        "move_number": 122,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 12,
+        "timestamp": "19:29:32"
+      },
+      {
+        "move_number": 123,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 13,
+        "timestamp": "19:29:34"
+      },
+      {
+        "move_number": 124,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 13,
+        "timestamp": "19:29:39"
+      },
+      {
+        "move_number": 125,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 11,
+        "col": 13,
+        "timestamp": "19:29:42"
+      },
+      {
+        "move_number": 126,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 10,
+        "col": 13,
+        "timestamp": "19:29:46"
+      },
+      {
+        "move_number": 127,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 11,
+        "col": 11,
+        "timestamp": "19:29:48"
+      },
+      {
+        "move_number": 128,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 12,
+        "col": 12,
+        "timestamp": "19:29:52"
+      },
+      {
+        "move_number": 129,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 13,
+        "col": 12,
+        "timestamp": "19:29:55"
+      },
+      {
+        "move_number": 130,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 12,
+        "col": 13,
+        "timestamp": "19:29:58"
+      },
+      {
+        "move_number": 131,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 1,
+        "timestamp": "19:30:01"
+      },
+      {
+        "move_number": 132,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 3,
+        "timestamp": "19:30:04"
+      },
+      {
+        "move_number": 133,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 2,
+        "timestamp": "19:30:07"
+      },
+      {
+        "move_number": 134,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 1,
+        "timestamp": "19:30:11"
+      },
+      {
+        "move_number": 135,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 4,
+        "timestamp": "19:30:14"
+      },
+      {
+        "move_number": 136,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 1,
+        "col": 5,
+        "timestamp": "19:30:16"
+      },
+      {
+        "move_number": 137,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 3,
+        "timestamp": "19:30:20"
+      },
+      {
+        "move_number": 138,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 2,
+        "timestamp": "19:30:22"
+      },
+      {
+        "move_number": 139,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 1,
+        "timestamp": "19:30:26"
+      },
+      {
+        "move_number": 140,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 1,
+        "timestamp": "19:30:28"
+      },
+      {
+        "move_number": 141,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 3,
+        "timestamp": "19:30:30"
+      },
+      {
+        "move_number": 142,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 4,
+        "timestamp": "19:30:33"
+      },
+      {
+        "move_number": 143,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 5,
+        "timestamp": "19:30:36"
+      },
+      {
+        "move_number": 144,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 1,
+        "col": 2,
+        "timestamp": "19:30:40"
+      },
+      {
+        "move_number": 145,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 2,
+        "timestamp": "19:30:42"
+      },
+      {
+        "move_number": 146,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 1,
+        "col": 3,
+        "timestamp": "19:30:47"
+      },
+      {
+        "move_number": 147,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 0,
+        "timestamp": "19:30:49"
+      },
+      {
+        "move_number": 148,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 2,
+        "timestamp": "19:30:52"
+      },
+      {
+        "move_number": 149,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 3,
+        "timestamp": "19:30:56"
+      },
+      {
+        "move_number": 150,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 1,
+        "timestamp": "19:30:58"
+      },
+      {
+        "move_number": 151,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 13,
+        "timestamp": "19:31:02"
+      },
+      {
+        "move_number": 152,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 12,
+        "timestamp": "19:31:06"
+      },
+      {
+        "move_number": 153,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 0,
+        "col": 10,
+        "timestamp": "19:31:10"
+      },
+      {
+        "move_number": 154,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 13,
+        "timestamp": "19:31:13"
+      },
+      {
+        "move_number": 155,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 14,
+        "timestamp": "19:31:14"
+      },
+      {
+        "move_number": 156,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 0,
+        "col": 14,
+        "timestamp": "19:31:20"
+      },
+      {
+        "move_number": 157,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 14,
+        "timestamp": "19:31:23"
+      },
+      {
+        "move_number": 158,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 14,
+        "timestamp": "19:31:25"
+      },
+      {
+        "move_number": 159,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 12,
+        "timestamp": "19:31:28"
+      },
+      {
+        "move_number": 160,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 14,
+        "timestamp": "19:31:31"
+      },
+      {
+        "move_number": 161,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 13,
+        "timestamp": "19:31:35"
+      },
+      {
+        "move_number": 162,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 0,
+        "col": 13,
+        "timestamp": "19:31:37"
+      },
+      {
+        "move_number": 163,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 0,
+        "col": 12,
+        "timestamp": "19:31:40"
+      },
+      {
+        "move_number": 164,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 13,
+        "timestamp": "19:31:47"
+      },
+      {
+        "move_number": 165,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 13,
+        "timestamp": "19:31:49"
+      },
+      {
+        "move_number": 166,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 12,
+        "timestamp": "19:31:54"
+      },
+      {
+        "move_number": 167,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 11,
+        "timestamp": "19:31:56"
+      },
+      {
+        "move_number": 168,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 2,
+        "timestamp": "19:32:00"
+      }
+    ],
+    "reason": "FIVE_IN_ROW"
+  },
+  {
+    "room_id": "0956B1",
+    "match_id": "967c46926557445a9dc3018842760964",
+    "start_time": "2026-11-23 19:32:35",
+    "end_time": "2026-11-23 19:36:30",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "FIVE_IN_ROW",
+      "winner_id": "Bob",
+      "loser_id": "Alice",
+      "winner_symbol": "O",
+      "winning_line": [
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "total_moves": 68
+    },
+    "total_moves": 68,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 9,
+        "timestamp": "19:32:36"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 5,
+        "timestamp": "19:32:38"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 4,
+        "timestamp": "19:32:40"
+      },
+      {
+        "move_number": 4,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 5,
+        "timestamp": "19:32:45"
+      },
+      {
+        "move_number": 5,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 7,
+        "timestamp": "19:32:48"
+      },
+      {
+        "move_number": 6,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 5,
+        "timestamp": "19:32:52"
+      },
+      {
+        "move_number": 7,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 5,
+        "timestamp": "19:32:54"
+      },
+      {
+        "move_number": 8,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 6,
+        "timestamp": "19:32:58"
+      },
+      {
+        "move_number": 9,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 7,
+        "timestamp": "19:33:00"
+      },
+      {
+        "move_number": 10,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 4,
+        "timestamp": "19:33:03"
+      },
+      {
+        "move_number": 11,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 4,
+        "timestamp": "19:33:05"
+      },
+      {
+        "move_number": 12,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 6,
+        "timestamp": "19:33:09"
+      },
+      {
+        "move_number": 13,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 7,
+        "timestamp": "19:33:12"
+      },
+      {
+        "move_number": 14,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 7,
+        "timestamp": "19:33:15"
+      },
+      {
+        "move_number": 15,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 6,
+        "timestamp": "19:33:17"
+      },
+      {
+        "move_number": 16,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 10,
+        "timestamp": "19:33:21"
+      },
+      {
+        "move_number": 17,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 8,
+        "col": 9,
+        "timestamp": "19:33:23"
+      },
+      {
+        "move_number": 18,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 7,
+        "timestamp": "19:33:26"
+      },
+      {
+        "move_number": 19,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 12,
+        "col": 9,
+        "timestamp": "19:33:29"
+      },
+      {
+        "move_number": 20,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 12,
+        "col": 2,
+        "timestamp": "19:33:32"
+      },
+      {
+        "move_number": 21,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 2,
+        "timestamp": "19:33:36"
+      },
+      {
+        "move_number": 22,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 2,
+        "timestamp": "19:33:39"
+      },
+      {
+        "move_number": 23,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 4,
+        "timestamp": "19:33:41"
+      },
+      {
+        "move_number": 24,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 10,
+        "timestamp": "19:33:54"
+      },
+      {
+        "move_number": 25,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 8,
+        "timestamp": "19:33:59"
+      },
+      {
+        "move_number": 26,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 9,
+        "timestamp": "19:34:03"
+      },
+      {
+        "move_number": 27,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 8,
+        "timestamp": "19:34:07"
+      },
+      {
+        "move_number": 28,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 8,
+        "timestamp": "19:34:10"
+      },
+      {
+        "move_number": 29,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 10,
+        "timestamp": "19:34:12"
+      },
+      {
+        "move_number": 30,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 9,
+        "timestamp": "19:34:14"
+      },
+      {
+        "move_number": 31,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 9,
+        "timestamp": "19:34:18"
+      },
+      {
+        "move_number": 32,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 6,
+        "timestamp": "19:34:21"
+      },
+      {
+        "move_number": 33,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 7,
+        "timestamp": "19:34:24"
+      },
+      {
+        "move_number": 34,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 9,
+        "timestamp": "19:34:28"
+      },
+      {
+        "move_number": 35,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 11,
+        "timestamp": "19:34:33"
+      },
+      {
+        "move_number": 36,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 11,
+        "timestamp": "19:34:36"
+      },
+      {
+        "move_number": 37,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 11,
+        "timestamp": "19:34:40"
+      },
+      {
+        "move_number": 38,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 12,
+        "timestamp": "19:34:43"
+      },
+      {
+        "move_number": 39,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 11,
+        "timestamp": "19:34:45"
+      },
+      {
+        "move_number": 40,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 11,
+        "timestamp": "19:34:49"
+      },
+      {
+        "move_number": 41,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 10,
+        "timestamp": "19:34:52"
+      },
+      {
+        "move_number": 42,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 12,
+        "timestamp": "19:34:55"
+      },
+      {
+        "move_number": 43,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 12,
+        "timestamp": "19:34:57"
+      },
+      {
+        "move_number": 44,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 12,
+        "timestamp": "19:35:01"
+      },
+      {
+        "move_number": 45,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 6,
+        "timestamp": "19:35:08"
+      },
+      {
+        "move_number": 46,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 7,
+        "timestamp": "19:35:11"
+      },
+      {
+        "move_number": 47,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 7,
+        "timestamp": "19:35:14"
+      },
+      {
+        "move_number": 48,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 1,
+        "col": 8,
+        "timestamp": "19:35:17"
+      },
+      {
+        "move_number": 49,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 10,
+        "timestamp": "19:35:21"
+      },
+      {
+        "move_number": 50,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 8,
+        "timestamp": "19:35:24"
+      },
+      {
+        "move_number": 51,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 10,
+        "col": 7,
+        "timestamp": "19:35:28"
+      },
+      {
+        "move_number": 52,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 5,
+        "timestamp": "19:35:30"
+      },
+      {
+        "move_number": 53,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 11,
+        "col": 8,
+        "timestamp": "19:35:33"
+      },
+      {
+        "move_number": 54,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 13,
+        "col": 10,
+        "timestamp": "19:35:36"
+      },
+      {
+        "move_number": 55,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 10,
+        "col": 10,
+        "timestamp": "19:35:39"
+      },
+      {
+        "move_number": 56,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 9,
+        "col": 9,
+        "timestamp": "19:35:44"
+      },
+      {
+        "move_number": 57,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 8,
+        "timestamp": "19:35:48"
+      },
+      {
+        "move_number": 58,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 11,
+        "col": 6,
+        "timestamp": "19:35:52"
+      },
+      {
+        "move_number": 59,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 11,
+        "col": 5,
+        "timestamp": "19:35:54"
+      },
+      {
+        "move_number": 60,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 10,
+        "col": 4,
+        "timestamp": "19:35:57"
+      },
+      {
+        "move_number": 61,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 5,
+        "timestamp": "19:36:06"
+      },
+      {
+        "move_number": 62,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 6,
+        "timestamp": "19:36:09"
+      },
+      {
+        "move_number": 63,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 8,
+        "col": 4,
+        "timestamp": "19:36:12"
+      },
+      {
+        "move_number": 64,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 4,
+        "timestamp": "19:36:17"
+      },
+      {
+        "move_number": 65,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 5,
+        "timestamp": "19:36:20"
+      },
+      {
+        "move_number": 66,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 3,
+        "timestamp": "19:36:24"
+      },
+      {
+        "move_number": 67,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 2,
+        "timestamp": "19:36:27"
+      },
+      {
+        "move_number": 68,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 3,
+        "timestamp": "19:36:30"
+      }
+    ],
+    "reason": "FIVE_IN_ROW"
+  },
+  {
+    "room_id": "0956B1",
+    "match_id": "220cc74b16954c7eb47db78ca3ce88d2",
+    "start_time": "2026-11-23 19:37:13",
+    "end_time": "2026-11-23 19:38:56",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "FIVE_IN_ROW",
+      "winner_id": "Bob",
+      "loser_id": "Alice",
+      "winner_symbol": "O",
+      "winning_line": [
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          5
+        ]
+      ],
+      "total_moves": 34
+    },
+    "total_moves": 34,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 9,
+        "timestamp": "19:37:14"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 7,
+        "timestamp": "19:37:16"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 7,
+        "timestamp": "19:37:18"
+      },
+      {
+        "move_number": 4,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 6,
+        "timestamp": "19:37:22"
+      },
+      {
+        "move_number": 5,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 7,
+        "timestamp": "19:37:24"
+      },
+      {
+        "move_number": 6,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 8,
+        "timestamp": "19:37:27"
+      },
+      {
+        "move_number": 7,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 5,
+        "timestamp": "19:37:29"
+      },
+      {
+        "move_number": 8,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 5,
+        "timestamp": "19:37:32"
+      },
+      {
+        "move_number": 9,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 8,
+        "col": 10,
+        "timestamp": "19:37:40"
+      },
+      {
+        "move_number": 10,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 5,
+        "timestamp": "19:37:43"
+      },
+      {
+        "move_number": 11,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 8,
+        "timestamp": "19:37:46"
+      },
+      {
+        "move_number": 12,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 8,
+        "timestamp": "19:37:49"
+      },
+      {
+        "move_number": 13,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 10,
+        "timestamp": "19:37:52"
+      },
+      {
+        "move_number": 14,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 10,
+        "timestamp": "19:37:55"
+      },
+      {
+        "move_number": 15,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 10,
+        "timestamp": "19:37:59"
+      },
+      {
+        "move_number": 16,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 9,
+        "timestamp": "19:38:02"
+      },
+      {
+        "move_number": 17,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 6,
+        "timestamp": "19:38:04"
+      },
+      {
+        "move_number": 18,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 7,
+        "timestamp": "19:38:07"
+      },
+      {
+        "move_number": 19,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 9,
+        "timestamp": "19:38:09"
+      },
+      {
+        "move_number": 20,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 7,
+        "timestamp": "19:38:15"
+      },
+      {
+        "move_number": 21,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 8,
+        "col": 6,
+        "timestamp": "19:38:17"
+      },
+      {
+        "move_number": 22,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 5,
+        "timestamp": "19:38:21"
+      },
+      {
+        "move_number": 23,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 6,
+        "timestamp": "19:38:23"
+      },
+      {
+        "move_number": 24,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 6,
+        "timestamp": "19:38:25"
+      },
+      {
+        "move_number": 25,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 5,
+        "timestamp": "19:38:28"
+      },
+      {
+        "move_number": 26,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 4,
+        "timestamp": "19:38:31"
+      },
+      {
+        "move_number": 27,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 6,
+        "timestamp": "19:38:34"
+      },
+      {
+        "move_number": 28,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 8,
+        "timestamp": "19:38:36"
+      },
+      {
+        "move_number": 29,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 8,
+        "timestamp": "19:38:39"
+      },
+      {
+        "move_number": 30,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 9,
+        "timestamp": "19:38:41"
+      },
+      {
+        "move_number": 31,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 7,
+        "timestamp": "19:38:46"
+      },
+      {
+        "move_number": 32,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 4,
+        "timestamp": "19:38:50"
+      },
+      {
+        "move_number": 33,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 9,
+        "timestamp": "19:38:53"
+      },
+      {
+        "move_number": 34,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 9,
+        "timestamp": "19:38:56"
+      }
+    ],
+    "reason": "FIVE_IN_ROW"
+  },
+  {
+    "room_id": "0956B1",
+    "match_id": "0b409acd22b143faae84f983f04ecc7e",
+    "start_time": "2026-11-23 19:39:19",
+    "end_time": "2026-11-23 19:41:40",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "TIMEOUT",
+      "winner_id": "Alice",
+      "loser_id": "Bob",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 37
+    },
+    "total_moves": 37,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 6,
+        "timestamp": "19:39:22"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 6,
+        "timestamp": "19:39:26"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 8,
+        "timestamp": "19:39:28"
+      },
+      {
+        "move_number": 4,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 4,
+        "timestamp": "19:39:31"
+      },
+      {
+        "move_number": 5,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 7,
+        "timestamp": "19:39:33"
+      },
+      {
+        "move_number": 6,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 5,
+        "timestamp": "19:39:36"
+      },
+      {
+        "move_number": 7,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 4,
+        "timestamp": "19:39:38"
+      },
+      {
+        "move_number": 8,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 9,
+        "timestamp": "19:39:42"
+      },
+      {
+        "move_number": 9,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 8,
+        "timestamp": "19:39:45"
+      },
+      {
+        "move_number": 10,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 8,
+        "timestamp": "19:39:47"
+      },
+      {
+        "move_number": 11,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 7,
+        "timestamp": "19:39:49"
+      },
+      {
+        "move_number": 12,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 7,
+        "timestamp": "19:39:53"
+      },
+      {
+        "move_number": 13,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 6,
+        "timestamp": "19:39:56"
+      },
+      {
+        "move_number": 14,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 9,
+        "timestamp": "19:39:59"
+      },
+      {
+        "move_number": 15,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 9,
+        "timestamp": "19:40:01"
+      },
+      {
+        "move_number": 16,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 7,
+        "timestamp": "19:40:04"
+      },
+      {
+        "move_number": 17,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 8,
+        "timestamp": "19:40:08"
+      },
+      {
+        "move_number": 18,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 5,
+        "timestamp": "19:40:11"
+      },
+      {
+        "move_number": 19,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 4,
+        "timestamp": "19:40:14"
+      },
+      {
+        "move_number": 20,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 5,
+        "timestamp": "19:40:17"
+      },
+      {
+        "move_number": 21,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 5,
+        "timestamp": "19:40:19"
+      },
+      {
+        "move_number": 22,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 3,
+        "timestamp": "19:40:22"
+      },
+      {
+        "move_number": 23,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 2,
+        "timestamp": "19:40:24"
+      },
+      {
+        "move_number": 24,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 3,
+        "timestamp": "19:40:27"
+      },
+      {
+        "move_number": 25,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 3,
+        "timestamp": "19:40:32"
+      },
+      {
+        "move_number": 26,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 4,
+        "timestamp": "19:40:35"
+      },
+      {
+        "move_number": 27,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 3,
+        "timestamp": "19:40:38"
+      },
+      {
+        "move_number": 28,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 3,
+        "timestamp": "19:40:41"
+      },
+      {
+        "move_number": 29,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 2,
+        "timestamp": "19:40:45"
+      },
+      {
+        "move_number": 30,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 1,
+        "timestamp": "19:40:48"
+      },
+      {
+        "move_number": 31,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 2,
+        "timestamp": "19:40:50"
+      },
+      {
+        "move_number": 32,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 2,
+        "timestamp": "19:40:52"
+      },
+      {
+        "move_number": 33,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 8,
+        "col": 2,
+        "timestamp": "19:40:57"
+      },
+      {
+        "move_number": 34,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 4,
+        "timestamp": "19:41:00"
+      },
+      {
+        "move_number": 35,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 8,
+        "col": 4,
+        "timestamp": "19:41:03"
+      },
+      {
+        "move_number": 36,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 3,
+        "timestamp": "19:41:05"
+      },
+      {
+        "move_number": 37,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 1,
+        "timestamp": "19:41:10"
+      }
+    ],
+    "reason": "TIMEOUT"
+  },
+  {
+    "room_id": "0956B1",
+    "match_id": "60bfc67e72d54e37858499330a586f0b",
+    "start_time": "2026-11-23 19:46:03",
+    "end_time": "2026-11-23 19:46:17",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "Alice",
+      "loser_id": "Bob",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 7
+    },
+    "total_moves": 7,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 8,
+        "timestamp": "19:46:04"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 6,
+        "timestamp": "19:46:05"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 7,
+        "timestamp": "19:46:06"
+      },
+      {
+        "move_number": 4,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 6,
+        "timestamp": "19:46:08"
+      },
+      {
+        "move_number": 5,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 7,
+        "timestamp": "19:46:10"
+      },
+      {
+        "move_number": 6,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 7,
+        "timestamp": "19:46:12"
+      },
+      {
+        "move_number": 7,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 6,
+        "timestamp": "19:46:15"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "46EE0E",
+    "match_id": "68402106f8964b278112216e1776013b",
+    "start_time": "2026-11-23 19:47:03",
+    "end_time": "2026-11-23 19:47:18",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "Alice",
+      "loser_id": "Bob",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 5
+    },
+    "total_moves": 5,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 6,
+        "timestamp": "19:47:09"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 7,
+        "timestamp": "19:47:10"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 6,
+        "timestamp": "19:47:12"
+      },
+      {
+        "move_number": 4,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 7,
+        "timestamp": "19:47:14"
+      },
+      {
+        "move_number": 5,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 7,
+        "timestamp": "19:47:16"
+      }
+    ],
+    "reason": "RESIGN"
   }
 ]
