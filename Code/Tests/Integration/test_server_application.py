@@ -7,9 +7,10 @@ from unittest.mock import Mock, patch
 from Code.Client.GUI.app import CaroApp
 from Code.Client.Network.client_sync import ClientStateSync
 
-from Code.Server.Room_Match.models import RoomStatus
+from Code.Server.Room_Match.models import RoomStatus, Role
 from Code.Server.User_Lobby.models import PlayerStatus
 from Code.Server.Application.application import ServerApplication
+from Code.Server.Game_Engine.engine import GameEngine
 
 
 class TestServerApplication(unittest.TestCase):
@@ -387,6 +388,246 @@ class TestServerApplication(unittest.TestCase):
         self.app.handle_message(self.bob, {"type": "CREATE_ROOM"})
         self.assertEqual(self._last_message(self.bob, "ROOM_CREATED")["room"]["players"],
                          {"X": "Bobby"})
+
+    def test_player_already_in_room_cannot_create_another_room(self):
+        carol = object()
+        self.app.handle_message(
+            carol,
+            {"type": "LOGIN", "name": "Carol"}
+        )
+
+        self.app.handle_message(
+            self.alice,
+            {"type": "CREATE_ROOM"}
+        )
+
+        room_id = self._last_message(
+            self.alice, "ROOM_CREATED"
+        )["room"]["room_id"]
+
+        self.app.handle_message(
+            self.bob,
+            {"type": "JOIN_ROOM", "room_id": room_id}
+        )
+
+        original_room = self.app.rooms.get_room(room_id)
+        original_players = dict(
+            original_room.to_dict()["players"]
+        )
+
+        self.app.handle_message(
+            self.alice,
+            {"type": "CREATE_ROOM"}
+        )
+
+        error = self._last_message(self.alice, "ERROR")
+
+        self.assertEqual(error["code"], "INVALID_STATE")
+
+        self.assertEqual(len(self.app.rooms.list_rooms()), 1)
+        self.assertEqual(
+            self.app.rooms.list_rooms()[0]["room_id"],
+            room_id
+        )
+
+        self.assertIs(
+            self.app.rooms.room_of("Alice"),
+            original_room
+        )
+
+    def test_host_leaves_ready_room_and_bob_becomes_host(self):
+        self.app.handle_message(self.alice, {
+            "type": "CREATE_ROOM"
+        })
+
+        room_id = self._last_message(
+            self.alice, "ROOM_CREATED"
+        )["room"]["room_id"]
+
+        self.app.handle_message(self.bob, {
+            "type": "JOIN_ROOM",
+            "room_id": room_id
+        })
+
+        room = self.app.rooms.get_room(room_id)
+
+        self.assertEqual(room.status, RoomStatus.READY)
+        self.assertEqual(room.host, "Alice")
+
+        self.app.handle_message(self.alice, {
+            "type": "LEAVE_ROOM"
+        })
+
+        room = self.app.rooms.get_room(room_id)
+
+        self.assertEqual(room.status, RoomStatus.WAITING)
+
+        self.assertEqual(room.host, "Bobby")
+        self.assertEqual(
+            room.players,
+            {next(role for role in room.players if role.value == "O"): "Bobby"}
+        )
+
+        self.assertIsNone(self.app.rooms.room_of("Alice"))
+
+        self.assertIs(
+            self.app.rooms.room_of("Bobby"),
+            room
+        )
+
+        self.assertEqual(
+            self.app.players.get_player(self.alice).status,
+            PlayerStatus.ONLINE
+        )
+        self.assertEqual(
+            self.app.players.get_player(self.bob).status,
+            PlayerStatus.IN_ROOM
+        )
+
+        self.assertEqual(
+            self._last_message(self.alice, "ROOM_LEFT")["room_id"],
+            room_id
+        )
+        self.assertEqual(
+            self._last_message(self.bob, "ROOM_UPDATED")["room"]["status"],
+            "WAITING"
+        )
+
+    def test_non_host_leaves_ready_room_and_host_remains(self):
+        self.app.handle_message(self.alice, {
+            "type": "CREATE_ROOM"
+        })
+
+        room_id = self._last_message(
+            self.alice, "ROOM_CREATED"
+        )["room"]["room_id"]
+
+        self.app.handle_message(self.bob, {
+            "type": "JOIN_ROOM",
+            "room_id": room_id
+        })
+
+        room = self.app.rooms.get_room(room_id)
+
+        self.assertEqual(room.status, RoomStatus.READY)
+        self.assertEqual(room.host, "Alice")
+        self.assertEqual(
+            room.players,
+            {
+                Role.PLAYER_X: "Alice",
+                Role.PLAYER_O: "Bobby"
+            }
+        )
+
+        self.app.handle_message(self.bob, {
+            "type": "LEAVE_ROOM"
+        })
+
+        room = self.app.rooms.get_room(room_id)
+
+        self.assertEqual(room.status, RoomStatus.WAITING)
+
+        self.assertEqual(room.host, "Alice")
+        self.assertEqual(
+            room.players,
+            {Role.PLAYER_X: "Alice"}
+        )
+
+        self.assertIs(
+            self.app.rooms.room_of("Alice"),
+            room
+        )
+        self.assertIsNone(
+            self.app.rooms.room_of("Bobby")
+        )
+
+        self.assertEqual(
+            self.app.players.get_player(self.alice).status,
+            PlayerStatus.IN_ROOM
+        )
+        self.assertEqual(
+            self.app.players.get_player(self.bob).status,
+            PlayerStatus.ONLINE
+        )
+
+        self.assertEqual(
+            self._last_message(self.bob, "ROOM_LEFT")["room_id"],
+            room_id
+        )
+        self.assertEqual(
+            self._last_message(self.alice, "ROOM_UPDATED")["room"]["status"],
+            "WAITING"
+        )
+
+    def test_third_player_cannot_join_room_while_playing(self):
+        room_id = self._create_room(playing=True)
+
+        carol = object()
+        self.app.handle_message(carol, {
+            "type": "LOGIN",
+            "name": "Carol"
+        })
+
+        self.app.handle_message(carol, {
+            "type": "JOIN_ROOM",
+            "room_id": room_id
+        })
+
+        error = self.app.rooms.get_room(room_id)
+        room = self.app.rooms.get_room(room_id)
+
+        self.assertEqual(room.status, RoomStatus.PLAYING)
+
+        self.assertEqual(
+            {role.value: name for role, name in room.players.items()},
+            {"X": "Alice", "O": "Bobby"}
+        )
+
+        self.assertIsNone(self.app.rooms.room_of("Carol"))
+        self.assertEqual(
+            self.app.players.get_player(carol).status,
+            PlayerStatus.ONLINE
+        )
+
+    def test_initial_match_state_is_synced_with_game_engine(self):
+        room_id = self._create_room(playing=True)
+
+        state = self.app.sync.rooms[room_id]
+        snapshot = state.get_full_snapshot()
+
+        self.assertEqual(
+            snapshot["players"],
+            {"X": "Alice", "O": "Bobby"}
+        )
+
+        self.assertEqual(snapshot["status"], "PLAYING")
+
+        board_size = state.board_size
+
+        expected_board = [
+            ["" for _ in range(board_size)]
+            for _ in range(board_size)
+        ]
+        self.assertEqual(len(snapshot["board"]), board_size)
+        self.assertEqual(snapshot["board"], expected_board)
+
+        self.assertEqual(snapshot["current_turn"], "X")
+
+        self.assertEqual(snapshot["move_history"], [])
+        self.assertIsNone(snapshot["winner"])
+
+        self.assertFalse(GameEngine.is_board_full(snapshot["board"]))
+
+        client = ClientStateSync(
+            "Alice",
+            ui_callback=lambda *_:None
+        )
+        client.handle_server_message(snapshot)
+
+        self.assertEqual(client.board, expected_board)
+        self.assertEqual(client.current_turn, "X")
+        self.assertEqual(client.status, "PLAYING")
+        self.assertEqual(client.players, {"X": "Alice", "O": "Bobby"})
 
 
 if __name__ == "__main__":

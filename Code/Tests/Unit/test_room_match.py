@@ -473,6 +473,12 @@ class TestRoom(unittest.TestCase):
         ids = {r["room_id"] for r in self.m.list_rooms()}
         self.assertEqual(len(ids), 51)
 
+    def test_get_noneexistent_room_raises_room_not_found(self):
+        with self.assertRaises(RoomError) as context:
+            self.m.get_room("not-exist")
+
+        self.assertEqual(context.exception.code, ROOM_NOT_FOUND)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -64,3 +64,74 @@ class TestSynchronizationTimeout(unittest.TestCase):
             self.assertTrue(
                 any(message["type"] == "MATCH_FINISHED" for message in messages)
             )
+
+class TestSynchronizationBroadcast(unittest.TestCase):
+    def test_valid_move_broadcasts_same_state_to_both_clients(self):
+        clients = {
+            "Alice": ClientStateSync("Alice"),
+            "Bob": ClientStateSync("Bob")
+        }
+
+        received_messages = {
+            "Alice": [],
+            "Bob": []
+        }
+
+        def mock_network_send(target_user, message):
+            received_messages[target_user].append(message)
+            clients[target_user].handle_server_message(message)
+
+        sync = SyncManager(send_callback=mock_network_send)
+        room_id = "ROOM_SY_02"
+
+        sync.create_or_init_match(
+            room_id,
+            "Alice",
+            "Bob",
+            board_size=15
+        )
+
+        success, result = sync.sync_move(
+            room_id,
+            "Alice",
+            7,
+            7
+        )
+
+        self.assertTrue(success)
+
+        for username in ("Alice", "Bob"):
+            self.assertTrue(
+                any(
+                    msg["type"] == "SYNC_MOVE"
+                    for msg in received_messages[username]
+                )
+            )
+
+        self.assertEqual(clients["Alice"].board[7][7], "X")
+        self.assertEqual(clients["Bob"].board[7][7], "X")
+
+        self.assertEqual(
+            clients["Alice"].board,
+            clients["Bob"].board
+        )
+
+        self.assertEqual(clients["Alice"].current_turn, "O")
+        self.assertEqual(clients["Bob"].current_turn, "O")
+
+        self.assertEqual(
+            clients["Alice"].move_history,
+            clients["Bob"].move_history
+        )
+        self.assertEqual(len(clients["Alice"].move_history), 1)
+
+        server_state = sync.rooms[room_id]
+
+        self.assertEqual(
+            server_state.board,
+            clients["Alice"].board
+        )
+        self.assertEqual(
+            server_state.board,
+            clients["Bob"].board
+        )
