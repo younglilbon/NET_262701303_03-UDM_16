@@ -127,14 +127,15 @@ Sơ đồ rematch mô tả API nội bộ, không khẳng định quy trình ch�
 ## 6. Tích hợp đã có và còn thiếu
 
 Đã nối CREATE_ROOM, JOIN_ROOM, JOIN_AS_SPECTATOR, LIST_ROOMS, START_MATCH, LEAVE_ROOM qua ServerApplication. Rời/đóng phòng đã phối hợp TV2/TV5 để chốt kết quả một lần và dọn thành viên; xem [room_match_integration.md](room_match_integration.md).
+Server đã chặn người đang chờ phản hồi lời mời đấu tạo phòng, vào phòng
+chơi hoặc vào xem. GUI đã xử lý `ROOM_LEFT` và `ROOM_CLOSED` để đưa
+người dùng về sảnh sau khi server xác nhận rời phòng hoặc đóng phòng.
 
 Còn thiếu hoặc cần phối hợp:
 
 - REMATCH/REMATCH_RESPONSE, hai bên đồng ý, hạn 30 giây và hủy yêu cầu khi rời/disconnect.
 - Snapshot cho spectator vào PAUSED/FINISHED; thứ tự ROOM_JOINED/ROOM_STARTED trước snapshot.
 - Phát ROOM_LIST sau mọi thay đổi; metadata trận trong payload phòng.
-- Chặn INVITE_PENDING tại lệnh tạo/vào phòng, phối hợp TV2.
-- TV6 xử lý ROOM_CLOSED, xác nhận rời phòng và sửa màn hình phòng.
 - Giữ thời gian reconnect và BOTH_DISCONNECTED/ABORTED do TV5/TV4 chủ trì; TV3 hỗ trợ dọn thành viên.
 
 ## 7. Kiểm chứng

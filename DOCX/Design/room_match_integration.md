@@ -50,8 +50,12 @@ lỗi gửi từng socket, bảo toàn timer spectator, lưu thất bại khi đ
 I/O ngoài khóa, callback cũ, start/leave và kết thúc/leave đồng thời.
 Các test dùng callback mạng giả và lịch sử trong thư mục tạm.
 
-Còn cần TV6 xử lý ROOM_CLOSED và chỉ về lobby sau xác nhận server. Chưa hoàn
-thiện spectator vào PAUSED/FINISHED, giữ thời gian còn lại khi resume,
+GUI đã xử lý `ROOM_LEFT` và `ROOM_CLOSED`. Khi người dùng chủ động
+rời phòng, client chờ phản hồi từ server rồi mới quay về sảnh.
+Khi phòng đóng vì hết người chơi, khán giả còn kết nối nhận
+`ROOM_CLOSED` và được đưa về sảnh
+
+Chưa hoàn thiện spectator vào PAUSED/FINISHED, giữ thời gian còn lại khi resume,
 BOTH_DISCONNECTED/ABORTED, rematch có chấp thuận hoặc toàn bộ trường match_id
 trong protocol/GUI. Chưa nghiệm thu các phần đó bằng các test rời/đóng phòng.
 
