@@ -1,27 +1,46 @@
-"""timer.py - Đồng hồ giới hạn thời gian suy nghĩ mỗi lượt (TV4).
-
-Thiết kế "pull": Timer không tự tạo thread. Server (hoặc vòng lặp tick của
-TV3/TV5) gọi engine.check_timeout() định kỳ ~ mỗi 0.5-1 giây. Cách này dễ test
-(truyền clock giả) và tránh race condition giữa nhiều thread.
-"""
+import math
 import time
-from typing import Callable, Optional
+from typing import Any, Callable, Optional
+
+MIN_TURN_TIME_LIMIT = 5
+MAX_TURN_TIME_LIMIT = 600
+DEFAULT_TURN_TIME_LIMIT = 30
+
+
+def validate_turn_time_limit(limit: Any) -> int:
+    """Kiểm tra cấu hình thời gian lượt từ chủ phòng: int trong [5, 600], từ chối bool."""
+    if (
+        not isinstance(limit, int)
+        or isinstance(limit, bool)
+        or not (MIN_TURN_TIME_LIMIT <= limit <= MAX_TURN_TIME_LIMIT)
+    ):
+        raise ValueError(
+            f"Thời gian lượt phải là số nguyên từ {MIN_TURN_TIME_LIMIT} đến {MAX_TURN_TIME_LIMIT} giây."
+        )
+    return limit
 
 
 class TurnTimer:
-    def __init__(self, limit: float = 30.0, clock: Callable[[], float] = time.monotonic):
-        if limit <= 0:
-            raise ValueError("limit phải > 0")
-        self.limit = limit
+    def __init__(
+        self,
+        limit: float = DEFAULT_TURN_TIME_LIMIT,
+        clock: Callable[[], float] = time.monotonic,
+    ) -> None:
+        if isinstance(limit, bool) or not isinstance(limit, (int, float)) or limit <= 0:
+            raise ValueError("limit phải là số dương > 0")
+        self.limit = float(limit)
         self._clock = clock
-        self._deadline: Optional[float] = None   # khi đang chạy
-        self._paused_left: Optional[float] = None  # khi đang tạm dừng
+        self._deadline: Optional[float] = None      # khi đang chạy
+        self._paused_left: Optional[float] = None   # khi đang tạm dừng
 
     # ---------- điều khiển ----------
     def start(self, seconds: Optional[float] = None) -> None:
-        """Bắt đầu đếm ngược (mặc định = limit). Dùng khi đổi lượt."""
+        """Bắt đầu đếm ngược (mặc định = limit). Dùng khi bắt đầu hoặc đổi lượt."""
+        duration = self.limit if seconds is None else seconds
+        if isinstance(duration, bool) or not isinstance(duration, (int, float)) or duration <= 0:
+            raise ValueError("seconds phải là số dương > 0")
         self._paused_left = None
-        self._deadline = self._clock() + (self.limit if seconds is None else seconds)
+        self._deadline = self._clock() + float(duration)
 
     def stop(self) -> None:
         self._deadline = None
@@ -34,6 +53,7 @@ class TurnTimer:
             self._deadline = None
 
     def resume(self) -> None:
+        """Tiếp tục đếm với phần thời gian còn lại trước khi tạm dừng."""
         if self._paused_left is not None:
             self._deadline = self._clock() + self._paused_left
             self._paused_left = None
@@ -53,6 +73,10 @@ class TurnTimer:
         if self._paused_left is not None:
             return self._paused_left
         return 0.0
+
+    def remaining_seconds(self) -> int:
+        """Số giây còn lại không âm, làm tròn lên để tránh hiện 0 khi vẫn còn phần giây."""
+        return math.ceil(self.remaining())
 
     def expired(self) -> bool:
         return self._deadline is not None and self._clock() >= self._deadline
