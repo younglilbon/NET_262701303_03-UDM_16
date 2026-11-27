@@ -7427,5 +7427,6275 @@
     "total_moves": 0,
     "moves": [],
     "reason": "RESIGN"
+  },
+  {
+    "room_id": "EDC517",
+    "match_id": "71df9b5fbe924f6e82b8d7a92b9b7fc9",
+    "start_time": "2026-11-26 13:39:06",
+    "end_time": "2026-11-26 13:40:17",
+    "players": {
+      "X": "alice",
+      "O": "bob"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "DISCONNECT",
+      "winner_id": "bob",
+      "loser_id": "alice",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 3
+    },
+    "total_moves": 3,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 9,
+        "timestamp": "13:39:09"
+      },
+      {
+        "move_number": 2,
+        "player": "bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 6,
+        "timestamp": "13:39:10"
+      },
+      {
+        "move_number": 3,
+        "player": "alice",
+        "symbol": "X",
+        "row": 11,
+        "col": 11,
+        "timestamp": "13:39:12"
+      }
+    ],
+    "reason": "DISCONNECT"
+  },
+  {
+    "room_id": "7E87B5",
+    "match_id": "dfef029fdd8a488c82f6d99a55dfacd4",
+    "start_time": "2026-11-26 18:25:10",
+    "end_time": "2026-11-26 18:25:41",
+    "players": {
+      "X": "alice",
+      "O": "Bob"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "FIVE_IN_ROW",
+      "winner_id": "alice",
+      "loser_id": "Bob",
+      "winner_symbol": "X",
+      "winning_line": [
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "total_moves": 13
+    },
+    "total_moves": 13,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 5,
+        "timestamp": "18:25:12"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 5,
+        "timestamp": "18:25:16"
+      },
+      {
+        "move_number": 3,
+        "player": "alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 6,
+        "timestamp": "18:25:18"
+      },
+      {
+        "move_number": 4,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 6,
+        "timestamp": "18:25:21"
+      },
+      {
+        "move_number": 5,
+        "player": "alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 7,
+        "timestamp": "18:25:22"
+      },
+      {
+        "move_number": 6,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 8,
+        "timestamp": "18:25:24"
+      },
+      {
+        "move_number": 7,
+        "player": "alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 7,
+        "timestamp": "18:25:27"
+      },
+      {
+        "move_number": 8,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 6,
+        "timestamp": "18:25:29"
+      },
+      {
+        "move_number": 9,
+        "player": "alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 7,
+        "timestamp": "18:25:31"
+      },
+      {
+        "move_number": 10,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 5,
+        "timestamp": "18:25:34"
+      },
+      {
+        "move_number": 11,
+        "player": "alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 7,
+        "timestamp": "18:25:36"
+      },
+      {
+        "move_number": 12,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 7,
+        "timestamp": "18:25:39"
+      },
+      {
+        "move_number": 13,
+        "player": "alice",
+        "symbol": "X",
+        "row": 8,
+        "col": 7,
+        "timestamp": "18:25:41"
+      }
+    ],
+    "reason": "FIVE_IN_ROW"
+  },
+  {
+    "room_id": "EF3928",
+    "match_id": "894767ab9c2a4dbe826656b3e9b57307",
+    "start_time": "2026-11-27 08:21:08",
+    "end_time": "2026-11-27 08:21:36",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "FIVE_IN_ROW",
+      "winner_id": "Alice",
+      "loser_id": "Bob",
+      "winner_symbol": "X",
+      "winning_line": [
+        [
+          2,
+          9
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      "total_moves": 11
+    },
+    "total_moves": 11,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 11,
+        "timestamp": "08:21:09"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 10,
+        "timestamp": "08:21:10"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 9,
+        "timestamp": "08:21:12"
+      },
+      {
+        "move_number": 4,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 8,
+        "timestamp": "08:21:15"
+      },
+      {
+        "move_number": 5,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 9,
+        "timestamp": "08:21:26"
+      },
+      {
+        "move_number": 6,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 8,
+        "timestamp": "08:21:28"
+      },
+      {
+        "move_number": 7,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 9,
+        "timestamp": "08:21:29"
+      },
+      {
+        "move_number": 8,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 8,
+        "timestamp": "08:21:31"
+      },
+      {
+        "move_number": 9,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 9,
+        "timestamp": "08:21:32"
+      },
+      {
+        "move_number": 10,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 9,
+        "timestamp": "08:21:34"
+      },
+      {
+        "move_number": 11,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 9,
+        "timestamp": "08:21:36"
+      }
+    ],
+    "reason": "FIVE_IN_ROW"
+  },
+  {
+    "room_id": "EF3928",
+    "match_id": "3ef0c708ab8247298115932f61f0748c",
+    "start_time": "2026-11-27 08:56:29",
+    "end_time": "2026-11-27 08:57:54",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "DISCONNECT",
+      "winner_id": "Alice",
+      "loser_id": "Bob",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 3
+    },
+    "total_moves": 3,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 1,
+        "col": 8,
+        "timestamp": "08:56:31"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 6,
+        "timestamp": "08:56:33"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 8,
+        "timestamp": "08:56:35"
+      }
+    ],
+    "reason": "DISCONNECT"
+  },
+  {
+    "room_id": "2E8710",
+    "match_id": "0a4dc42fc8094512a998677ba81a8c44",
+    "start_time": "2026-11-27 08:59:23",
+    "end_time": "2026-11-27 08:59:44",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "Alice",
+      "loser_id": "Bob",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 0
+    },
+    "total_moves": 0,
+    "moves": [],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "4989CE",
+    "match_id": "d7e1673a96f641a4861fdd342886d516",
+    "start_time": "2026-11-27 09:00:21",
+    "end_time": "2026-11-27 09:00:31",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "Bob",
+      "loser_id": "Alice",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 0
+    },
+    "total_moves": 0,
+    "moves": [],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "F133DD",
+    "match_id": "0464237deedd4375afa910ffe801d458",
+    "start_time": "2026-11-27 09:02:35",
+    "end_time": "2026-11-27 09:03:33",
+    "players": {
+      "X": "alice",
+      "O": "bob"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "TIMEOUT",
+      "winner_id": "alice",
+      "loser_id": "bob",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 5
+    },
+    "total_moves": 5,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 13,
+        "timestamp": "09:02:38"
+      },
+      {
+        "move_number": 2,
+        "player": "bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 11,
+        "timestamp": "09:02:40"
+      },
+      {
+        "move_number": 3,
+        "player": "alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 11,
+        "timestamp": "09:02:42"
+      },
+      {
+        "move_number": 4,
+        "player": "bob",
+        "symbol": "O",
+        "row": 9,
+        "col": 10,
+        "timestamp": "09:03:01"
+      },
+      {
+        "move_number": 5,
+        "player": "alice",
+        "symbol": "X",
+        "row": 9,
+        "col": 9,
+        "timestamp": "09:03:03"
+      }
+    ],
+    "reason": "TIMEOUT"
+  },
+  {
+    "room_id": "858F68",
+    "match_id": "a11e76b324b14d05af0c0b1036041d7c",
+    "start_time": "2026-11-27 09:54:38",
+    "end_time": "2026-11-27 09:55:38",
+    "players": {
+      "X": "PF01_PlayerX",
+      "O": "PF01_PlayerO"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "DISCONNECT",
+      "winner_id": "PF01_PlayerX",
+      "loser_id": "PF01_PlayerO",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 100
+    },
+    "total_moves": 100,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 2,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 0,
+        "col": 1,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 3,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 0,
+        "col": 2,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 4,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 0,
+        "col": 3,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 5,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 0,
+        "col": 4,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 6,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 0,
+        "col": 5,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 7,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 0,
+        "col": 6,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 8,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 0,
+        "col": 7,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 9,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 0,
+        "col": 8,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 10,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 0,
+        "col": 9,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 11,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 0,
+        "col": 10,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 12,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 0,
+        "col": 11,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 13,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 0,
+        "col": 12,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 14,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 0,
+        "col": 13,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 15,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 0,
+        "col": 14,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 16,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 1,
+        "col": 0,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 17,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 1,
+        "col": 1,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 18,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 1,
+        "col": 2,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 19,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 1,
+        "col": 3,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 20,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 1,
+        "col": 4,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 21,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 1,
+        "col": 5,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 22,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 1,
+        "col": 6,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 23,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 1,
+        "col": 7,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 24,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 1,
+        "col": 8,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 25,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 1,
+        "col": 9,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 26,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 1,
+        "col": 10,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 27,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 1,
+        "col": 11,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 28,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 1,
+        "col": 12,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 29,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 1,
+        "col": 13,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 30,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 1,
+        "col": 14,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 31,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 2,
+        "col": 0,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 32,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 2,
+        "col": 1,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 33,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 2,
+        "col": 2,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 34,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 2,
+        "col": 3,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 35,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 2,
+        "col": 4,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 36,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 2,
+        "col": 5,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 37,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 2,
+        "col": 6,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 38,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 2,
+        "col": 7,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 39,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 2,
+        "col": 8,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 40,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 2,
+        "col": 9,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 41,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 2,
+        "col": 10,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 42,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 2,
+        "col": 11,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 43,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 2,
+        "col": 12,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 44,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 2,
+        "col": 13,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 45,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 2,
+        "col": 14,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 46,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 3,
+        "col": 0,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 47,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 3,
+        "col": 1,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 48,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 3,
+        "col": 2,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 49,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 3,
+        "col": 3,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 50,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 3,
+        "col": 4,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 51,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 3,
+        "col": 5,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 52,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 3,
+        "col": 6,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 53,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 3,
+        "col": 7,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 54,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 3,
+        "col": 8,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 55,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 3,
+        "col": 9,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 56,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 3,
+        "col": 10,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 57,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 3,
+        "col": 11,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 58,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 3,
+        "col": 12,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 59,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 3,
+        "col": 13,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 60,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 3,
+        "col": 14,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 61,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 4,
+        "col": 1,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 62,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 4,
+        "col": 0,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 63,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 4,
+        "col": 3,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 64,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 4,
+        "col": 2,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 65,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 4,
+        "col": 5,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 66,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 4,
+        "col": 4,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 67,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 4,
+        "col": 7,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 68,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 4,
+        "col": 6,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 69,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 4,
+        "col": 9,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 70,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 4,
+        "col": 8,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 71,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 4,
+        "col": 11,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 72,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 4,
+        "col": 10,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 73,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 4,
+        "col": 13,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 74,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 4,
+        "col": 12,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 75,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 5,
+        "col": 0,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 76,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 4,
+        "col": 14,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 77,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 5,
+        "col": 1,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 78,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 5,
+        "col": 2,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 79,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 5,
+        "col": 3,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 80,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 5,
+        "col": 4,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 81,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 5,
+        "col": 5,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 82,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 5,
+        "col": 6,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 83,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 5,
+        "col": 7,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 84,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 5,
+        "col": 8,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 85,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 5,
+        "col": 9,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 86,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 5,
+        "col": 10,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 87,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 5,
+        "col": 11,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 88,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 5,
+        "col": 12,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 89,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 5,
+        "col": 13,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 90,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 5,
+        "col": 14,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 91,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 6,
+        "col": 0,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 92,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 6,
+        "col": 1,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 93,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 6,
+        "col": 2,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 94,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 6,
+        "col": 3,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 95,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 6,
+        "col": 4,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 96,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 6,
+        "col": 5,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 97,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 6,
+        "col": 6,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 98,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 6,
+        "col": 7,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 99,
+        "player": "PF01_PlayerX",
+        "symbol": "X",
+        "row": 6,
+        "col": 8,
+        "timestamp": "09:54:38"
+      },
+      {
+        "move_number": 100,
+        "player": "PF01_PlayerO",
+        "symbol": "O",
+        "row": 6,
+        "col": 9,
+        "timestamp": "09:54:38"
+      }
+    ],
+    "reason": "DISCONNECT"
+  },
+  {
+    "room_id": "4D13A0",
+    "match_id": "0f621133606242d5a369b7c1819f118f",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:29",
+    "players": {
+      "X": "PF2X04230000",
+      "O": "PF2O04230000"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X04230000",
+      "loser_id": "PF2O04230000",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230000",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "B43850",
+    "match_id": "4b4b97f39f6648d5973f882b35162124",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:29",
+    "players": {
+      "X": "PF2X04230001",
+      "O": "PF2O04230001"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230001",
+      "loser_id": "PF2X04230001",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230001",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "CA3C29",
+    "match_id": "d96f189e65df49feb07694e68da66dbc",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:29",
+    "players": {
+      "X": "PF2X04230002",
+      "O": "PF2O04230002"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230002",
+      "loser_id": "PF2X04230002",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230002",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "B42BCA",
+    "match_id": "330426b696a54ac785599425b36380d3",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:29",
+    "players": {
+      "X": "PF2X04230019",
+      "O": "PF2O04230019"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230019",
+      "loser_id": "PF2X04230019",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230019",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "6BBB31",
+    "match_id": "b9471c17d39c4224a7aa40e7e413ec72",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:29",
+    "players": {
+      "X": "PF2X04230003",
+      "O": "PF2O04230003"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230003",
+      "loser_id": "PF2X04230003",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230003",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "768B9E",
+    "match_id": "24963818959149078b0790633bf01c92",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:29",
+    "players": {
+      "X": "PF2X04230042",
+      "O": "PF2O04230042"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230042",
+      "loser_id": "PF2X04230042",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230042",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "DE8290",
+    "match_id": "1f33b31247a94aaa89879ff89b34514d",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:29",
+    "players": {
+      "X": "PF2X04230010",
+      "O": "PF2O04230010"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X04230010",
+      "loser_id": "PF2O04230010",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230010",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "1BA4D1",
+    "match_id": "60902630b766477087dae77175172a3e",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230004",
+      "O": "PF2O04230004"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X04230004",
+      "loser_id": "PF2O04230004",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230004",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "DCC30B",
+    "match_id": "936ff9de52e74f96a1785f071a3cefa3",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230012",
+      "O": "PF2O04230012"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X04230012",
+      "loser_id": "PF2O04230012",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230012",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "FBED55",
+    "match_id": "d8276e1199164e5da329878ddf7c5b28",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230005",
+      "O": "PF2O04230005"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X04230005",
+      "loser_id": "PF2O04230005",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230005",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "985D6B",
+    "match_id": "bb990d90cdf141ef983b6a59e3078aa7",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230006",
+      "O": "PF2O04230006"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X04230006",
+      "loser_id": "PF2O04230006",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230006",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "13FAEF",
+    "match_id": "dcd3bb0522d445d4b8dfde673c854b88",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230009",
+      "O": "PF2O04230009"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230009",
+      "loser_id": "PF2X04230009",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230009",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "682D0D",
+    "match_id": "b9e9db62b1804bcf8206c530ff5f78ed",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230007",
+      "O": "PF2O04230007"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X04230007",
+      "loser_id": "PF2O04230007",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230007",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "A508D0",
+    "match_id": "056ba5fdcce24c76b219df030e62e985",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230008",
+      "O": "PF2O04230008"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X04230008",
+      "loser_id": "PF2O04230008",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230008",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "4C1932",
+    "match_id": "c85472ea04f745e2bb224fd610933e70",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230011",
+      "O": "PF2O04230011"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X04230011",
+      "loser_id": "PF2O04230011",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230011",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "427E6D",
+    "match_id": "a2c54f031ae24a00a210717c324d2f01",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230015",
+      "O": "PF2O04230015"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X04230015",
+      "loser_id": "PF2O04230015",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230015",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "588EC3",
+    "match_id": "4d30bc0585cf4ece88f3d0d3f2e1f3c0",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230016",
+      "O": "PF2O04230016"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X04230016",
+      "loser_id": "PF2O04230016",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230016",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "33B49B",
+    "match_id": "7ab495cee0f54ee88f19447c1841e2a3",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230014",
+      "O": "PF2O04230014"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230014",
+      "loser_id": "PF2X04230014",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230014",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "649190",
+    "match_id": "652e7f3d0316471087ba9aa6bef8a108",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230013",
+      "O": "PF2O04230013"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230013",
+      "loser_id": "PF2X04230013",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230013",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "C85CB1",
+    "match_id": "b1675fab875e4e3385b5d40f72e90fc5",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230017",
+      "O": "PF2O04230017"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X04230017",
+      "loser_id": "PF2O04230017",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230017",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "65B49F",
+    "match_id": "372a86c5b23746fe867b54386f0e996e",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230020",
+      "O": "PF2O04230020"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230020",
+      "loser_id": "PF2X04230020",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230020",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "CCEBA9",
+    "match_id": "816ad384c4dc48c28d4d8c3e77b2b49f",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230018",
+      "O": "PF2O04230018"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X04230018",
+      "loser_id": "PF2O04230018",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230018",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "238113",
+    "match_id": "b55fa3884f5d4dc480955a7b47afd31e",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230021",
+      "O": "PF2O04230021"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230021",
+      "loser_id": "PF2X04230021",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230021",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "0FDD8A",
+    "match_id": "b2b70ff0a1384e8ba8e1bae4be962c08",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230025",
+      "O": "PF2O04230025"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230025",
+      "loser_id": "PF2X04230025",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230025",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "EA2C12",
+    "match_id": "1173778f56174343bec7a8b9e52d873d",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230023",
+      "O": "PF2O04230023"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230023",
+      "loser_id": "PF2X04230023",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230023",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "63D498",
+    "match_id": "8ea6880cc9ff42ccb7ae1668144d084f",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230022",
+      "O": "PF2O04230022"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230022",
+      "loser_id": "PF2X04230022",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230022",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "FE732A",
+    "match_id": "f53e2dee29044959a168515c19c4d917",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230024",
+      "O": "PF2O04230024"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X04230024",
+      "loser_id": "PF2O04230024",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230024",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "B7E25B",
+    "match_id": "39bd621d111c451daf4319929c29f59a",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230026",
+      "O": "PF2O04230026"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X04230026",
+      "loser_id": "PF2O04230026",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230026",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "873EA4",
+    "match_id": "47d7d92cdb0b4a87817ce229857e5770",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230028",
+      "O": "PF2O04230028"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230028",
+      "loser_id": "PF2X04230028",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230028",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "9E3895",
+    "match_id": "317017929a664244a2e2bebe1f5e4c1d",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230027",
+      "O": "PF2O04230027"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230027",
+      "loser_id": "PF2X04230027",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230027",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "161051",
+    "match_id": "b8cde1ebe98547be8e21465aa117cb73",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230031",
+      "O": "PF2O04230031"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230031",
+      "loser_id": "PF2X04230031",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230031",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "04C5DD",
+    "match_id": "d2b4c05fdfe54b82878d44903921c655",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230034",
+      "O": "PF2O04230034"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X04230034",
+      "loser_id": "PF2O04230034",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230034",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "811CB0",
+    "match_id": "86b6f3da428b44f0afb4f55b39e938cc",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230032",
+      "O": "PF2O04230032"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230032",
+      "loser_id": "PF2X04230032",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230032",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "513C8D",
+    "match_id": "50d08c4012234354afc81ff03bc2f896",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230029",
+      "O": "PF2O04230029"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230029",
+      "loser_id": "PF2X04230029",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230029",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "DED22A",
+    "match_id": "253d7e9d839c468a9500d94d48031b3f",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230033",
+      "O": "PF2O04230033"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230033",
+      "loser_id": "PF2X04230033",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230033",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "87222D",
+    "match_id": "aa36f2e35ffe46ebbfaa889d21684de6",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230030",
+      "O": "PF2O04230030"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X04230030",
+      "loser_id": "PF2O04230030",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230030",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "033A27",
+    "match_id": "1efb84d9d7f448c6bb5f819a44efb38a",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230040",
+      "O": "PF2O04230040"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X04230040",
+      "loser_id": "PF2O04230040",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230040",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "36BFDA",
+    "match_id": "5f41360e6913495ea7cd8334f4818090",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230041",
+      "O": "PF2O04230041"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230041",
+      "loser_id": "PF2X04230041",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230041",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "166BCD",
+    "match_id": "d213f430621b424d8283a8bc12bd6de3",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230035",
+      "O": "PF2O04230035"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230035",
+      "loser_id": "PF2X04230035",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230035",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "ECBFD5",
+    "match_id": "0c4ade7d7c764d1bbe7bfe0fcbd40b50",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230038",
+      "O": "PF2O04230038"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230038",
+      "loser_id": "PF2X04230038",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230038",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "B2273A",
+    "match_id": "eba5e7e8c6f645a5a4bf5741a886af42",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230037",
+      "O": "PF2O04230037"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230037",
+      "loser_id": "PF2X04230037",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230037",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "E3894D",
+    "match_id": "b912ba1f41df4a1d8b8db0ba704a679e",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230039",
+      "O": "PF2O04230039"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X04230039",
+      "loser_id": "PF2O04230039",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230039",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "FFF6FB",
+    "match_id": "40d9d1546bf84713a66003f98d6e1c5d",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230036",
+      "O": "PF2O04230036"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X04230036",
+      "loser_id": "PF2O04230036",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230036",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "AB928C",
+    "match_id": "08dbc3950f07452b9e5d273c53e264df",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230048",
+      "O": "PF2O04230048"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X04230048",
+      "loser_id": "PF2O04230048",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230048",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "09422B",
+    "match_id": "c9562184fc25449abc8b53c446dc5bca",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230044",
+      "O": "PF2O04230044"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230044",
+      "loser_id": "PF2X04230044",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230044",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "F924AC",
+    "match_id": "85b9d913f22648e5be0487ccbc195305",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230045",
+      "O": "PF2O04230045"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230045",
+      "loser_id": "PF2X04230045",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230045",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "CF2B2F",
+    "match_id": "917fee4cc32f47df941032603ecdb8d7",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230046",
+      "O": "PF2O04230046"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230046",
+      "loser_id": "PF2X04230046",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230046",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "FDB2A0",
+    "match_id": "dc174c8f76e84cacb1365fe4e69a8ac5",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230047",
+      "O": "PF2O04230047"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X04230047",
+      "loser_id": "PF2O04230047",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230047",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "BF8EEB",
+    "match_id": "73fd3259602149f6aaa7f03f3dbb82d7",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230043",
+      "O": "PF2O04230043"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230043",
+      "loser_id": "PF2X04230043",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230043",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "AD4DC4",
+    "match_id": "67e63849bc4b40ee8454f5200bbb1cc2",
+    "start_time": "2026-11-27 12:10:26",
+    "end_time": "2026-11-27 12:10:30",
+    "players": {
+      "X": "PF2X04230049",
+      "O": "PF2O04230049"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O04230049",
+      "loser_id": "PF2X04230049",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X04230049",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:10:26"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "AA2C1E",
+    "match_id": "8829aac7e0874c8b9967a50d8e52dfb5",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:07",
+    "players": {
+      "X": "PF2X94670000",
+      "O": "PF2O94670000"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O94670000",
+      "loser_id": "PF2X94670000",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670000",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "824F9F",
+    "match_id": "c1e84672cd67434b8f47bb1bc65c2571",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:07",
+    "players": {
+      "X": "PF2X94670001",
+      "O": "PF2O94670001"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O94670001",
+      "loser_id": "PF2X94670001",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670001",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "777605",
+    "match_id": "2d5f3625dc444e058df6c917e8f9c461",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670003",
+      "O": "PF2O94670003"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O94670003",
+      "loser_id": "PF2X94670003",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670003",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "AD30F9",
+    "match_id": "92a49d4929194c8c9c830fcbda1e6dbe",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670002",
+      "O": "PF2O94670002"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O94670002",
+      "loser_id": "PF2X94670002",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670002",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "3ACE7D",
+    "match_id": "d6fecfc4caf043a39b25ed511c2e6eee",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670004",
+      "O": "PF2O94670004"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X94670004",
+      "loser_id": "PF2O94670004",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670004",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "197321",
+    "match_id": "3fb0f83e3fbd4de797fc4ec46b806f29",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670005",
+      "O": "PF2O94670005"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X94670005",
+      "loser_id": "PF2O94670005",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670005",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "1D9D94",
+    "match_id": "4a86949f5cc54102a7eab35ace1bd77f",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670006",
+      "O": "PF2O94670006"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X94670006",
+      "loser_id": "PF2O94670006",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670006",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "9C1D19",
+    "match_id": "f65ec2f94fca47a6815ad8cc76a351f4",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670011",
+      "O": "PF2O94670011"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O94670011",
+      "loser_id": "PF2X94670011",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670011",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "442DEE",
+    "match_id": "f926afacad3940d68fdf58a7af63e7bc",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670015",
+      "O": "PF2O94670015"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X94670015",
+      "loser_id": "PF2O94670015",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670015",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "A589DC",
+    "match_id": "814178aba6044820bad3ef643ad9e665",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670013",
+      "O": "PF2O94670013"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O94670013",
+      "loser_id": "PF2X94670013",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670013",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "07ED63",
+    "match_id": "9a4d7fab2033422a80dfcc8f6186a6c1",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670007",
+      "O": "PF2O94670007"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O94670007",
+      "loser_id": "PF2X94670007",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670007",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "A51C63",
+    "match_id": "dec0ac9a243d49f688b55f8fc6bb0328",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670014",
+      "O": "PF2O94670014"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X94670014",
+      "loser_id": "PF2O94670014",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670014",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "34B8FF",
+    "match_id": "39a7f89d3ab7469bb06026f7789ca87d",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670012",
+      "O": "PF2O94670012"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X94670012",
+      "loser_id": "PF2O94670012",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670012",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "0FDBBC",
+    "match_id": "f070ecff209142bdaa07ad6ba6e4f30b",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670019",
+      "O": "PF2O94670019"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X94670019",
+      "loser_id": "PF2O94670019",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670019",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "371299",
+    "match_id": "ec6a23d276db4467a28fc77c12e16930",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670021",
+      "O": "PF2O94670021"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O94670021",
+      "loser_id": "PF2X94670021",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670021",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "7F1476",
+    "match_id": "ac9b207545604ffca5f5f6aee96d70c7",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670017",
+      "O": "PF2O94670017"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X94670017",
+      "loser_id": "PF2O94670017",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670017",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "1B8126",
+    "match_id": "a089aa1a201043e08c3dda688a1749d1",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670018",
+      "O": "PF2O94670018"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X94670018",
+      "loser_id": "PF2O94670018",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670018",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "F9AD34",
+    "match_id": "3be0ffed33834c519b6fe0333904c133",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670020",
+      "O": "PF2O94670020"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X94670020",
+      "loser_id": "PF2O94670020",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670020",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "D20CFA",
+    "match_id": "491fbf1de7d242fc9ab3b97ce5296e09",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670024",
+      "O": "PF2O94670024"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X94670024",
+      "loser_id": "PF2O94670024",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670024",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "913E3D",
+    "match_id": "096d97a3d69145d591bca3c240172295",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670023",
+      "O": "PF2O94670023"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O94670023",
+      "loser_id": "PF2X94670023",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670023",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "04839F",
+    "match_id": "1328b9da44b0490dbae8e128b00ac238",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670028",
+      "O": "PF2O94670028"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X94670028",
+      "loser_id": "PF2O94670028",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670028",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "2F9102",
+    "match_id": "52df39e1f6d14d77aad877fe230ca426",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670029",
+      "O": "PF2O94670029"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O94670029",
+      "loser_id": "PF2X94670029",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670029",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "B21F65",
+    "match_id": "6db90d5ad4ac4ba8b4c233be2eb796c6",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670025",
+      "O": "PF2O94670025"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X94670025",
+      "loser_id": "PF2O94670025",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670025",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "F68AE9",
+    "match_id": "fc98e369ef0343f4842809c3d737a652",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670026",
+      "O": "PF2O94670026"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X94670026",
+      "loser_id": "PF2O94670026",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670026",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "C55B37",
+    "match_id": "3c74a9147b4d486d8fa668178c6ccdee",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670027",
+      "O": "PF2O94670027"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X94670027",
+      "loser_id": "PF2O94670027",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670027",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "4FBEE2",
+    "match_id": "257633389e5d4bf696269848d007ceac",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670030",
+      "O": "PF2O94670030"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O94670030",
+      "loser_id": "PF2X94670030",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670030",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "15CD02",
+    "match_id": "5e59918de0434605903d17590928bd8b",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670032",
+      "O": "PF2O94670032"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X94670032",
+      "loser_id": "PF2O94670032",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670032",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "DACA2E",
+    "match_id": "a0a2290ab3b0402d8517cf709a8c52aa",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670033",
+      "O": "PF2O94670033"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X94670033",
+      "loser_id": "PF2O94670033",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670033",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "81D46A",
+    "match_id": "d1291d6313424912ab4f905381e425a2",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:09",
+    "players": {
+      "X": "PF2X94670036",
+      "O": "PF2O94670036"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X94670036",
+      "loser_id": "PF2O94670036",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670036",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "EB0BA9",
+    "match_id": "0be7ba898de94a9481e24cddff6c7e83",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:09",
+    "players": {
+      "X": "PF2X94670038",
+      "O": "PF2O94670038"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O94670038",
+      "loser_id": "PF2X94670038",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670038",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "78F442",
+    "match_id": "624c7cc587bc42ee9bd32e66d9c88877",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:09",
+    "players": {
+      "X": "PF2X94670041",
+      "O": "PF2O94670041"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O94670041",
+      "loser_id": "PF2X94670041",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670041",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "80437A",
+    "match_id": "342e45a6055746ea84c6aa80f3a516cd",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:09",
+    "players": {
+      "X": "PF2X94670040",
+      "O": "PF2O94670040"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X94670040",
+      "loser_id": "PF2O94670040",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670040",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "AF96AC",
+    "match_id": "2ab7e314e968469ea8a6f3d47b80c5af",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:09",
+    "players": {
+      "X": "PF2X94670043",
+      "O": "PF2O94670043"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O94670043",
+      "loser_id": "PF2X94670043",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670043",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "EDC8DC",
+    "match_id": "edaa079e3d6c42138e025ee1c778aaa2",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:09",
+    "players": {
+      "X": "PF2X94670049",
+      "O": "PF2O94670049"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O94670049",
+      "loser_id": "PF2X94670049",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670049",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "F17732",
+    "match_id": "ffd5fad058dd4705a67725492aaeb095",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:09",
+    "players": {
+      "X": "PF2X94670044",
+      "O": "PF2O94670044"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X94670044",
+      "loser_id": "PF2O94670044",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670044",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "12374A",
+    "match_id": "621ec9dde0684de790c334d5b54b8653",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:09",
+    "players": {
+      "X": "PF2X94670046",
+      "O": "PF2O94670046"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X94670046",
+      "loser_id": "PF2O94670046",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670046",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "268558",
+    "match_id": "b525480846344d0a8051840f94eb2027",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:09",
+    "players": {
+      "X": "PF2X94670047",
+      "O": "PF2O94670047"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O94670047",
+      "loser_id": "PF2X94670047",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670047",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "6C1289",
+    "match_id": "ec9a0f4d4f8849218e4d23a9b8c07b10",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:09",
+    "players": {
+      "X": "PF2X94670048",
+      "O": "PF2O94670048"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O94670048",
+      "loser_id": "PF2X94670048",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670048",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "F6A7A5",
+    "match_id": "b309d0bc9bd14442afd44c9dc221c9a5",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670008",
+      "O": "PF2O94670008"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X94670008",
+      "loser_id": "PF2O94670008",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670008",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "39B9CE",
+    "match_id": "c6559e7b14a1466eb575ede75c80f65c",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670009",
+      "O": "PF2O94670009"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O94670009",
+      "loser_id": "PF2X94670009",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670009",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "5070BD",
+    "match_id": "a612985b34e8491d9866787063f32bf6",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670035",
+      "O": "PF2O94670035"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X94670035",
+      "loser_id": "PF2O94670035",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670035",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "34D6F4",
+    "match_id": "56762d68a56742569e46703ef0bf1cb5",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670034",
+      "O": "PF2O94670034"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O94670034",
+      "loser_id": "PF2X94670034",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670034",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "35850C",
+    "match_id": "a6256f82ff4f4bc58dd8dac45ffc027e",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:09",
+    "players": {
+      "X": "PF2X94670037",
+      "O": "PF2O94670037"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O94670037",
+      "loser_id": "PF2X94670037",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670037",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "E90A03",
+    "match_id": "c97d0fc3ff004805a532ef4d47918f5b",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670010",
+      "O": "PF2O94670010"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O94670010",
+      "loser_id": "PF2X94670010",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670010",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "23CC30",
+    "match_id": "294d451a4c424339b343eb85293ff452",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:09",
+    "players": {
+      "X": "PF2X94670031",
+      "O": "PF2O94670031"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O94670031",
+      "loser_id": "PF2X94670031",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670031",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "79B1AB",
+    "match_id": "d4e00f86c53c4a4fb03c9114d0f01946",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:09",
+    "players": {
+      "X": "PF2X94670039",
+      "O": "PF2O94670039"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X94670039",
+      "loser_id": "PF2O94670039",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670039",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "1B4A57",
+    "match_id": "0a02ef10519f4af2a1c55cfc1ea3828c",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670016",
+      "O": "PF2O94670016"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X94670016",
+      "loser_id": "PF2O94670016",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670016",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "C02553",
+    "match_id": "2aa4a3717d8c4cb69cbb29f180297a3e",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:17:08",
+    "players": {
+      "X": "PF2X94670022",
+      "O": "PF2O94670022"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O94670022",
+      "loser_id": "PF2X94670022",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670022",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "7B28F6",
+    "match_id": "ab22efd8437848b1a86ab5be762eec47",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:18:09",
+    "players": {
+      "X": "PF2X94670042",
+      "O": "PF2O94670042"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "DISCONNECT",
+      "winner_id": "PF2O94670042",
+      "loser_id": "PF2X94670042",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670042",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "DISCONNECT"
+  },
+  {
+    "room_id": "21A505",
+    "match_id": "4bc74ede01544904a11b20362384d541",
+    "start_time": "2026-11-27 12:17:04",
+    "end_time": "2026-11-27 12:18:09",
+    "players": {
+      "X": "PF2X94670045",
+      "O": "PF2O94670045"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "DISCONNECT",
+      "winner_id": "PF2O94670045",
+      "loser_id": "PF2X94670045",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X94670045",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:17:04"
+      }
+    ],
+    "reason": "DISCONNECT"
+  },
+  {
+    "room_id": "42E970",
+    "match_id": "397de9c705cc4e48b5a0cc5138bd110b",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140001",
+      "O": "PF2O71140001"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X71140001",
+      "loser_id": "PF2O71140001",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140001",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "D6C52F",
+    "match_id": "8ebbe5d1adaa44efb7c95a18d6ceb911",
+    "start_time": "2026-11-27 12:19:41",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140000",
+      "O": "PF2O71140000"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140000",
+      "loser_id": "PF2X71140000",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140000",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:41"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "64D3E6",
+    "match_id": "1caff84d61014b77a32a785a3582acdc",
+    "start_time": "2026-11-27 12:19:41",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140002",
+      "O": "PF2O71140002"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140002",
+      "loser_id": "PF2X71140002",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140002",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:41"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "DBB30C",
+    "match_id": "c8e926184b204f928ef37aaa08669603",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140003",
+      "O": "PF2O71140003"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140003",
+      "loser_id": "PF2X71140003",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140003",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "7D065F",
+    "match_id": "60989e8f1a5e4f43b770d20aaa2e8357",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140004",
+      "O": "PF2O71140004"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140004",
+      "loser_id": "PF2X71140004",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140004",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "AC5DD3",
+    "match_id": "f9bdfff5c20d4639ac85b647f52e6139",
+    "start_time": "2026-11-27 12:19:41",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140010",
+      "O": "PF2O71140010"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X71140010",
+      "loser_id": "PF2O71140010",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140010",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:41"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "78F752",
+    "match_id": "20e898a5962a4eb88d8c94f4a1ff68c0",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140006",
+      "O": "PF2O71140006"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140006",
+      "loser_id": "PF2X71140006",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140006",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "65BF06",
+    "match_id": "eb32fc9bf5664ea88e3687701f536636",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140005",
+      "O": "PF2O71140005"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140005",
+      "loser_id": "PF2X71140005",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140005",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "4C7EA0",
+    "match_id": "6cb6431a073440908d275a54c00ac6ee",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140007",
+      "O": "PF2O71140007"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X71140007",
+      "loser_id": "PF2O71140007",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140007",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "E762DA",
+    "match_id": "61a8c87a8b1143828370bf5e117e402c",
+    "start_time": "2026-11-27 12:19:41",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140008",
+      "O": "PF2O71140008"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140008",
+      "loser_id": "PF2X71140008",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140008",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:41"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "B4B13F",
+    "match_id": "abb724dd50c442019242b60584cc17b0",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140009",
+      "O": "PF2O71140009"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X71140009",
+      "loser_id": "PF2O71140009",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140009",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "9DD057",
+    "match_id": "68f765c26af244b39e39d1a4d2ac9671",
+    "start_time": "2026-11-27 12:19:41",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140012",
+      "O": "PF2O71140012"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X71140012",
+      "loser_id": "PF2O71140012",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140012",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:41"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "5FBBAD",
+    "match_id": "ba8bc4fa5d764db2b2e8d7dc54883835",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140011",
+      "O": "PF2O71140011"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X71140011",
+      "loser_id": "PF2O71140011",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140011",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "34AA4C",
+    "match_id": "1408b7efe37848749499e0502a5a9f97",
+    "start_time": "2026-11-27 12:19:41",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140015",
+      "O": "PF2O71140015"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140015",
+      "loser_id": "PF2X71140015",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140015",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:41"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "E76A20",
+    "match_id": "d525fc973732405bbc59699a57d3debc",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140013",
+      "O": "PF2O71140013"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X71140013",
+      "loser_id": "PF2O71140013",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140013",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "073A44",
+    "match_id": "80775486e6a64ff0b5d7d89a4699e7a6",
+    "start_time": "2026-11-27 12:19:41",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140014",
+      "O": "PF2O71140014"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140014",
+      "loser_id": "PF2X71140014",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140014",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:41"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "29A3C3",
+    "match_id": "9a1a8dc8a95a4cdc897cac1af6829d59",
+    "start_time": "2026-11-27 12:19:41",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140016",
+      "O": "PF2O71140016"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140016",
+      "loser_id": "PF2X71140016",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140016",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:41"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "3AFB4C",
+    "match_id": "71662e04fb0f4eabac6073472bb6121d",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140018",
+      "O": "PF2O71140018"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140018",
+      "loser_id": "PF2X71140018",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140018",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "861184",
+    "match_id": "0f5f7217d8ff4a4dafc21314da3ff5cd",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140017",
+      "O": "PF2O71140017"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X71140017",
+      "loser_id": "PF2O71140017",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140017",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "859E65",
+    "match_id": "efa20df7d16645319dcd3917a2b0d64d",
+    "start_time": "2026-11-27 12:19:41",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140023",
+      "O": "PF2O71140023"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140023",
+      "loser_id": "PF2X71140023",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140023",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:41"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "AC1AC7",
+    "match_id": "a4357581245a4a659d8f144a6c6adcaa",
+    "start_time": "2026-11-27 12:19:41",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140019",
+      "O": "PF2O71140019"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140019",
+      "loser_id": "PF2X71140019",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140019",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:41"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "36D507",
+    "match_id": "814880b65da9407aba3a3d3ead10eebd",
+    "start_time": "2026-11-27 12:19:41",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140020",
+      "O": "PF2O71140020"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X71140020",
+      "loser_id": "PF2O71140020",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140020",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:41"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "198647",
+    "match_id": "888d369eea3a42ed85be4aeab54e903e",
+    "start_time": "2026-11-27 12:19:41",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140021",
+      "O": "PF2O71140021"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X71140021",
+      "loser_id": "PF2O71140021",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140021",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:41"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "2C1A95",
+    "match_id": "c4976c3de550475da652df782bc90f00",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140022",
+      "O": "PF2O71140022"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140022",
+      "loser_id": "PF2X71140022",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140022",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "BD976E",
+    "match_id": "2ebeb5f7281f43ef83317daaeb61b0b0",
+    "start_time": "2026-11-27 12:19:41",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140028",
+      "O": "PF2O71140028"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X71140028",
+      "loser_id": "PF2O71140028",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140028",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:41"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "FCF07A",
+    "match_id": "f84e4808a123441bb9108882dd5c461e",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140024",
+      "O": "PF2O71140024"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X71140024",
+      "loser_id": "PF2O71140024",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140024",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "B52303",
+    "match_id": "61ac9b7b9ab3418b9bb971a7a6a2f478",
+    "start_time": "2026-11-27 12:19:41",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140026",
+      "O": "PF2O71140026"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X71140026",
+      "loser_id": "PF2O71140026",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140026",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:41"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "65A849",
+    "match_id": "0ffc29fec02c483dbbc6fc946b20999b",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140027",
+      "O": "PF2O71140027"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140027",
+      "loser_id": "PF2X71140027",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140027",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "445FD0",
+    "match_id": "84485a21f99949419fdba2d3ed55a731",
+    "start_time": "2026-11-27 12:19:41",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140025",
+      "O": "PF2O71140025"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140025",
+      "loser_id": "PF2X71140025",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140025",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:41"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "F2C086",
+    "match_id": "b4b2c00976fd427a8b32a07caca94077",
+    "start_time": "2026-11-27 12:19:41",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140030",
+      "O": "PF2O71140030"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140030",
+      "loser_id": "PF2X71140030",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140030",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:41"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "937836",
+    "match_id": "c2374bbadce34d6790a94eb4e0f2f1cb",
+    "start_time": "2026-11-27 12:19:41",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140029",
+      "O": "PF2O71140029"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140029",
+      "loser_id": "PF2X71140029",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140029",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:41"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "2EA345",
+    "match_id": "90d96c873fb1477396bb841454fb5e14",
+    "start_time": "2026-11-27 12:19:41",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140034",
+      "O": "PF2O71140034"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X71140034",
+      "loser_id": "PF2O71140034",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140034",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:41"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "F830A6",
+    "match_id": "548a7c98dc7c41dea730672ffd96e24f",
+    "start_time": "2026-11-27 12:19:41",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140032",
+      "O": "PF2O71140032"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140032",
+      "loser_id": "PF2X71140032",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140032",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:41"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "A7828D",
+    "match_id": "9d1344670c80499bbce15d9cc7522cfe",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140031",
+      "O": "PF2O71140031"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140031",
+      "loser_id": "PF2X71140031",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140031",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "15AD81",
+    "match_id": "566dc70cbf3e451f8e9e09978c1a57bc",
+    "start_time": "2026-11-27 12:19:41",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140033",
+      "O": "PF2O71140033"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140033",
+      "loser_id": "PF2X71140033",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140033",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "FB4DDA",
+    "match_id": "c68853c7a7894ef4b7f70acc163e05e0",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140035",
+      "O": "PF2O71140035"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140035",
+      "loser_id": "PF2X71140035",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140035",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "AF2A75",
+    "match_id": "a427390386c4441ea85343b7c22d4517",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140036",
+      "O": "PF2O71140036"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X71140036",
+      "loser_id": "PF2O71140036",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140036",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "74E956",
+    "match_id": "f5b59404ed3d424bbf1f5d29636dff1f",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140041",
+      "O": "PF2O71140041"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140041",
+      "loser_id": "PF2X71140041",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140041",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "8C1547",
+    "match_id": "6827af058f39457cb7dd3af849f517f8",
+    "start_time": "2026-11-27 12:19:41",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140037",
+      "O": "PF2O71140037"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140037",
+      "loser_id": "PF2X71140037",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140037",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "3B1A9D",
+    "match_id": "ef5221649efa45e7bc73261e673133ac",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140038",
+      "O": "PF2O71140038"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X71140038",
+      "loser_id": "PF2O71140038",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140038",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "D12389",
+    "match_id": "4098a3cc1d6f439daa5a95aebe3a2f47",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140039",
+      "O": "PF2O71140039"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X71140039",
+      "loser_id": "PF2O71140039",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140039",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "1A8B90",
+    "match_id": "14ac75503fce4bce876f1121ef0fb7e6",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:45",
+    "players": {
+      "X": "PF2X71140040",
+      "O": "PF2O71140040"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140040",
+      "loser_id": "PF2X71140040",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140040",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "8E5E1D",
+    "match_id": "6538db6a7a0046c1857fd42564be4144",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:46",
+    "players": {
+      "X": "PF2X71140047",
+      "O": "PF2O71140047"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140047",
+      "loser_id": "PF2X71140047",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140047",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "C7C152",
+    "match_id": "00e684a2912e4a94ab57fdbc77ab94c4",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:46",
+    "players": {
+      "X": "PF2X71140042",
+      "O": "PF2O71140042"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140042",
+      "loser_id": "PF2X71140042",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140042",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "664AFD",
+    "match_id": "5580dce7b8424786a11c47c65474613a",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:46",
+    "players": {
+      "X": "PF2X71140043",
+      "O": "PF2O71140043"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X71140043",
+      "loser_id": "PF2O71140043",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140043",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "6888F4",
+    "match_id": "9b1d41f2724d41959ccc73452acae7bb",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:46",
+    "players": {
+      "X": "PF2X71140044",
+      "O": "PF2O71140044"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X71140044",
+      "loser_id": "PF2O71140044",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140044",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "F20912",
+    "match_id": "97d0927940c74eed953e10d699f5163d",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:46",
+    "players": {
+      "X": "PF2X71140045",
+      "O": "PF2O71140045"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140045",
+      "loser_id": "PF2X71140045",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140045",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "ACCEC3",
+    "match_id": "73a66a0890954a5092d01fca47d565b6",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:46",
+    "players": {
+      "X": "PF2X71140046",
+      "O": "PF2O71140046"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2O71140046",
+      "loser_id": "PF2X71140046",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140046",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "1472A5",
+    "match_id": "a5d8211dc93d41c1bcf97f682988b2f8",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:46",
+    "players": {
+      "X": "PF2X71140048",
+      "O": "PF2O71140048"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X71140048",
+      "loser_id": "PF2O71140048",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140048",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "E626F1",
+    "match_id": "e5e50b634d934978b929e9ce93a39a69",
+    "start_time": "2026-11-27 12:19:42",
+    "end_time": "2026-11-27 12:19:46",
+    "players": {
+      "X": "PF2X71140049",
+      "O": "PF2O71140049"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "PF2X71140049",
+      "loser_id": "PF2O71140049",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "PF2X71140049",
+        "symbol": "X",
+        "row": 0,
+        "col": 0,
+        "timestamp": "12:19:42"
+      }
+    ],
+    "reason": "RESIGN"
   }
 ]

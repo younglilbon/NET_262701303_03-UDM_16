@@ -62,6 +62,108 @@ class TestProtocol(unittest.TestCase):
         self.assertEqual(err["room_id"], "R1")
         self.assertEqual(err["match_id"], "M1")
 
+    def test_protocol_trip_multiple_valid_message_types(self):
+        message_types = [
+            "LOGIN",
+            "LOGIN_RESULT",
+            "PLAYER_LIST",
+            "INVITE",
+            "INVITE_RESPONSE",
+            "INVITE_RESULT",
+            "CREATE_ROOM",
+            "JOIN_ROOM",
+            "LEAVE_ROOM",
+            "ROOM_CREATE",
+            "ROOM_JOINED",
+            "ROOM_LEFT",
+            "START_MATCH",
+            "MOVE",
+            "SYNC_MOVE",
+            "SYNC_FULL_STATE",
+            "MATCH_FINISHED",
+            "ERROR",
+            "PLAYER_DISCONNECTED",
+            "PLAYER_RECONNECTED"
+        ]
+
+        for message_type in message_types:
+            with self.subTest(message_type=message_type):
+                original_message = {
+                    "type": message_type,
+                    "room_id": "ROOM_01",
+                    "username": "Alice",
+                    "payload": {
+                        "text": "Phòng Caro",
+                        "row": 2,
+                        "col": 3,
+                        "active": True,
+                        "extra": None
+                    },
+                }
+
+                encoded = encode_message(original_message)
+
+                self.assertIsInstance(encoded, bytes)
+                self.assertTrue(encoded.endswith(b"\n"))
+
+                decoded = decode_message(encoded)
+
+                self.assertEqual(decoded, original_message)
+
+    def test_rejects_malformed_json_message(self):
+        invalid_payload = b"abc\n"
+        with self.assertRaises(ProtocolError):
+            decode_message(invalid_payload)
+
+    def test_rejects_json_message_missing_type(self):
+        invalid_payload = b'{"action":"move"}\n'
+        with self.assertRaises(ProtocolError) as context:
+            decode_message(invalid_payload)
+        self.assertIn("type", str(context.exception).lower())
+
+    def test_rejects_unknown_message_type(self):
+        invalid_payload = b'{"type": "unknown_xyz"}\n'
+        with self.assertRaises(ProtocolError) as context:
+            decode_message(invalid_payload)
+        self.assertEqual(
+            context.exception.code,
+            "UNKNOWN_MESSAGE"
+        )
+        self.assertIn(
+            "unknown_xyz",
+            str(context.exception)
+        )
+
+    def test_round_trip_vietnamese_unicode_message(self):
+        original_message = {
+            "type": "LOGIN",
+            "username": "Nguyễn Văn An",
+            "display_name": "Nguyễn Thị Ánh",
+            "message": "Chào mừng bạn đến với phòng Caro!"
+        }
+        encoded = encode_message(original_message)
+        decoded = decode_message(encoded)
+
+        self.assertIsInstance(encoded, bytes)
+        self.assertTrue(encoded.endswith(b"\n"))
+        self.assertEqual(decoded, original_message)
+
+    def test_round_trip_large_100kb_message(self):
+        large_text = "A" * (100*1024)
+        original_message = {
+            "type": "SYNC_FULL_STATE",
+            "username": "alice",
+            "display_name": "Nguyễn Văn An",
+            "payload": large_text,
+        }
+        encoded = encode_message(original_message)
+        decoded = decode_message(encoded)
+        self.assertLessEqual(len(encoded), MAX_MESSAGE_BYTES)
+        self.assertGreater(len(encoded), 100 * 1024)
+        self.assertEqual(decoded, original_message)
+        self.assertEqual(decoded["payload"], large_text)
+        self.assertEqual(decoded["username"], "alice")
+        self.assertEqual(decoded["display_name"], "Nguyễn Văn An")
 
 if __name__ == "__main__":
     unittest.main()
