@@ -263,10 +263,7 @@ def main():
 
     print(f"Ket noi Server {HOST}:{PORT} ...")
     try:
-        # Start monitoring before opening the load.
         monitor.start()
-
-        # Open 100 independent TCP connections.
         with ThreadPoolExecutor(max_workers=WORKERS) as pool:
             futures = {
                 pool.submit(LoadClient, f"PF2X{run_id}{i:02d}"): (i, "X")
@@ -294,8 +291,6 @@ def main():
             raise RuntimeError(
                 f"Chi tao duoc {len(clients)}/{TOTAL_CLIENTS} TCP client"
             )
-
-        # Authenticate all clients while keeping all connections alive.
         with ThreadPoolExecutor(max_workers=WORKERS) as pool:
             futures = {pool.submit(c.login): c.username for c in clients}
             for future in as_completed(futures):
@@ -307,7 +302,6 @@ def main():
             raise RuntimeError("Co loi trong giai doan ket noi/dang nhap: " + " | ".join(errors[:5]))
         print(f"Dang nhap thanh cong {len(clients)}/{TOTAL_CLIENTS} client.")
 
-        # Create/join/start 50 rooms concurrently.
         with ThreadPoolExecutor(max_workers=WORKERS) as pool:
             futures = {
                 pool.submit(
@@ -350,8 +344,6 @@ def main():
             writer.writerows(results)
 
         passed_rooms = sum(1 for r in results if r["status"] == "PASS")
-        # Keep all 100 connections and 50 active rooms alive briefly so the
-        # resource monitor captures sustained load, not only setup.
         print("Giu 100 client va 50 phong hoat dong trong 3 giay de lay mau CPU/RAM ...")
         time.sleep(3)
         monitor.stop()
