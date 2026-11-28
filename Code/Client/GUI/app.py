@@ -137,7 +137,8 @@ class CaroApp:
         board_frame.pack(expand=True)
         self.board_widget = BoardWidget(
             board_frame,
-            on_move=self.make_move
+            on_move=self.make_move,
+            on_invalid_click=self.handle_invalid_board_click
         )
         self.board_widget.pack(
             padx=10,
@@ -161,6 +162,12 @@ class CaroApp:
             "row": row,
             "col": col,
         })
+
+    def  handle_invalid_board_click(self):
+        self.status_bar.set_message(
+            "Vị trí không hợp lệ! Vui lòng chọn một ô trên bàn cờ.",
+            "warning"
+        )
 
     def create_room(self) -> None:
         if self.room_id is not None or self._room_action_pending:

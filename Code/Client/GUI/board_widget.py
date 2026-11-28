@@ -14,7 +14,7 @@ from .style import (
 
 class BoardWidget(tk.Canvas):
 
-    def __init__(self, parent, on_move=None):
+    def __init__(self, parent, on_move=None, on_invalid_click = None):
         
         board_pixels = 2 * board_margin + (board_size - 1) * cell_size
 
@@ -29,6 +29,7 @@ class BoardWidget(tk.Canvas):
         )
 
         self.on_move = on_move
+        self.on_invalid_click = on_invalid_click
         self.board = [["" for _ in range(board_size)] for _ in range(board_size)]
         self.input_enabled = True
         self.bind("<Button-1>", self._handle_click)
@@ -99,6 +100,8 @@ class BoardWidget(tk.Canvas):
         cell = self._get_cell_from_click(event)
 
         if cell is None:
+            if self.on_invalid_click is not None:
+                self.on_invalid_click()
             return
 
         row, col = cell

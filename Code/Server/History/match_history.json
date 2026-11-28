@@ -13697,5 +13697,630 @@
       }
     ],
     "reason": "RESIGN"
+  },
+  {
+    "room_id": "56A26B",
+    "match_id": "7f00ab940449492db5f7f01858d8481f",
+    "start_time": "2026-11-27 13:39:24",
+    "end_time": "2026-11-27 13:40:03",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "TIMEOUT",
+      "winner_id": "Alice",
+      "loser_id": "Bob",
+      "winner_symbol": "X",
+      "winning_line": [],
+      "total_moves": 3
+    },
+    "total_moves": 3,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 7,
+        "timestamp": "13:39:27"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 6,
+        "timestamp": "13:39:29"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 9,
+        "timestamp": "13:39:33"
+      }
+    ],
+    "reason": "TIMEOUT"
+  },
+  {
+    "room_id": "56A26B",
+    "match_id": "7de8b9eeb8f24588b870c0b0889e3090",
+    "start_time": "2026-11-27 13:42:24",
+    "end_time": "2026-11-27 13:43:14",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "TIMEOUT",
+      "winner_id": "Bob",
+      "loser_id": "Alice",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 6
+    },
+    "total_moves": 6,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 7,
+        "timestamp": "13:42:26"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 8,
+        "timestamp": "13:42:28"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 8,
+        "timestamp": "13:42:29"
+      },
+      {
+        "move_number": 4,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 8,
+        "timestamp": "13:42:37"
+      },
+      {
+        "move_number": 5,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 8,
+        "timestamp": "13:42:39"
+      },
+      {
+        "move_number": 6,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 7,
+        "col": 7,
+        "timestamp": "13:42:44"
+      }
+    ],
+    "reason": "TIMEOUT"
+  },
+  {
+    "room_id": "56A26B",
+    "match_id": "4fb0dfee7905490689e519903dd773ab",
+    "start_time": "2026-11-27 13:44:44",
+    "end_time": "2026-11-27 13:45:36",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "TIMEOUT",
+      "winner_id": "Bob",
+      "loser_id": "Alice",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 8
+    },
+    "total_moves": 8,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 10,
+        "timestamp": "13:44:45"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 8,
+        "timestamp": "13:44:47"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 9,
+        "timestamp": "13:44:48"
+      },
+      {
+        "move_number": 4,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 10,
+        "timestamp": "13:44:50"
+      },
+      {
+        "move_number": 5,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 10,
+        "timestamp": "13:44:55"
+      },
+      {
+        "move_number": 6,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 9,
+        "timestamp": "13:45:01"
+      },
+      {
+        "move_number": 7,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 10,
+        "timestamp": "13:45:03"
+      },
+      {
+        "move_number": 8,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 5,
+        "col": 11,
+        "timestamp": "13:45:06"
+      }
+    ],
+    "reason": "TIMEOUT"
+  },
+  {
+    "room_id": "AB48C7",
+    "match_id": "dffa307809eb4bb0ac1187f0c814f30e",
+    "start_time": "2026-11-28 18:05:49",
+    "end_time": "2026-11-28 18:06:57",
+    "players": {
+      "X": "alice",
+      "O": "bob"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "DISCONNECT",
+      "winner_id": "bob",
+      "loser_id": "alice",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 0
+    },
+    "total_moves": 0,
+    "moves": [],
+    "reason": "DISCONNECT"
+  },
+  {
+    "room_id": "5E5613",
+    "match_id": "36b62d1e1ca8470bb8a9a7c35b17b2fa",
+    "start_time": "2026-11-28 18:14:35",
+    "end_time": "2026-11-28 18:15:07",
+    "players": {
+      "X": "alice",
+      "O": "bob"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "bob",
+      "loser_id": "alice",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 0
+    },
+    "total_moves": 0,
+    "moves": [],
+    "reason": "RESIGN"
+  },
+  {
+    "room_id": "B934B8",
+    "match_id": "81fe22445f0b40349e0a60d2c34de106",
+    "start_time": "2026-11-28 18:21:28",
+    "end_time": "2026-11-28 18:21:45",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "FIVE_IN_ROW",
+      "winner_id": "Alice",
+      "loser_id": "Bob",
+      "winner_symbol": "X",
+      "winning_line": [
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          8,
+          6
+        ]
+      ],
+      "total_moves": 9
+    },
+    "total_moves": 9,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 6,
+        "timestamp": "18:21:31"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 4,
+        "col": 7,
+        "timestamp": "18:21:32"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 6,
+        "timestamp": "18:21:34"
+      },
+      {
+        "move_number": 4,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 6,
+        "timestamp": "18:21:35"
+      },
+      {
+        "move_number": 5,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 6,
+        "timestamp": "18:21:37"
+      },
+      {
+        "move_number": 6,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 7,
+        "timestamp": "18:21:38"
+      },
+      {
+        "move_number": 7,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 6,
+        "timestamp": "18:21:40"
+      },
+      {
+        "move_number": 8,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 7,
+        "timestamp": "18:21:43"
+      },
+      {
+        "move_number": 9,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 8,
+        "col": 6,
+        "timestamp": "18:21:45"
+      }
+    ],
+    "reason": "FIVE_IN_ROW"
+  },
+  {
+    "room_id": "DADD0B",
+    "match_id": "97afcc1cc1b44e16918b4618fde440c0",
+    "start_time": "2026-11-28 18:31:10",
+    "end_time": "2026-11-28 18:31:29",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "X",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "FIVE_IN_ROW",
+      "winner_id": "Alice",
+      "loser_id": "Bob",
+      "winner_symbol": "X",
+      "winning_line": [
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          4
+        ]
+      ],
+      "total_moves": 9
+    },
+    "total_moves": 9,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 2,
+        "col": 4,
+        "timestamp": "18:31:13"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 2,
+        "col": 5,
+        "timestamp": "18:31:14"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 4,
+        "timestamp": "18:31:16"
+      },
+      {
+        "move_number": 4,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 1,
+        "col": 4,
+        "timestamp": "18:31:18"
+      },
+      {
+        "move_number": 5,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 4,
+        "col": 4,
+        "timestamp": "18:31:19"
+      },
+      {
+        "move_number": 6,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 1,
+        "col": 5,
+        "timestamp": "18:31:21"
+      },
+      {
+        "move_number": 7,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 5,
+        "col": 4,
+        "timestamp": "18:31:23"
+      },
+      {
+        "move_number": 8,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 5,
+        "timestamp": "18:31:27"
+      },
+      {
+        "move_number": 9,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 4,
+        "timestamp": "18:31:29"
+      }
+    ],
+    "reason": "FIVE_IN_ROW"
+  },
+  {
+    "room_id": "DADD0B",
+    "match_id": "3d6c14466bf443a28abbbc8468969c7c",
+    "start_time": "2026-11-28 18:32:16",
+    "end_time": "2026-11-28 18:33:28",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "DISCONNECT",
+      "winner_id": "Bob",
+      "loser_id": "Alice",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 0
+    },
+    "total_moves": 0,
+    "moves": [],
+    "reason": "DISCONNECT"
+  },
+  {
+    "room_id": "0EC243",
+    "match_id": "3f7dd90b996c4c048f42b1deb24266b7",
+    "start_time": "2026-11-28 18:56:06",
+    "end_time": "2026-11-28 18:57:11",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "TIMEOUT",
+      "winner_id": "Bob",
+      "loser_id": "Alice",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 6
+    },
+    "total_moves": 6,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 8,
+        "timestamp": "18:56:11"
+      },
+      {
+        "move_number": 2,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 8,
+        "col": 8,
+        "timestamp": "18:56:12"
+      },
+      {
+        "move_number": 3,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 7,
+        "col": 9,
+        "timestamp": "18:56:14"
+      },
+      {
+        "move_number": 4,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 6,
+        "col": 8,
+        "timestamp": "18:56:16"
+      },
+      {
+        "move_number": 5,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 6,
+        "col": 6,
+        "timestamp": "18:56:38"
+      },
+      {
+        "move_number": 6,
+        "player": "Bob",
+        "symbol": "O",
+        "row": 3,
+        "col": 4,
+        "timestamp": "18:56:41"
+      }
+    ],
+    "reason": "TIMEOUT"
+  },
+  {
+    "room_id": "0EC243",
+    "match_id": "3e13fc2639c349f7a347246dac6320b0",
+    "start_time": "2026-11-28 18:57:27",
+    "end_time": "2026-11-28 18:57:40",
+    "players": {
+      "X": "Alice",
+      "O": "Bob"
+    },
+    "winner": "O",
+    "result": {
+      "outcome": "WIN",
+      "is_draw": false,
+      "reason": "RESIGN",
+      "winner_id": "Bob",
+      "loser_id": "Alice",
+      "winner_symbol": "O",
+      "winning_line": [],
+      "total_moves": 1
+    },
+    "total_moves": 1,
+    "moves": [
+      {
+        "move_number": 1,
+        "player": "Alice",
+        "symbol": "X",
+        "row": 3,
+        "col": 8,
+        "timestamp": "18:57:31"
+      }
+    ],
+    "reason": "RESIGN"
   }
 ]
